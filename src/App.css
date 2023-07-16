@@ -33,7 +33,7 @@
 }
 
 .box > Card.Title {
-    /* font-size: 3.8vh; */
+    font-size: 3.8vh;
     display: block;
     text-align: center;
     height: 10vh;
@@ -65,3 +65,8 @@
     background-color: #F8E4CA;
 }
 
+.logos-Marcas{
+    width: 20vh;
+    height: 10vh;
+    padding: 10px;
+}
