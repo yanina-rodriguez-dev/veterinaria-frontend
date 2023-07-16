@@ -7,7 +7,6 @@ function App() {
  
   return (
     <>
-    <h1>Prueba</h1>
 <Planes></Planes>
 {/* <Marcas></Marcas> */}
     </>
