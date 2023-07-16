@@ -1,10 +1,16 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
+import Planes from './PaginaPrincipal/Planes';
 
 const Inicio = () => {
     return (
-        <div>
-            
-        </div>
+      <section>
+        <Container>
+            <Row>
+                <Planes></Planes>
+            </Row>
+        </Container>
+      </section>
     );
 };
 
