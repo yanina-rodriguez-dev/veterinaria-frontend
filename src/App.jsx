@@ -7,8 +7,8 @@ function App() {
  
   return (
     <>
-<Planes></Planes>
-{/* <Marcas></Marcas> */}
+{/* <Planes></Planes> */}
+<Marcas></Marcas>
     </>
   );
 }

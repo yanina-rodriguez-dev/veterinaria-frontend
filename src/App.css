@@ -61,9 +61,7 @@
     width: 100%;   
 }
 
-.btn-teal{
-    border-radius: 5px;
-    /* border-color:; */
-    background-color:  #46C3CE;
-
+.bg-b{
+    background-color: #F8E4CA;
 }
+
