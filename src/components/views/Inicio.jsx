@@ -8,6 +8,7 @@ const Inicio = () => {
         <Container>
             <Row>
                 <Planes></Planes>
+                <Marcas></Marcas>
             </Row>
         </Container>
       </section>
