@@ -16,16 +16,20 @@ function Menu() {
    
       <Navbar key={expand} expand={expand} className="fondoMenu mb-3">
         <Container fluid>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Brand href="#">
               HC
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+          <Navbar.Brand href="#">
+              <span></span>
+          </Navbar.Brand>
           <Navbar.Offcanvas 
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-            placement="end"
+            placement="start"
             className="fondoMenu"
           >
+
             <Offcanvas.Header closeButton className="fondoMenu">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                 Huellitas
@@ -34,6 +38,7 @@ function Menu() {
             <Offcanvas.Body className="fondoMenu">
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#action1">Inicio</Nav.Link>
+                <Nav.Link href="#action2">Iniciar sesion</Nav.Link>
                 <Nav.Link href="#action2">Productos</Nav.Link>
                 <Nav.Link href="#action2">Servicios</Nav.Link>
                 <Nav.Link href="#action2">Contacto</Nav.Link>
@@ -55,11 +60,11 @@ function Menu() {
               <Form className="d-flex">
                 <Form.Control
                   type="search"
-                  placeholder="Search"
+                  placeholder="Buscar"
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="btn btn-dark">Buscar</Button>
               </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
