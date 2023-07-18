@@ -4,6 +4,7 @@ import "./banner.css";
 import { FaPaw } from "react-icons/fa";
 import { FaDog, FaCat } from "react-icons/fa";
 import { LuRat } from "react-icons/lu";
+
 const Banner = () => {
   return (
     <>
@@ -21,7 +22,7 @@ const Banner = () => {
           </Button>
         </aside>
       </section>
-      <Row>
+      <Row className="mb-5">
         <Col xs={12} md={4}>
         <Card  className="">
           <Card.Body>
@@ -49,8 +50,7 @@ const Banner = () => {
           </Card.Body>
         </Card>
         </Col>
-      </Row>
-      <div className="vh-100"></div>
+      </Row>      
     </>
   );
 };
