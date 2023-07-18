@@ -18,8 +18,11 @@ function Menu() {
         <Container fluid>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Brand href="#">
-              HC
+             (LOGO)
           </Navbar.Brand>
+          
+        
+          
           <Navbar.Brand href="#">
               <span></span>
           </Navbar.Brand>
@@ -64,7 +67,8 @@ function Menu() {
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="btn btn-dark">Buscar</Button>
+                <Button variant="btn btn-dark text-light ">
+                  </Button>
               </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
