@@ -1,9 +1,10 @@
-import React from 'react';
+// import React from 'react';
+import Banner from './paginaPrincipal/Banner';
 
 const Inicio = () => {
     return (
-        <div>
-            
+        <div className='container-fluid'>
+            <Banner/>
         </div>
     );
 };
