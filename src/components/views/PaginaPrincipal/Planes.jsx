@@ -5,7 +5,7 @@ const Planes = () => {
     <section>
       <Col md={4} ld={3} className="mb-3">
      <div className="banner-Planes">
-     <img className="" src="src/assets/planes-salud-mascotas.png"/> 
+     <img className="img-fluid h-100 img-thumbnail rounded-3" src="src/assets/planes-salud-mascotas.png" alt=""/> 
      <div>
         <h2 className="text-verde fw-bold">Planes de salud para mascotas</h2>
         <h3 className="text-verde fw-semibold">Te ayudamos a mantener a tu mascota feliz y saludable</h3>

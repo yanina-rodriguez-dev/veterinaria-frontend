@@ -1,6 +1,6 @@
 const Marcas = () => {
     return (
-       <section className="">
+       <section className="justify-content-end flex-grow-1 pe-3">
         <div className="bg-b">
             <h2 className="text-verde text-center">Trabajamos con las mejores marcas en el mercado</h2>
         <img className="logos-Marcas m-3" src="../src/assets/logo-pedigree.png"></img>

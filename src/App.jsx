@@ -1,5 +1,6 @@
 
 import './App.css'
+import './PlanesMarcas.css'
 import Marcas from './components/views/PaginaPrincipal/Marcas'
 import Planes from './components/views/PaginaPrincipal/Planes'
 
@@ -7,7 +8,7 @@ function App() {
  
   return (
     <>
-{/* <Planes></Planes> */}
+<Planes></Planes>
 <Marcas></Marcas>
     </>
   );
