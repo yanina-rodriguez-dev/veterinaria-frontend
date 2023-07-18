@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 const Profesionales = () => {
     return (
         <Container>
-            
+            <h1 className='p-3 my-3 titulos'>Nuestros Profesionales</h1>
         <Carousel>
             <Carousel.Item>
                 <img
