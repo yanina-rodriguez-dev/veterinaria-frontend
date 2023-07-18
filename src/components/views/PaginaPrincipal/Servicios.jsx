@@ -2,7 +2,7 @@
 const Servicios = () => {
     return (
         <section className="mainSection">
-            <h1 className="ms-4 titulos">Servicios</h1>
+            <h1 className="ms-4 mt-3 titulos">Servicios</h1>
             <article className="contenedor">
                 <div className="contenedor-imagen">
                     <img className="imagen"
