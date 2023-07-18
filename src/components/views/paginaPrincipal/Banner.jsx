@@ -2,8 +2,7 @@
 import { Button, Card, Col, Row } from "react-bootstrap";
 import "./banner.css";
 import { FaPaw } from "react-icons/fa";
-import { FaDog, FaCat } from "react-icons/fa";
-import { LuRat } from "react-icons/lu";
+import { FaDog, FaCat, FaKiwiBird } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -27,7 +26,7 @@ const Banner = () => {
         <Card  className="">
           <Card.Body>
           <Card.Title className="text-center">Perritos</Card.Title>
-          <Card.Text> Nos dedicamos a cuidar y proteger la salud de tus amigos caninos. Nuestro equipo veterinario altamente capacitado está aquí para brindarles el mejor cuidado posible. Confía en nosotros para mantener a tus perros felices y saludables.  </Card.Text>
+          <Card.Text className="mx-5"> Nos dedicamos a cuidar y proteger la salud de tus amigos caninos. Nuestro equipo veterinario altamente capacitado está aquí para brindarles el mejor cuidado posible. Confía en nosotros para mantener a tus perros felices y saludables.  </Card.Text>
           <FaDog className="fs-1"></FaDog>
           </Card.Body>
         </Card>
@@ -36,7 +35,7 @@ const Banner = () => {
         <Card>
           <Card.Body>
           <Card.Title className="text-center">Gatitos</Card.Title>
-          <Card.Text> Nos dedicamos a cuidar y proteger la salud de tus amigos caninos. Nuestro equipo veterinario altamente capacitado está aquí para brindarles el mejor cuidado posible. Confía en nosotros para mantener a tus perros felices y saludables.</Card.Text>
+          <Card.Text className="mx-5"> Nos dedicamos a cuidar y proteger la salud de tus amigos caninos. Nuestro equipo veterinario altamente capacitado está aquí para brindarles el mejor cuidado posible. Confía en nosotros para mantener a tus perros felices y saludables.</Card.Text>
           <FaCat className="fs-1"></FaCat>
           </Card.Body>
         </Card>
@@ -45,8 +44,8 @@ const Banner = () => {
         <Card>
           <Card.Body>
           <Card.Title className="text-center">Animalitos</Card.Title>
-          <Card.Text> Nos dedicamos a cuidar y proteger la salud de tus amigos caninos. Nuestro equipo veterinario altamente capacitado está aquí para brindarles el mejor cuidado posible. Confía en nosotros para mantener a tus perros felices y saludables.</Card.Text>
-          <LuRat className="fs-1"></LuRat>
+          <Card.Text className="mx-5"> Nos dedicamos a cuidar y proteger la salud de tus amigos caninos. Nuestro equipo veterinario altamente capacitado está aquí para brindarles el mejor cuidado posible. Confía en nosotros para mantener a tus perros felices y saludables.</Card.Text>
+          <FaKiwiBird className="fs-1"></FaKiwiBird>
           </Card.Body>
         </Card>
         </Col>
