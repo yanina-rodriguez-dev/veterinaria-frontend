@@ -1,23 +1,21 @@
 // import React from 'react'
-import { Button, Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import './banner.css'
 import { FaPaw } from "react-icons/fa"; 
 
 const Banner = () => {
     return (
         <>
-         <Container className="" >
-        <div className="banner-container">
-        <div className="background-image">
-          <img src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gatito" />
-        </div>
-        <div className="content">
-          <h1>Bienvenidos a Huellitas Center</h1>
-          <p>Donde el cuidado excepcional y el cariño incondicional se encuentran!</p>
-          <Button>Ver más <FaPaw></FaPaw></Button>
-        </div>
-      </div>
-         </Container>
+        <section className="bannerContainer my-5 text-light">
+          <aside className="d-flex flex-column ms-lg-5 ms-md-3 justify-content-lg-center justify-content-md-end h-100">
+              <h1 className="text-light fs-1 mb-4">
+                  Bienvenidos a <br /> Huellitas Center!
+              </h1>
+              <span className="fs-5">Donde el cuidado excepcional y <br /> el cariño incondicional se encuentran!</span>
+              <Button className="btn btn-lg my-4">Ver más <FaPaw style={{ transform: 'rotate(30deg)' }} /></Button>
+          </aside>
+      </section>
+      <div className="vh-100"></div>
       </>
     );
 };
