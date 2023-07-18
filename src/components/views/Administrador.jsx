@@ -5,16 +5,10 @@ import '../../App.css';
 
 const Administrador = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
-        <div className="col-2">
-          <img src={avatarImage} alt="Avatar" className="avatar" />
-          <h4>Administrador</h4>
-          <div className="botones">
-            <button>Inicio</button>
-            <button>Turnos</button>
-            <button>Pacientes</button>
-          </div>
+      <div className="col-sm-2 d-none d-sm-block columna-izquierda">
+          <ColumnaIzquierda></ColumnaIzquierda>
         </div>
         <div className="col-10">
           <div>
