@@ -34,3 +34,15 @@
     margin-top: 50%;
     text-align: center;
   }
+
+/*  */
+  .fondoMenu{
+    background-color: #4D91CD;
+}
+.buscar{
+    position:absolute;
+    padding: 5px;
+}
+.buscarInput{
+    border-radius: 30px;
+}
