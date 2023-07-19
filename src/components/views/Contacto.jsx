@@ -17,7 +17,7 @@ const Contacto = () => {
                         </Form.Group>
                         <Form.Group className="mb-2">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control placeholder="Ingrese un email" />
+                            <Form.Control type="email" placeholder="Ingrese un email" />
                         </Form.Group>
                         <Form.Group className="mb-2">
                             <Form.Label>Tipo de Consulta</Form.Label>
