@@ -1,10 +1,15 @@
 import React from 'react';
 import avatarImage from '../../../assets/admin.png';
 import Button from 'react-bootstrap/Button';
-import '../../../App.css'
+import '../../../css/Administrador.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const ColumnaIzquierda = () => {
   return (
+    <>    
     <div className="columna-izquierda">
       <div className="encabezado">
         <h4 className="titulo text-wrap text-break">Administrador</h4>
@@ -17,11 +22,12 @@ const ColumnaIzquierda = () => {
         <Button variant="success" className='m-2'>Turnos</Button>
         </div>
       </div>
-      <div className="salir">
+      <div className="salir mb-5">
       <Button variant="success">Salir</Button>
       </div>
       <span>Version 1.0.1</span>
     </div>
+    </>
   );
 };
 
