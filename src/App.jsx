@@ -1,5 +1,4 @@
-
-import './App.css'
+import './css/Contacto.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Contacto from './components/views/Contacto';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -10,7 +9,7 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route exact path="/Profesionales" element={<Contacto></Contacto>} ></Route>
+        <Route exact path="/Contacto" element={<Contacto></Contacto>} ></Route>
       </Routes>
       </BrowserRouter>
     </>
