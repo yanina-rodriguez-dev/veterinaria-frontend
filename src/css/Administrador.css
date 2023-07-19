@@ -19,30 +19,15 @@
     height: 80px;
     margin: 0 auto;
     
-  }
-  
+  }  
   .botones {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
     padding-top: 50px;
-    
   }
-  
   .salir {
     margin-top: 50%;
     text-align: center;
   }
-
-/*  */
-  .fondoMenu{
-    background-color: #4D91CD;
-}
-.buscar{
-    position:absolute;
-    padding: 5px;
-}
-.buscarInput{
-    border-radius: 30px;
-}

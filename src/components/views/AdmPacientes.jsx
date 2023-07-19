@@ -2,14 +2,12 @@ import React from 'react';
 import TablaGestionPacientes from './Pacientes/TablaGestionPacientes';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
-import Menu from './Turnos/menu';
 import Button from 'react-bootstrap/Button';
 
 
 const AdmPacientes = () => {
   return (
     <>
-    <Menu></Menu>
     <div className="container-fluid">
       <div className="row">
       <div className="col-sm-2 d-none d-sm-block columna-izquierda">

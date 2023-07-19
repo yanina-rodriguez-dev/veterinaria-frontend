@@ -15,8 +15,9 @@ const ColumnaIzquierda = () => {
         <img src={avatarImage} alt="Avatar" className="avatar" />
         <div className="botones">
         <Button variant="success" className='m-2'>Inicio</Button>
-        <Button variant="success" className='m-2'>Pacientes</Button>
-        <Button variant="success" className='m-2'>Turnos</Button>
+        <Button variant="success" className='m-2'>Actividades</Button>
+        <Button variant="success" className='m-2'>Balance</Button>
+        <Button variant="success" className='m-2'>Configuracion</Button>
         </div>
       </div>
       <div className="salir mb-5">

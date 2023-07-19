@@ -2,11 +2,10 @@ import React from 'react';
 import TablaTurnos from './Turnos/TablaTurnos';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../App.css';
-import Menu from './Turnos/menu';
+
 const Administrador = () => {
   return (
     <>
-    <Menu></Menu>
     <div className="container-fluid">
       <div className="row">
       <div className="col-sm-2 d-none d-sm-block columna-izquierda">
