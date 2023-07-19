@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 
 function TablaGestionTurnos() {
   return (
-    <Table striped bordered size="sm" responsive>
+    <Table striped bordered size="sm" responsive className='text-center'>
       <thead>
         <tr>
           <th>#</th>
