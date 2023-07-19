@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 const Contacto = () => {
     return (
         <div className="mt-5 mainSection">
-            <h3 className="text-center titulos">Contactanos!</h3>
+            <h3 className="text-center titulos">Contáctanos!</h3>
             <hr />
             <div className="row justify-content-center w-100 ps-4">
                 <div className="col-12 col-sm-8 col-md-6 col-xl-4">
@@ -23,7 +23,7 @@ const Contacto = () => {
                             <Form.Label>Tipo de Consulta</Form.Label>
                             <Form.Select
                             >
-                                <option value="">Seleccione una opcion</option>
+                                <option value="">Seleccione una opción</option>
                                 <option value="consulta">Consulta Veterinaria</option>
                                 <option value="plan">Servicio Plan</option>
                                 <option value="madurando">Servicio Madurando</option>
