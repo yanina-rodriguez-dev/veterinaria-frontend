@@ -4,8 +4,8 @@ const Contacto = () => {
     return (
         <div className="mt-5 mainSection">
             <h3 className="text-center titulos">Contactanos!</h3>
-           
-            <div className="row justify-content-center w-100">
+            <hr />
+            <div className="row justify-content-center w-100 ps-4">
                 <div className="col-12 col-sm-8 col-md-6 col-xl-4">
                     <Form>
                         <Form.Group className="mb-2">
@@ -20,7 +20,7 @@ const Contacto = () => {
                             <Form.Control placeholder="Ingrese un email" />
                         </Form.Group>
                         <Form.Group className="mb-2">
-                        <Form.Label>Tipo de Consulta</Form.Label>
+                            <Form.Label>Tipo de Consulta</Form.Label>
                             <Form.Select
                             >
                                 <option value="">Seleccione una opcion</option>
@@ -29,6 +29,10 @@ const Contacto = () => {
                                 <option value="madurando">Servicio Madurando</option>
                                 <option value="adultos">Servicio Adultos</option>
                             </Form.Select>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Consulta</Form.Label>
+                            <Form.Control as="textarea" rows={3} />
                         </Form.Group>
                         <div className="text-center">
                             <Button
