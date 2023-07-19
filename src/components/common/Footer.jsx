@@ -3,7 +3,9 @@ import { Container, Nav} from "react-bootstrap";
 
 const Footer = () => {
     return (
-        <Container className="bg-dark text-light">
+        <div className="bg-dark text-light">
+            <Container>
+                
             <div className="fs-1 m-4 pt-3">O</div>
             <div className="text-light ">
               <Nav.Link>Nosotros</Nav.Link>
@@ -20,7 +22,8 @@ const Footer = () => {
             </article>
 
             <hr />
-        </Container>
+            </Container>
+        </div>
     );
 };
 

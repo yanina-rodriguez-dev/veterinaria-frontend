@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../../css/Menu.css'
-
+import { AiOutlineSearch } from "react-icons/ai";
 
 
 function Menu() {
@@ -19,10 +19,7 @@ function Menu() {
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Brand href="#">
              (LOGO)
-          </Navbar.Brand>
-          
-        
-          
+          </Navbar.Brand>  
           <Navbar.Brand href="#">
               <span></span>
           </Navbar.Brand>
@@ -61,13 +58,14 @@ function Menu() {
                 </NavDropdown>
               </Nav>
               <Form className="d-flex">
-                <Form.Control
+                <input
                   type="search"
                   placeholder="Buscar"
-                  className="me-2"
+                  className=" buscarInput"
                   aria-label="Search"
                 />
-                <Button variant="btn btn-dark text-light ">
+                <Button variant="btn btnBusqueda text-light ">
+                <AiOutlineSearch className='icono'/>
                   </Button>
               </Form>
             </Offcanvas.Body>

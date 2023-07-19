@@ -12,7 +12,6 @@ const Login = () => {
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
-
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control type="password" placeholder="Password" />
@@ -20,7 +19,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Recuerdame" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="danger" type="submit">
          Acceder
         </Button>
       </Form>
