@@ -5,6 +5,42 @@
     position:absolute;
     padding: 5px;
 }
+
+
 .buscarInput{
-    border-radius: 30px;
-}
+    box-sizing:border-box ;
+    height: 60px;
+    width: 0;
+    padding: 0 20px;
+    border-radius: 50px;
+    color: #000;
+    font-size: 20px;
+    border: 1px solid #d60a0a;
+    transition: all .7s ease;
+   }
+   .input{
+    outline: none;
+    box-sizing: border-box;   
+   }
+   ::placeholder{
+       color: grey;
+   }
+   .btnBusqueda{
+   
+   right: 0;
+   top: 0;
+   width: 8px;
+   background: #ec2121;
+   line-height: 80px;
+   border-radius:50px ;
+   text-align: center;
+   cursor: pointer;
+   transition: .5s;
+   }
+   .icono{
+       font-size: 25px;
+       color: aliceblue;
+       line-height: 80px;
+       transition: all .7 ease;
+   }
+   
