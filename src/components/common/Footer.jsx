@@ -20,8 +20,7 @@ const Footer = () => {
               <hr />
               <Nav.Link>Terminos y condiciones</Nav.Link>
                 </aside>
-              
-                
+                     
             </div>
             <article>
                 <span></span>
