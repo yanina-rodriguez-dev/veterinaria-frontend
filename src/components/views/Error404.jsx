@@ -1,4 +1,4 @@
-import { Card, Button, Col, Row, Container } from "react-bootstrap";
+import {Button, Col, Row, Container } from "react-bootstrap";
 import React from "react";
 
 const Error404 = () => {
