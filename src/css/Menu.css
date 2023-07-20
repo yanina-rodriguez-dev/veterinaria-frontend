@@ -35,3 +35,7 @@ color: rgb(92, 230, 73);
     background-color: rgb(251, 251, 253);
 
 }
+.logoCentrado{
+    display: flex;
+    text-align: center;
+}

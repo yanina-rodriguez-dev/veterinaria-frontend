@@ -6,6 +6,7 @@ import {FaFacebook} from 'react-icons/fa'
 import {SiInstagram} from 'react-icons/si';
 import {TfiTwitter} from 'react-icons/tfi';
 import {FaWhatsapp} from 'react-icons/fa';
+import {FaPaw} from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -32,7 +33,7 @@ const Footer = () => {
        
         <div className="text-ligh d-flex row">
            {/* ITEMS DEL FOOTER */}
-          <article className="mt-5 container col-lg-4 col-sm-12 mx-0">
+          <article className="mt-5 container col-lg-4 col-md-4 col-sm-12 mx-0">
             <h3 className="mb-4">Nosotros</h3>
             <Nav.Link>Quienes somos</Nav.Link>
             <hr />
@@ -45,7 +46,7 @@ const Footer = () => {
             <Nav.Link>Productos</Nav.Link>
             <hr />
           </article>
-          <article className="col-lg-4 col-sm-12 mt-5 ps-sm-5">
+          <article className="col-lg-4 col-md-4 col-sm-12 mt-5 ps-sm-5">
             <h3 className="mb-4">Ayuda</h3>
             <Nav.Link>¿Como comprar?</Nav.Link>
             <hr />
@@ -56,18 +57,24 @@ const Footer = () => {
             <Nav.Link>Politica de devolucion</Nav.Link>
             <hr />
           </article>
-          <div className="logoFooter pt-3 col-lg-4 text-center">
-          <img src={logo} className="logoFooter " alt="logo del sitio" />
+          <div className="logoFooter pt-5 col-lg-4 col-md-4">
+            <div className="ps-5 ms-3">
+          <img src={logo} className="logoFooter mt-3" alt="logo del sitio" />
+            </div>
+            <h3 className="text-center mt-3">Amamos lo mismo que vos <FaPaw/></h3>
+            
         </div>
         </div>
         
         {/* DATA FISCAL */}
-        <article>
-          <img src={dataFiscal} alt="data fiscal-logo" />
+        <div className="row">
+        <article className="text-center my-4">
+          <img src={dataFiscal} alt="data fiscal-logo" className="me-3" />
           <img src={camaraDeComercio} alt="logo de Camara de Comercio" />
         </article>
-
         <hr />
+        <p className="text-center">&copy;2023 Huellitas Center - Todos los derechos reservados</p>
+        </div>
       </Container>
     </div>
   );
