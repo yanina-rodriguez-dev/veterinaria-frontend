@@ -18,7 +18,7 @@ function Menu() {
         <Container fluid>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Brand href="#">
-          <div className="ps-5 ms-3 fs-6 ">
+          <div className="ms-3 pe-3">
           <img src={logo} className="logoFooter logoSitio" alt="logo del sitio" />
             </div>
           </Navbar.Brand>  
