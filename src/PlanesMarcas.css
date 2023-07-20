@@ -44,5 +44,14 @@
     object-fit: cover;
 }
 
+.box{
+    min-height: 100%;
+    min-width: fit-content;
+}
 
+.btn-beige{
+    background-color: #F8E4CA !important;
+    color:#1B4C51 !important;
+
+}
 
