@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../../css/Menu.css'
 import { AiOutlineSearch } from "react-icons/ai";
-
+import logo from "../../assets/logo.png";
 
 function Menu() {
   const expand = 'xxl';
@@ -18,7 +18,9 @@ function Menu() {
         <Container fluid>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Brand href="#">
-             (LOGO)
+          <div className="ps-5 ms-3 fs-6 ">
+          <img src={logo} className="logoFooter logoSitio mt-3" alt="logo del sitio" />
+            </div>
           </Navbar.Brand>  
           <Navbar.Brand href="#">
               <span></span>
