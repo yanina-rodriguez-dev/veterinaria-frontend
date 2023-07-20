@@ -1,7 +1,8 @@
 .carousel {
 max-width: fit-content;
 max-height:fit-content;
-object-position: center;
+display: flex;
+justify-content: center;
 }
 
 .caption{

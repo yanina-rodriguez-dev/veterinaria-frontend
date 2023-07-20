@@ -6,7 +6,8 @@
 }
 
 .btnError{
-    background-color: #F8E4CA;
-    border-style: double;
-    border-color: #1B4C51;
+    background-color: #F8E4CA !important;
+    border-style: double !important;
+    border-color: #1B4C51 !important;
 }
+

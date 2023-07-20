@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Button, Carousel, Collapse} from 'react-bootstrap';
+import {Button, Carousel, Collapse, Container} from 'react-bootstrap';
 import React from 'react';
 
 const AcercaDeNosotros = () => {
@@ -11,7 +11,9 @@ const AcercaDeNosotros = () => {
     const [open, setOpen] = useState(false);
 
   return (
-    <section className='bg-nosotros text-center'>
+   
+   
+   <section className='bg-nosotros text-center'>
         <div className="mt-5 mb-5">
             <h2 className="f-title">Nuestra mision</h2>
             <>
@@ -60,13 +62,12 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </Collapse>
       </>
         </div>
-        {/* <br />
-        <br /> */}
+        <br />
+        <br />
             <h2 className="f-title mt-5">Nuestro equipo</h2>
             <p className="f-text">Conoce al equipo experto en tecnologia que hace posible nuestra web</p>
-        <div className="carousel mt-5 text-center">
-{/* <Container> */}
-    <Carousel activeIndex={index} onSelect={handleSelect} showControls touch={true} pause={"hover"} className="text-center object-fit-cover">
+<Container className="carousel mt-5"> 
+    <Carousel activeIndex={index} onSelect={handleSelect} showControls touch={true} pause={"hover"}>
       <Carousel.Item>
         <img
           className="d-block w-100 carousel"
@@ -136,8 +137,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    {/* </Container> */}
-</div>
+    </Container>
     </section>
   );
 }
