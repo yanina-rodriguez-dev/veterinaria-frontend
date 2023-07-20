@@ -3,12 +3,11 @@
     color: #1B4C51;
     min-width: 100vh;
     min-height:100vh;
-    /* position:absolute; */
-    top: 50%;
 }
 
 .btnError{
     background-color: #F8E4CA;
-    border-style: double;
-    border-color: #1B4C51;
+    border-style: double !important;
+    border-color: #1B4C51 !important;
 }
+

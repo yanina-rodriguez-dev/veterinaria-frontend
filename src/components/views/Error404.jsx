@@ -1,10 +1,10 @@
-import { Card, Button, Col, Row, Container } from "react-bootstrap";
+import { Button, Col, Row, Container } from "react-bootstrap";
 import React from "react";
 
 const Error404 = () => {
   return (
       <section className="error text-center">
-          <Container className="mt-5">
+          <Container className="mt-5 text-center">
             <Row>
                 <Col className="mt-5">
                 <iframe
@@ -20,7 +20,7 @@ const Error404 = () => {
           </p>
             <h1 className="f-title mt-5">Error 404</h1>
             <h2 className="f-text mt-3">No quedan huellas de la pagina que estabas buscando...</h2>
-      <Button variant="default" className="btnError" to={"/src/components/views/Inicio.jsx"}>Volver al inicio</Button>
+      <Button variant="default" className="btnError mt-3" to={"/src/components/views/Inicio.jsx"}>Volver al inicio</Button>
                 </Col>
             </Row>
           </Container>
