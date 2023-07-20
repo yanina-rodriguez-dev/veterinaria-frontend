@@ -1,0 +1,11 @@
+.error{
+    background-color: #F8E4CA;
+    color: #1B4C51;
+    min-width: 100vh;
+    min-height: 100vh;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+     */
+}

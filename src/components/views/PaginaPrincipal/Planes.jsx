@@ -23,9 +23,8 @@ const Planes = () => {
       <div className="bg-beige">
       <Container> 
       <Row xs={1} md={3}  lg={3} className="g-4">
-      {Array.from({ length: 3 }).map((_, idx) => (
-        <Col key={3}>
         <div className="bg-beige p-2">
+        <Col>
           <Card className="box p-2 m-3">
             <Card.Img variant="top" className="img-fluid img-thumbnail rounded-3" src="https://images.unsplash.com/photo-1616493039661-8a63de6ead09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=710&q=80" alt="cachorrito de perro y gatito durmiendo juntos" />
             <Card.Body>
@@ -65,10 +64,9 @@ const Planes = () => {
               <Button className="btn mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Button>
             </Card.Body>
           </Card>
+       </Col>
         </div>
-        </Col>
-        ))}
-      </Row>
+     </Row> 
       </Container>
       </div>
     </section>
