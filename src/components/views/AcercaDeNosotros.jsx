@@ -119,7 +119,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </Carousel.Item>
       <Carousel.Item>
         <img
-          style={{maxHeight:500, maxWidth:600}}
+          style={{maxHeight:400, maxWidth:500}}
           className="d-block w-100 carousel"
           src="https://trello.com/1/cards/64b330ed817877cd701c5264/attachments/64b9a680aee23f9d4760fed8/previews/64b9a681aee23f9d4760ffcd/download/Maxi.jpeg.jpg"
           alt="Maxi Vega"
