@@ -19,14 +19,14 @@ const AcercaDeNosotros = () => {
             <>
             <Button
         onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
+        aria-controls="mision-collapse-text"
         aria-expanded={open}
      className='btn-background m-3'
       >
        Aqui no hay gato encerrado
       </Button>
       <Collapse in={open}>
-        <div id="example-collapse-text">
+        <div id="mision-collapse-text" className='p-2'>
       Desarrollamos webs de la mejor calidad, con profesionalismo y dedicacion.
         </div>
       </Collapse>
@@ -34,28 +34,28 @@ const AcercaDeNosotros = () => {
             <>
             <Button
         onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
+        aria-controls="mision-collapse-text"
         aria-expanded={open}
      className='btn-background m-3'
       >
   No somos de caballo grande, ande o no ande
       </Button>
       <Collapse in={open}>
-        <div id="example-collapse-text">
+        <div id="mision-collapse-text p-2" className='p-2'>
 Valoramos como funciona tu web tanto como se luce.  </div>
       </Collapse>
       </>
             <>
             <Button
         onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
+        aria-controls="mision-collapse-text"
         aria-expanded={open}
      className='btn-background m-3'
       >
   Hasta al mejor cazador, se le va la liebre
       </Button>
       <Collapse in={open}>
-        <div id="example-collapse-text">
+        <div id="mision-collapse-text" className='p-2'>
         Aun las personas expertas en ciertas áreas, pueden fallar.
 Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
         </div>
@@ -63,7 +63,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </>
         </div>
             <h2 className="f-title mt-5">Nuestro equipo</h2>
-            <p className="f-text">Conoce al equipo experto en tecnologia que hace posible nuestra web</p>
+            <p className="f-text fs-4">Conoce al equipo experto en tecnologia que hace posible nuestra web</p>
 <Container className="carousel mt-5"> 
     <Carousel activeIndex={index} onSelect={handleSelect} showcontrolstouch="true" pause={"hover"}>
       <Carousel.Item>
