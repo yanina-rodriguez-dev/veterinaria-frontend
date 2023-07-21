@@ -3,13 +3,28 @@ import Banner from './paginaPrincipal/Banner';
 import Opiniones from './paginaPrincipal/Opiniones';
 import "./paginaPrincipal/banner.css"
 import "./paginaPrincipal/opiniones.css"
+import { Row } from 'react-bootstrap';
+import Planes from './PaginaPrincipal/Planes';
+import Marcas from './PaginaPrincipal/Marcas';
+import { Container } from 'react-bootstrap';
 
 const Inicio = () => {
     return (
-        <div className='container-fluid'>
+      <section>
+
+<div className='container-fluid'>
             <Banner/>
-            <Opiniones/>
+            
         </div>
+
+        <Container>
+            <Row>
+                <Planes></Planes>
+                <Opiniones/>
+                <Marcas></Marcas>
+            </Row>
+        </Container>
+      </section>
     );
 };
 

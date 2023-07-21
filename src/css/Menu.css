@@ -1,10 +1,54 @@
+
 .fondoMenu{
-    background-color: #4D91CD;
+  background-color: #4d91cd;
 }
 .buscar{
-    position:absolute;
-    padding: 5px;
+  position: absolute;
+  padding: 5px;
 }
 .buscarInput{
-    border-radius: 30px;
+  border-radius: 30px;
+}
+.logoFooter{
+  border-radius: 172px;
+  height: 150px;
+}
+.colorInstagram {
+    border-radius: 15px;
+    color: white;
+  background: rgb(235, 24, 197);
+  background: linear-gradient(
+    90deg,
+    rgba(235, 24, 197, 1) 6%,
+    rgba(84, 100, 195, 1) 59%,
+    rgba(223, 230, 12, 1) 100%,
+    rgba(223, 230, 12, 1) 100%
+  );
+}
+.colorWpp{
+color: rgb(92, 230, 73);
+}
+
+.colorFacebook{
+    border-radius: 21px;
+    color: rgb(53, 22, 226);
+    background-color: rgb(251, 251, 253);
+
+}
+.logoCentrado{
+    display: flex;
+    text-align: center;
+}
+.logoSitio{
+    height: 100px;
+}
+
+.btnColor{
+  background: rgb(3, 102, 3);
+}
+
+.navSM{
+  display: flex;
+
+justify-content: space-evenly;
 }
