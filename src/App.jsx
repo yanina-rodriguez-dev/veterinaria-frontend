@@ -1,5 +1,8 @@
-
-
+import './css/Administrador.css'
+import Administrador from './components/views/Administrador'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AdmTurnos from './components/views/AdmTurnos';
+import AdmPacientes from './components/views/AdmPacientes';
 // import './App.css'
 import './PlanesMarcas.css'
 import Marcas from './components/views/PaginaPrincipal/Marcas'
@@ -14,17 +17,17 @@ function App() {
 
   return (
     <>
-
-<Planes></Planes>
-<Marcas></Marcas>
-
       <BrowserRouter>
       <Routes>
         <Route exact path="/Profesionales" element={<Profesionales></Profesionales>} ></Route>
-    <Route exact path="/Planes" element={<Profesionales></Profesionales>} ></Route>
-    <Route exact path="/Marcas" element={<Profesionales></Profesionales>} ></Route>
+    <Route exact path="/Planes" element={<Planes></Planes>} ></Route>
+    <Route exact path="/Marcas" element={<Marcas></Marcas>} ></Route>
+    <Route exact path="/AdmPacientes" element={<AdmPacientes></AdmPacientes>} ></Route>
+    <Route exact path="/AdmTurnos" element={<AdmTurnos></AdmTurnos>} ></Route>
+    <Route exact path="/Administrador" element={<Administrador></Administrador>} ></Route>
       </Routes>
       </BrowserRouter>
+
     </>
   );
 }
