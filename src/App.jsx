@@ -1,6 +1,8 @@
-import './css/Contacto.css'
+
+import './Servicios.css'
+import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
-import Contacto from './components/views/Contacto';
+import Servicios from './components/views/PaginaPrincipal/Servicios';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,7 +11,8 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route exact path="/Contacto" element={<Contacto></Contacto>} ></Route>
+        <Route exact path="/Servicios" element={<Servicios></Servicios>} ></Route>
+
       </Routes>
       </BrowserRouter>
     </>
