@@ -3,10 +3,9 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../../css/Menu.css";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch } from 'react-icons/ai';
 import logo from "../../assets/logo.png";
 
 function Menu() {
@@ -52,19 +51,7 @@ function Menu() {
                 <hr />
                 <Nav.Link href="#action2">Nosotros</Nav.Link>
                 <hr />
-                <NavDropdown
-                  title="Dropdown"
-                  id={`offcanvasNavbarDropdown-expand-${expand}`}
-                >
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
+               
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -74,7 +61,7 @@ function Menu() {
                   aria-label="Search"
                 />
                 <Button variant="dark">
-                  <AiOutlineSearch className="text-light" />
+                  <AiOutlineSearch className="text-light"/>
                 </Button>
               </Form>
             </Offcanvas.Body>
