@@ -4,25 +4,24 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { FaPaw } from "react-icons/fa";
 import { FaDog, FaCat, FaKiwiBird } from "react-icons/fa";
 
-
 const Banner = () => {
   return (
     <>
       <section className="bannerContainer my-5 text-light">
         <aside>
-        <img
-          className="img-fluid d-md-none"
-          src="https://images.pexels.com/photos/160722/cat-tiger-getiegert-feel-at-home-160722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Imagen banner gatito"
-        />
+          <img
+            className="img-fluid d-md-none"
+            src="https://images.pexels.com/photos/160722/cat-tiger-getiegert-feel-at-home-160722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Imagen banner gatito"
+          />
         </aside>
-        <aside className=" mt-lg-5 ms-md-3 ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-start text-center text-md-start">
+        <aside className=" mt-lg-5 ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-center text-center text-md-start widthBanner">
           <h1 className="fs-1 mb-md-4 mt-2 mt-md-0 mx-2 mx-md-0">
             Bienvenidos a <br className="d-none d-md-block" /> Huellitas Center!
           </h1>
           <span className="fs-5 mx-2 ">
-            Donde el cuidado excepcional y <br className="d-none d-md-block" /> el cariño incondicional se
-            encuentran!
+            Donde el cuidado excepcional y <br className="d-none d-md-block" />{" "}
+            el cariño incondicional se encuentran!
           </span>
           <Button className="btn btn-lg my-4">
             Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
