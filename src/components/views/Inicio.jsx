@@ -7,10 +7,13 @@ import { Row } from 'react-bootstrap';
 import Planes from './PaginaPrincipal/Planes';
 import Marcas from './PaginaPrincipal/Marcas';
 import { Container } from 'react-bootstrap';
+import Menu from '../common/Menu';
+import Footer from "../common/Footer"
 
 const Inicio = () => {
     return (
       <section>
+        <Menu></Menu>
 
 <div className='container-fluid'>
             <Banner/>
@@ -24,6 +27,7 @@ const Inicio = () => {
                 <Marcas></Marcas>
             </Row>
         </Container>
+        <Footer></Footer>
       </section>
     );
 };
