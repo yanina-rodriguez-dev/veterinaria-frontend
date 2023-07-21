@@ -21,7 +21,7 @@ const Planes = () => {
       </div>
       </div>
       <div className="bg-beige">
-      <Container> 
+      <Container className="mb-5"> 
         <div className="bg-beige p-2">
       <Row xs={1} md={3} lg={3}  className="g-4">
         <Col>

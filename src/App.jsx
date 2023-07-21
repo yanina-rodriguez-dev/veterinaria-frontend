@@ -1,23 +1,16 @@
-import './css/Administrador.css'
-import Administrador from './components/views/Administrador'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AdmTurnos from './components/views/AdmTurnos';
-import AdmPacientes from './components/views/AdmPacientes';
-import Inicio from './components/views/Inicio';
-
-import './App.css'
-import './PlanesMarcas.css'
-import Marcas from './components/views/PaginaPrincipal/Marcas'
-import Planes from './components/views/PaginaPrincipal/Planes'
-import Menu from "./components/common/Menu";
-import './Profesionales.css';
+import "./css/Administrador.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./Profesionales.css";
+import "./PlanesMarcas.css";
+import "./Profesionales.css";
+import Inicio from "./components/views/Inicio";
+import Administrador from "./components/views/Administrador";
+import Menu from "./components/common/Menu";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
-import "./PlanesMarcas.css";
 import Marcas from "./components/views/PaginaPrincipal/Marcas";
 import Planes from "./components/views/PaginaPrincipal/Planes";
-import "./Profesionales.css";
 import Profesionales from "./components/views/PaginaPrincipal/profesionales";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -25,21 +18,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Route  element={<Menu></Menu>}></Route>
+        {/* <Route element={<Menu></Menu>}></Route> */}
         <Routes>
-        <Route exact path="/" element={<Inicio></Inicio>} ></Route>
+          <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route
             exact
             path="/Profesionales"
             element={<Profesionales></Profesionales>}
           ></Route>
-          <Route
-            exact
-            path="/Profesionales"
-            element={<Profesionales></Profesionales>}
-          ></Route>
-          <Route exact path="/Planes" element={<Planes></Planes>}></Route>
-          <Route exact path="/Marcas" element={<Marcas></Marcas>}></Route>
+          {/* <Route exact path="/Planes" element={<Planes></Planes>}></Route> */}
+          {/* <Route exact path="/Marcas" element={<Marcas></Marcas>}></Route> */}
           <Route
             exact
             path="/AdmPacientes"

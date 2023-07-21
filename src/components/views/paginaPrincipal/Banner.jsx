@@ -29,6 +29,7 @@ const Banner = () => {
         </aside>
       </section>
       <Row className="mb-5">
+        <h1 className="text-center fw-semibold mb-3">¡Nos importan tus mascotas!</h1>
         <Col xs={12} md={4} className="mb-4">
           <Card>
             <Card.Body>
