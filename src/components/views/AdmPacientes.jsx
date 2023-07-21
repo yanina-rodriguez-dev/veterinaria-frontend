@@ -1,9 +1,11 @@
 import React from 'react';
-import TablaTurnos from './Turnos/TablaTurnos';
+import TablaGestionPacientes from './Pacientes/TablaGestionPacientes';
 import ColumnaIzquierda from './Turnos/Columna';
-import '../../App.css';
+import '../../css/Administrador.css';
+import Button from 'react-bootstrap/Button';
 
-const Administrador = () => {
+
+const AdmPacientes = () => {
   return (
     <>
     <div className="container-fluid">
@@ -13,11 +15,12 @@ const Administrador = () => {
         </div>
         <div className="col-10">
           <div>
-            <h2>Bienvenido!</h2>
+            <h2>Administrar Pacientes:</h2>
             <hr />
-            <p>Estos son los turnos reservados de los próximos días:</p>
+            <p>Gestiona los pacientes:</p>
           </div>
-          <TablaTurnos />
+          <Button variant="dark" className='m-2'>Nuevo Paciente</Button>
+          <TablaGestionPacientes />
         </div>
       </div>
     </div>
@@ -25,4 +28,4 @@ const Administrador = () => {
   );
 };
 
-export default Administrador;
+export default AdmPacientes;
