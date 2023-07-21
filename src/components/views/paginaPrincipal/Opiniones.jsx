@@ -1,11 +1,11 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { FaUserCircle, FaStar, FaQuoteLeft } from "react-icons/fa";
-import "./opiniones.css";
+// import "./opiniones.css";
 
 const Opiniones = () => {
   return (
     <div>
-      <section>
+      <Container>
         <Row className="mb-5">
           <Col xs={12} md={4} className="mb-4">
             <Card className="opinion">
@@ -19,7 +19,7 @@ const Opiniones = () => {
                   {" "}
                   <FaQuoteLeft className="ms-3" />{" "}
                 </Card.Title>
-                <Card.Text className="mx-lg-5 mx-md-1">
+                <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                   También es genial que ofrezcan consejos útiles sobre cuidado y
                   nutrición para los animales. ¡Sin duda recomendaría esta
                   clínica veterinaria a todos mis amigos y familiares amantes de
@@ -43,7 +43,7 @@ const Opiniones = () => {
                   {" "}
                   <FaQuoteLeft className="ms-3" />{" "}
                 </Card.Title>
-                <Card.Text className="mx-lg-5 mx-md-1">
+                <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                   También es genial que ofrezcan consejos útiles sobre cuidado y
                   nutrición para los animales. ¡Sin duda recomendaría esta
                   clínica veterinaria a todos mis amigos y familiares amantes de
@@ -67,7 +67,7 @@ const Opiniones = () => {
                   {" "}
                   <FaQuoteLeft className="ms-3" />{" "}
                 </Card.Title>
-                <Card.Text className="mx-lg-5 mx-md-1">
+                <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                   También es genial que ofrezcan consejos útiles sobre cuidado y
                   nutrición para los animales. ¡Sin duda recomendaría esta
                   clínica veterinaria a todos mis amigos y familiares amantes de
@@ -80,7 +80,7 @@ const Opiniones = () => {
             </Card>
           </Col>
         </Row>
-      </section>
+      </Container>
     </div>
   );
 };

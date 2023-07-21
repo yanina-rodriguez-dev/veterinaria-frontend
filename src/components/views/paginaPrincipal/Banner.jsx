@@ -1,8 +1,9 @@
 // import React from 'react'
-import { Button, Card, Col, Row } from "react-bootstrap";
-import "./banner.css";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
+// import "./banner.css";
 import { FaPaw } from "react-icons/fa";
 import { FaDog, FaCat, FaKiwiBird } from "react-icons/fa";
+
 
 const Banner = () => {
   return (
@@ -15,12 +16,12 @@ const Banner = () => {
           alt="Imagen banner gatito"
         />
         </aside>
-        <aside className=" mt-lg-5 ms-md-3 ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-start">
-          <h1 className="fs-1 mb-md-4 mt-2 mt-md-0">
-            Bienvenidos a <br /> Huellitas Center!
+        <aside className=" mt-lg-5 ms-md-3 ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-start text-center text-md-start">
+          <h1 className="fs-1 mb-md-4 mt-2 mt-md-0 mx-2 mx-md-0">
+            Bienvenidos a <br className="d-none d-md-block" /> Huellitas Center!
           </h1>
-          <span className="fs-5 mx-1 text-center text-md-start">
-            Donde el cuidado excepcional y <br /> el cariño incondicional se
+          <span className="fs-5 mx-2 ">
+            Donde el cuidado excepcional y <br className="d-none d-md-block" /> el cariño incondicional se
             encuentran!
           </span>
           <Button className="btn btn-lg my-4">
@@ -40,7 +41,7 @@ const Banner = () => {
                 />
               </Card.Title>
               <Card.Title className="text-center">Perritos </Card.Title>
-              <Card.Text className="mx-lg-5 mx-md-1">
+              <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
                 caninos. Nuestro equipo veterinario altamente capacitado está
@@ -62,7 +63,7 @@ const Banner = () => {
                 />
               </Card.Title>
               <Card.Title className="text-center">Gatitos</Card.Title>
-              <Card.Text className="mx-lg-5 mx-md-1">
+              <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
                 caninos. Nuestro equipo veterinario altamente capacitado está
@@ -84,7 +85,7 @@ const Banner = () => {
                 />
               </Card.Title>
               <Card.Title className="text-center">Animalitos</Card.Title>
-              <Card.Text className="mx-lg-5 mx-md-1">
+              <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
                 caninos. Nuestro equipo veterinario altamente capacitado está
