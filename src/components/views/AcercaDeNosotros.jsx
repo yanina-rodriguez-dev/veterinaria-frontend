@@ -65,7 +65,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
             <h2 className="f-title mt-5">Nuestro equipo</h2>
             <p className="f-text">Conoce al equipo experto en tecnologia que hace posible nuestra web</p>
 <Container className="carousel mt-5"> 
-    <Carousel activeIndex={index} onSelect={handleSelect} showControls touch={true} pause={"hover"}>
+    <Carousel activeIndex={index} onSelect={handleSelect} showcontrolstouch="true" pause={"hover"}>
       <Carousel.Item>
         <img
           className="d-block w-100 carousel"
