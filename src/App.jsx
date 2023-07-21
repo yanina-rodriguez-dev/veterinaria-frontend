@@ -1,8 +1,7 @@
 
-import './Servicios.css'
-import './App.css'
+import './Profesionales.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Servicios from './components/views/PaginaPrincipal/Servicios';
+import Profesionales from './components/views/PaginaPrincipal/profesionales';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route exact path="/Servicios" element={<Servicios></Servicios>} ></Route>
-
+        <Route exact path="/Profesionales" element={<Profesionales></Profesionales>} ></Route>
       </Routes>
       </BrowserRouter>
     </>
