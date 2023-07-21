@@ -3,6 +3,7 @@ import Administrador from './components/views/Administrador'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdmTurnos from './components/views/AdmTurnos';
 import AdmPacientes from './components/views/AdmPacientes';
+import Inicio from './components/views/Inicio';
 // import './App.css'
 import './PlanesMarcas.css'
 import Marcas from './components/views/PaginaPrincipal/Marcas'
@@ -19,6 +20,7 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
+        <Route exact path="/" element={<Inicio></Inicio>} ></Route>
         <Route exact path="/Profesionales" element={<Profesionales></Profesionales>} ></Route>
     <Route exact path="/Planes" element={<Planes></Planes>} ></Route>
     <Route exact path="/Marcas" element={<Marcas></Marcas>} ></Route>
