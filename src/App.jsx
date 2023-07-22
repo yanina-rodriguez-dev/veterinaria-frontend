@@ -1,5 +1,8 @@
 import "./css/Administrador.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css'
+import Footer from "./components/common/Footer";
+// import Login from "./components/views/Login";
 import "./App.css";
 import "./Profesionales.css";
 import "./PlanesMarcas.css";
@@ -15,6 +18,7 @@ import Marcas from "./components/views/PaginaPrincipal/Marcas";
 import Planes from "./components/views/PaginaPrincipal/Planes";
 import Profesionales from "./components/views/PaginaPrincipal/profesionales";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
