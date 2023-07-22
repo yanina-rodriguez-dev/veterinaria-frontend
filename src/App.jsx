@@ -1,5 +1,8 @@
 import "./css/Administrador.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css'
+import Footer from "./components/common/Footer";
+// import Login from "./components/views/Login";
 import "./App.css";
 import "./Profesionales.css";
 import "./PlanesMarcas.css";
@@ -7,12 +10,16 @@ import "./Profesionales.css";
 import Inicio from "./components/views/Inicio"
 import Contacto from "./components/views/Contacto"
 import Login from "./components/views/Login"
+import './css/Registro.css'
+import Registro from './components/views/Registro';
+import Inicio from "./components/views/Inicio";
 import Administrador from "./components/views/Administrador";
 import Menu from "./components/common/Menu";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
 import { BrowserRouter , Route, Routes } from "react-router-dom";
 import Footer from "./components/common/Footer";
+
 
 function App() {
   return (
