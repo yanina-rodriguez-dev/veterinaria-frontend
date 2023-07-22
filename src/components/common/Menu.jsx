@@ -45,7 +45,7 @@ function Menu() {
                 <hr />
                 <NavLink end className="nav-item nav-link" to='/login'>Mi cuenta</NavLink>
                 <hr />
-                <NavLink end className="nav-item nav-link" to='/productos'>Productos</NavLink>
+                <NavLink end className="nav-item nav-link" to='/registro'>Registro</NavLink>
                 <hr />
                 <NavLink end className="nav-item nav-link" to='/contacto'>Contacto</NavLink>
                 <hr />
