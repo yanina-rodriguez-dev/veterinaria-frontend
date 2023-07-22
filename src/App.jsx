@@ -50,6 +50,7 @@ function App() {
             element={<Administrador></Administrador>}
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route exact path="/registro" element={<Registro></Registro>}></Route>
           {/* <Route  path="*" element={<Error404></Error404>}></Route> */}
         </Routes>
         <Footer></Footer>
