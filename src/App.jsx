@@ -4,6 +4,8 @@ import "./App.css";
 import "./Profesionales.css";
 import "./PlanesMarcas.css";
 import "./Profesionales.css";
+    import './css/Registro.css'
+    import Registro from './components/views/Registro';
 import Inicio from "./components/views/Inicio";
 import Administrador from "./components/views/Administrador";
 import Menu from "./components/common/Menu";
@@ -44,6 +46,7 @@ function App() {
             element={<Administrador></Administrador>}
           ></Route>
         </Routes>
+
       </BrowserRouter>
     </>
   );
