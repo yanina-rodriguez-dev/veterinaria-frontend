@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway&display=swap');
+
+.f-title{
+    font-family: 'Raleway', sans-serif;
+}
+.f-text{
+    font-family: 'Lato', sans-serif;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.mainSection{
+    flex-grow: 1;
+}
+
+.text-verde{
+    color: #1B4C51;
+}
+.text-beige{
+    color: #F8E4CA;
+}
+
+.banner-Planes{
+    background-color: #4D91CD;
+}
+
+.banner-Planes img{
+    object-fit: cover;
+    height: 600px;
+    width: 100%;   
+}
+
+.bg-beige{
+    background-color: #F8E4CA;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.box{
+    min-height: 100%;
+    min-width: fit-content;
+}
+
+.btn-beige{
+    background-color: #F8E4CA !important;
+    color:#1B4C51 !important;
+
+}
+

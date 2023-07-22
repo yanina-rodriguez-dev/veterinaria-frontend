@@ -1,7 +1,5 @@
-
 import { Container, Nav } from "react-bootstrap";
 import logo from "../../assets/logo.png";
-import camaraDeComercio from "../../assets/footer/camaraDeComercio.png";
 import dataFiscal from "../../assets/footer/dataFiscal.png";
 import {FaFacebook} from 'react-icons/fa'
 import {SiInstagram} from 'react-icons/si';
@@ -71,7 +69,6 @@ const Footer = () => {
         <div className="row">
         <article className="text-center my-4">
           <img src={dataFiscal} alt="data fiscal-logo" className="me-3" />
-          <img src={camaraDeComercio} alt="logo de Camara de Comercio" />
         </article>
         <hr />
         <p className="text-center">&copy;2023 Huellitas Center - Todos los derechos reservados</p>

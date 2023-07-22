@@ -1,15 +1,15 @@
 
-.fondoMenu {
+.fondoMenu{
   background-color: #4d91cd;
 }
-.buscar {
+.buscar{
   position: absolute;
   padding: 5px;
 }
-.buscarInput {
+.buscarInput{
   border-radius: 30px;
 }
-.logoFooter {
+.logoFooter{
   border-radius: 172px;
   height: 150px;
 }
@@ -41,4 +41,14 @@ color: rgb(92, 230, 73);
 }
 .logoSitio{
     height: 100px;
+}
+
+.btnColor{
+  background: rgb(3, 102, 3);
+}
+
+.navSM{
+  display: flex;
+
+justify-content: space-evenly;
 }
