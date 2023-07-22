@@ -1,0 +1,30 @@
+{
+  "turnos": [
+    {
+      "id": 1,
+      "fecha": "23-07-2022 ",
+      "hora": " 09:00 ",
+      "motivoConsulta": "General",
+      "pacienteId": 1
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "nombreDueno": " yanina rodriguez",
+      "telefono": "3815434554",
+      "direccion": "aca va la dire",
+      "nombrePaciente": "Teodoro",
+      "especie": "pichiru",
+      "raza": "Caniche Toy"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@huellitascenter.com",
+      "password": "Huellita123"
+    }
+  ]
+}
