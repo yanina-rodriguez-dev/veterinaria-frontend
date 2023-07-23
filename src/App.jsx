@@ -1,20 +1,21 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Administrador.css";
-import "./App.css";
+import './App.css'
 import "./Profesionales.css";
 import "./PlanesMarcas.css";
-import "./Profesionales.css";
-import "./css/Registro.css";
-import Inicio from "./components/views/Inicio";
-import Contacto from "./components/views/Contacto";
-import Login from "./components/views/Login";
-import Registro from "./components/views/Registro";
+import './css/Registro.css'
+import Inicio from "./components/views/Inicio"
+import Contacto from "./components/views/Contacto"
+import Login from "./components/views/Login"
+import Registro from './components/views/Registro';
 import Administrador from "./components/views/Administrador";
 import Menu from "./components/common/Menu";
+import Footer from "./components/common/Footer";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
-import Footer from "./components/common/Footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter , Route, Routes } from "react-router-dom";
+
+
 
 function App() {
   return (
