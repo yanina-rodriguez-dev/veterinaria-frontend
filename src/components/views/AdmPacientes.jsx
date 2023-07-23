@@ -19,7 +19,7 @@ const AdmPacientes = () => {
             <hr />
             <p>Gestiona los pacientes:</p>
           </div>
-          <Button variant="dark" className='m-2'>Nuevo Paciente</Button>
+          
           <TablaGestionPacientes />
         </div>
       </div>
