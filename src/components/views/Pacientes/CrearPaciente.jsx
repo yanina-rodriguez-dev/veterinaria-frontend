@@ -83,7 +83,7 @@ const CrearPaciente = () => {
                     <Form.Control
                         type="number"
                         placeholder="Ej: 50"
-                        {...register('precio', {
+                        {...register('telefono', {
                             required: 'El precio del producto es obligatorio',
                             min: {
                                 value: 1,
@@ -104,7 +104,7 @@ const CrearPaciente = () => {
                     <Form.Control
                         type="text"
                         placeholder="Ej: Cafe"
-                        {...register('nombreProducto',
+                        {...register('direccion',
                             {
                                 required: 'El nombre del producto es obligatorio',
                                 minLength: {
