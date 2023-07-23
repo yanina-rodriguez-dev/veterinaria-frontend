@@ -1,11 +1,26 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import login from '../../css/login.css' 
+import login from "../../css/login.css";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const onSubmit = (usuario) => {
+    console.log(usuario);
+  };
+
   return (
     <section className="row d-flex justify-content-center fondoLogin m-0">
-      <Form className="text-center container mx-5 d-flex flex-column col-lg-3 col-md-4 my-5">
+      <Form
+        className="text-center container mx-5 d-flex flex-column col-lg-3 col-md-4 my-5"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <h1 className="titulos">Iniciar sesion</h1>
         <Form.Group className="mb-3 container" controlId="formBasicEmail">
           <Form.Label>Correo electronico</Form.Label>
@@ -19,7 +34,7 @@ const Login = () => {
           <Form.Label>Clave</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
-        
+
         <Button variant="primary" className="mx-5" type="submit">
           Acceder
         </Button>
