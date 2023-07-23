@@ -5,7 +5,7 @@ const ItemPaciente = ({paciente}) => {
     return (
     <tr>
         <td>{paciente.id}</td>
-        <td>{paciente.nombre}</td>
+        <td>{paciente.nombreDueno}</td>
         <td>{paciente.email}</td>
         <td>{paciente.telefono}</td>
         <td>{paciente.direccion}</td>

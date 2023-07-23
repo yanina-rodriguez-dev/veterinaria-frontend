@@ -1,14 +1,44 @@
 {
-    "pacientes": [
-        {
-            "id": 1,
-            "nombreDueno": "Ana",
-            "email": "anisantillan10@gmail.com",
-            "telefono": 3816810178,
-            "direccion": "Rivadavia 1050",
-            "nombrePaciente": "Bianca",
-            "especie": "Perro",
-            "raza": "Ovejero"
-        }
-    ]
+  "pacientes": [
+    {
+      "id": 1,
+      "nombreDueno": "Ana",
+      "email": "anisantillan10@gmail.com",
+      "telefono": 3816810178,
+      "direccion": "Rivadavia 1050",
+      "nombrePaciente": "Bianca",
+      "especie": "Perro",
+      "raza": "Ovejero"
+    },
+    {
+      "nombreDueno": "Yanina",
+      "email": "yani@gmail.com",
+      "telefono": "3816789078",
+      "direccion": "Tafi Viejo",
+      "nombrePaciente": "Toby",
+      "especie": "Perro",
+      "raza": "Caniche",
+      "id": 2
+    },
+    {
+      "nombreDueno": "Maxi",
+      "email": "maxi@gmail.com",
+      "telefono": "3816788877",
+      "direccion": "San Miguel ",
+      "nombrePaciente": "Roco",
+      "especie": "Gato",
+      "raza": "Raza de gato",
+      "id": 3
+    },
+    {
+      "nombreDueno": "Fede",
+      "email": "fede@gmail.com",
+      "telefono": "3814786545",
+      "direccion": "Santiago 145",
+      "nombrePaciente": "Coco",
+      "especie": "Perro",
+      "raza": "Pitbul",
+      "id": 4
+    }
+  ]
 }

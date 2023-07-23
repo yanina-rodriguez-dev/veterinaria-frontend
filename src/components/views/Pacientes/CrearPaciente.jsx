@@ -9,19 +9,19 @@ const CrearPaciente = () => {
         console.log(pacienteNuevo);
         crearPaciente(pacienteNuevo).then((respuesta) => {
             if (respuesta.status === 201) {
-                Swal.fire('Paciente creado', `El paciente ${pacienteNuevo.nombreDueno} fue creado correctamente`, 'success');
+                Swal.fire('Paciente creado', `El paciente ${pacienteNuevo.nombrePaciente} fue creado correctamente`, 'success');
                 reset();
             } else {
-                Swal.fire('Ocurrio un error', `El paciente ${pacienteNuevo.nombreDueno} no pudo ser creado`, 'error');
+                Swal.fire('Ocurrio un error', `El paciente ${pacienteNuevo.nombrePaciente} no pudo ser creado`, 'error');
             }
         })
     }
     return (
         <section className="container mainSection">
-            <h1 className="display-4 mt-5">Nuevo producto</h1>
+            <h1 className="display-4 mt-5">Nuevo Paciente</h1>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
+                <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control
                         type="text"
@@ -45,7 +45,7 @@ const CrearPaciente = () => {
                     </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
+                <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                         type="email"
@@ -81,7 +81,7 @@ const CrearPaciente = () => {
                         {errors.telefono?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
+                <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Dirección</Form.Label>
                     <Form.Control
                         type="text"
@@ -104,7 +104,7 @@ const CrearPaciente = () => {
                         {errors.direccion?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
+                <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Nombre Mascota</Form.Label>
                     <Form.Control
                         type="text"
@@ -127,7 +127,7 @@ const CrearPaciente = () => {
                         {errors.nombrePaciente?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
+                <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Especie</Form.Label>
                     <Form.Control
                         type="text"
@@ -150,7 +150,7 @@ const CrearPaciente = () => {
                         {errors.especie?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
+                <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Raza</Form.Label>
                     <Form.Control
                         type="text"

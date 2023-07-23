@@ -13,6 +13,7 @@ import Marcas from "./components/views/PaginaPrincipal/Marcas";
 import Planes from "./components/views/PaginaPrincipal/Planes";
 import Profesionales from "./components/views/PaginaPrincipal/profesionales";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
             path="/AdmTurnos"
             element={<AdmTurnos></AdmTurnos>}
           ></Route>
+          <Route exact path="/crear-paciente" 
+                element={<CrearPaciente></CrearPaciente>} ></Route>
           <Route
             exact
             path="/Administrador"

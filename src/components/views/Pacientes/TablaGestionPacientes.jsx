@@ -21,9 +21,9 @@ function TablaGestionPacientes() {
     <section>
       <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Pacientes</h1>
-          <Link className="btn btn-primary" to='/admPacientes/crear-paciente'>
+          {/* <Link className="btn btn-primary" to='/admPacientes/crear-paciente'>
             Agregar
-          </Link>
+          </Link> */}
         </div>
       <Table striped bordered size="sm" responsive className='text-center'>
       <thead>
