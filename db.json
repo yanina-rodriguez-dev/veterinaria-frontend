@@ -1,0 +1,15 @@
+{
+    "pacientes": [
+        {
+            "id": 1,
+            "nombrePaciente": "Ana",
+            "apellidoPaciente": "Santillan",
+            "email": "anisantillan10@gmail.com",
+            "telefono": 3816810178,
+            "direccion": "Rivadavia 1050",
+            "nombreMascota": "Bianca",
+            "especie": "Perro",
+            "raza": "Ovejero"
+        }
+    ]
+}
