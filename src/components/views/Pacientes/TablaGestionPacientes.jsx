@@ -1,8 +1,22 @@
 import React from 'react';
-import { TfiPencil, TfiTrash } from 'react-icons/tfi';
+import { useEffect, useState } from "react";
 import { Button, Table } from 'react-bootstrap';
+import { obtenerListaPaciente } from '../../helpers/queries';
+import ItemPaciente from './ItemPaciente';
 
 function TablaGestionPacientes() {
+  const [pacientes, setPacientes] = useState([]);
+
+  useEffect(()=>{
+    obtenerListaPaciente().then((respuesta)=>{
+      if(respuesta){
+        setPacientes(respuesta);
+      }else{
+        Swal.fire('Error', 'Intente realizar esta operación en unos minutos', 'error');
+      }
+    })
+  },[])
+
   return (
     <Table striped bordered size="sm" responsive className='text-center'>
       <thead>
@@ -19,66 +33,9 @@ function TablaGestionPacientes() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Angel</td>
-          <td>Di Maria</td>
-          <td>segundoFrancia@hotmail.com</td>
-          <td>381123123</td>
-          <td>Rosario, Santa Fe, Argentina</td>
-          <td>Toby</td>
-          <td>Perro</td>
-          <td>Labrador</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Angel</td>
-          <td>Di Maria</td>
-          <td>segundoFrancia@hotmail.com</td>
-          <td>381123123</td>
-          <td>Rosario, Santa Fe, Argentina</td>
-          <td>Toby</td>
-          <td>Perro</td>
-          <td>Labrador</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Angel</td>
-          <td>Di Maria</td>
-          <td>segundoFrancia@hotmail.com</td>
-          <td>381123123</td>
-          <td>Rosario, Santa Fe, Argentina</td>
-          <td>Toby</td>
-          <td>Perro</td>
-          <td>Labrador</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Angel</td>
-          <td>Di Maria</td>
-          <td>segundoFrancia@hotmail.com</td>
-          <td>381123123</td>
-          <td>Rosario, Santa Fe, Argentina</td>
-          <td>Toby</td>
-          <td>Perro</td>
-          <td>Labrador</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Angel</td>
-          <td>Di Maria</td>
-          <td>segundoFrancia@hotmail.com</td>
-          <td>381123123</td>
-          <td>Rosario, Santa Fe, Argentina</td>
-          <td>Toby</td>
-          <td>Perro</td>
-          <td>Labrador</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>      
+        {
+          pacientes.map((paciente)=> <ItemPaciente key={paciente.id} paciente={paciente}></ItemPaciente>)
+        }
       </tbody>
     </Table>
   );
