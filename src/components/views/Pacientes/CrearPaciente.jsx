@@ -14,7 +14,7 @@ const CrearPaciente = () => {
                     <Form.Control
                         type="text"
                         placeholder="Ej: Ana"
-                        {...register('nombrePaciente',
+                        {...register('nombreDueno',
                             {
                                 required: 'El nombre del paciente es obligatorio',
                                 minLength: {
@@ -29,32 +29,10 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombrePaciente?.message}
+                        {errors.nombreDueno?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombrePaciente">
-                    <Form.Label>Apellido</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ej: Santillan"
-                        {...register('apellidoPaciente',
-                            {
-                                required: 'El apellido del paciente es obligatorio',
-                                minLength: {
-                                    value: 2,
-                                    message: 'La cantidad minima de carácteres es 2'
-                                },
-                                maxLength: {
-                                    value: 50,
-                                    message: 'La cantidad maxima de carácteres es 50'
-                                },
-                            })
-                        }
-                    />
-                    <Form.Text className="text-danger">
-                        {errors.apellidoPaciente?.message}
-                    </Form.Text>
-                </Form.Group>
+                
                 <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
@@ -119,7 +97,7 @@ const CrearPaciente = () => {
                     <Form.Control
                         type="text"
                         placeholder="Ej: Bianca"
-                        {...register('nombreMascota',
+                        {...register('nombrePaciente',
                             {
                                 required: 'El nombre de la mascota es obligatorio',
                                 minLength: {
@@ -134,7 +112,7 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreMascota?.message}
+                        {errors.nombrePaciente?.message}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formNombrePaciente">

@@ -9,7 +9,6 @@ function TablaGestionPacientes() {
         <tr>
           <th>#</th>
           <th>Nombre</th>
-          <th>Apellido</th>
           <th>Email</th>
           <th>Telefono</th>
           <th>Direccion</th>
