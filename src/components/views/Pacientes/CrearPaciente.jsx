@@ -9,14 +9,14 @@ const CrearPaciente = () => {
             <h1 className="display-4 mt-5">Nuevo producto</h1>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: Ana"
                         {...register('nombrePaciente',
                             {
-                                required: 'El nombre del producto es obligatorio',
+                                required: 'El nombre del paciente es obligatorio',
                                 minLength: {
                                     value: 2,
                                     message: 'La cantidad minima de carácteres es 2'
@@ -29,17 +29,17 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.nombrePaciente?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Apellido</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: Santillan"
                         {...register('apellidoPaciente',
                             {
-                                required: 'El nombre del producto es obligatorio',
+                                required: 'El apellido del paciente es obligatorio',
                                 minLength: {
                                     value: 2,
                                     message: 'La cantidad minima de carácteres es 2'
@@ -52,21 +52,17 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.apellidoPaciente?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
-                        type="text"
-                        placeholder="Ej: Cafe"
+                        type="email"
+                        placeholder="Ej: anisantillan10@gmail.com"
                         {...register('email',
                             {
-                                required: 'El nombre del producto es obligatorio',
-                                minLength: {
-                                    value: 2,
-                                    message: 'La cantidad minima de carácteres es 2'
-                                },
+                                required: 'El email es obligatorio',
                                 maxLength: {
                                     value: 50,
                                     message: 'La cantidad maxima de carácteres es 50'
@@ -75,61 +71,57 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.email?.message}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formPrecio">
                     <Form.Label>Telefono</Form.Label>
                     <Form.Control
                         type="number"
-                        placeholder="Ej: 50"
+                        placeholder="Ej: 3816810178"
                         {...register('telefono', {
-                            required: 'El precio del producto es obligatorio',
-                            min: {
-                                value: 1,
-                                message: 'El precio minimo es $1'
-                            },
-                            max: {
-                                value: 100000,
-                                message: 'El precio maximo es $100000'
-                            },
+                            required: 'El telefono del paciente es obligatorio',
+                            pattern: {
+                                value: /^[0-9]{10}$/, 
+                                message: 'Ingresa un número de teléfono válido (10 dígitos)',
+                            }
                         })}
                     />
                     <Form.Text className="text-danger">
-                        {errors.precioProducto?.message}
+                        {errors.telefono?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Dirección</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: Rivadavia 1050"
                         {...register('direccion',
                             {
-                                required: 'El nombre del producto es obligatorio',
+                                required: 'La dirección del paciente es obligatoria',
                                 minLength: {
-                                    value: 2,
-                                    message: 'La cantidad minima de carácteres es 2'
+                                    value: 5,
+                                    message: 'La cantidad minima de carácteres es 5'
                                 },
                                 maxLength: {
-                                    value: 50,
-                                    message: 'La cantidad maxima de carácteres es 50'
+                                    value: 60,
+                                    message: 'La cantidad maxima de carácteres es 60'
                                 },
                             })
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.direccion?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Nombre Mascota</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: Bianca"
                         {...register('nombreMascota',
                             {
-                                required: 'El nombre del producto es obligatorio',
+                                required: 'El nombre de la mascota es obligatorio',
                                 minLength: {
                                     value: 2,
                                     message: 'La cantidad minima de carácteres es 2'
@@ -142,40 +134,40 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.nombreMascota?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Especie</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: perro"
                         {...register('especie',
                             {
-                                required: 'El nombre del producto es obligatorio',
+                                required: 'La especie es obligatoria',
                                 minLength: {
                                     value: 2,
                                     message: 'La cantidad minima de carácteres es 2'
                                 },
                                 maxLength: {
-                                    value: 50,
-                                    message: 'La cantidad maxima de carácteres es 50'
+                                    value: 30,
+                                    message: 'La cantidad maxima de carácteres es 30'
                                 },
                             })
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.especie?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formNombreProducto">
+                <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Raza</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: ovejero belga"
                         {...register('raza',
                             {
-                                required: 'El nombre del producto es obligatorio',
+                                required: 'La raza es obligatoria',
                                 minLength: {
                                     value: 2,
                                     message: 'La cantidad minima de carácteres es 2'
@@ -188,7 +180,7 @@ const CrearPaciente = () => {
                         }
                     />
                     <Form.Text className="text-danger">
-                        {errors.nombreProducto?.message}
+                        {errors.raza?.message}
                     </Form.Text>
                 </Form.Group>
                 <Button variant="primary" type="submit">
