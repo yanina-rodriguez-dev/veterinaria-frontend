@@ -1,9 +1,21 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { crearPaciente } from "../../helpers/queries";
 
 const CrearPaciente = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const onSubmit = (pacienteNuevo) => {
+        console.log(pacienteNuevo);
+        crearPaciente(pacienteNuevo).then((respuesta) => {
+            if (respuesta.status === 201) {
+                Swal.fire('Paciente creado', `El paciente ${pacienteNuevo.nombreDueno} fue creado correctamente`, 'success');
+                reset();
+            } else {
+                Swal.fire('Ocurrio un error', `El paciente ${pacienteNuevo.nombreDueno} no pudo ser creado`, 'error');
+            }
+        })
+    }
     return (
         <section className="container mainSection">
             <h1 className="display-4 mt-5">Nuevo producto</h1>
@@ -32,7 +44,7 @@ const CrearPaciente = () => {
                         {errors.nombreDueno?.message}
                     </Form.Text>
                 </Form.Group>
-                
+
                 <Form.Group className="mb-3" controlId="formNombrePaciente">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
@@ -60,7 +72,7 @@ const CrearPaciente = () => {
                         {...register('telefono', {
                             required: 'El telefono del paciente es obligatorio',
                             pattern: {
-                                value: /^[0-9]{10}$/, 
+                                value: /^[0-9]{10}$/,
                                 message: 'Ingresa un número de teléfono válido (10 dígitos)',
                             }
                         })}
