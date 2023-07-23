@@ -7,6 +7,8 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import "../../css/Menu.css";
 import { AiOutlineSearch } from 'react-icons/ai';
 import logo from "../../assets/logo.png";
+import { Link, NavLink } from "react-router-dom";
+
 
 function Menu() {
   const expand = "xl";
@@ -16,7 +18,7 @@ function Menu() {
       <Navbar key={expand} expand={expand} className="fondoMenu mb-3">
         <Container fluid className="d-flex justify-space-between">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="fs-6"/>
-          <Navbar.Brand href="#" className="text-center">
+          <Navbar.Brand as={Link} to='/' className="text-center">
            
               <img
                 src={logo}
@@ -39,17 +41,15 @@ function Menu() {
             </Offcanvas.Header>
             <Offcanvas.Body className="fondoMenu">
               <Nav className="justify-content-end flex-grow-1 pe-3 text-center">
-                <Nav.Link href="#action1">Inicio</Nav.Link>
+                <NavLink  end className="nav-item nav-link" to='/'>Inicio</NavLink>
                 <hr />
-                <Nav.Link href="#action1">Mi cuenta</Nav.Link>
+                <NavLink end className="nav-item nav-link" to='/login'>Mi cuenta</NavLink>
                 <hr />
-                <Nav.Link href="#action2">Productos</Nav.Link>
+                <NavLink end className="nav-item nav-link" to='/registro'>Registro</NavLink>
                 <hr />
-                <Nav.Link href="#action2">Servicios</Nav.Link>
+                <NavLink end className="nav-item nav-link" to='/contacto'>Contacto</NavLink>
                 <hr />
-                <Nav.Link href="#action2">Contacto</Nav.Link>
-                <hr />
-                <Nav.Link href="#action2">Nosotros</Nav.Link>
+                <NavLink end className="nav-item nav-link" to='/nosotros'>Nosotros</NavLink>
                 <hr />
                
               </Nav>

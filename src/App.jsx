@@ -7,53 +7,59 @@ import "./App.css";
 import "./Profesionales.css";
 import "./PlanesMarcas.css";
 import "./Profesionales.css";
-    import './css/Registro.css'
-    import Registro from './components/views/Registro';
+import Inicio from "./components/views/Inicio"
+import Contacto from "./components/views/Contacto"
+import Login from "./components/views/Login"
+import './css/Registro.css'
+import Registro from './components/views/Registro';
 import Inicio from "./components/views/Inicio";
 import Administrador from "./components/views/Administrador";
 import Menu from "./components/common/Menu";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
-import Marcas from "./components/views/PaginaPrincipal/Marcas";
-import Planes from "./components/views/PaginaPrincipal/Planes";
-import Profesionales from "./components/views/PaginaPrincipal/profesionales";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter , Route, Routes } from "react-router-dom";
+import Footer from "./components/common/Footer";
 
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Route element={<Menu></Menu>}></Route> */}
+        <Menu></Menu>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route
             exact
-            path="/Profesionales"
-            element={<Profesionales></Profesionales>}
+            path="/login"
+            element={<Login></Login>}
           ></Route>
-          {/* <Route exact path="/Planes" element={<Planes></Planes>}></Route> */}
-          {/* <Route exact path="/Marcas" element={<Marcas></Marcas>}></Route> */}
+
           <Route
             exact
-            path="/AdmPacientes"
+            path="/administrador/admPacientes"
             element={<AdmPacientes></AdmPacientes>}
           ></Route>
           <Route
             exact
-            path="/AdmTurnos"
+            path="/administrador/admTurnos"
             element={<AdmTurnos></AdmTurnos>}
           ></Route>
           <Route
             exact
-            path="/Administrador"
+            path="/administrador"
             element={<Administrador></Administrador>}
           ></Route>
+          <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route exact path="/registro" element={<Registro></Registro>}></Route>
+          {/* <Route  path="*" element={<Error404></Error404>}></Route> */}
         </Routes>
-
+        <Footer></Footer>
       </BrowserRouter>
     </>
   );
 }
 
 export default App;
+
+// json server comando
+// json-server --watch db.json --port 3004
