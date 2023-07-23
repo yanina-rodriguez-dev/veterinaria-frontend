@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import login from "../../css/login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
   const {
@@ -11,10 +12,26 @@ const Login = () => {
     formState: { errors },
     reset,
   } = useForm();
+  const navegacion = useNavigate();
+
   const onSubmit = (usuario) => {
     console.log(usuario);
+    iniciarSesion(usuario).then((respuesta) => {
+      if (respuesta) {
+        console.log("aqui esta todo bien con el usuario");
+        sessionStorage.setItem("usuario", JSON.stringify(respuesta));
+        Swal.fire(
+          "Sesion iniciada con exito!",
+          "Los datos ingresados son correctos.",
+          "success"
+        );
+        reset();
+        navegacion("/administrador");
+      } else {
+        Swal.fire("Error!", "El emal o password son incorrectos.", "error");
+      }
+    });
   };
-
   return (
     <section className="row d-flex justify-content-center fondoLogin m-0">
       <Form
