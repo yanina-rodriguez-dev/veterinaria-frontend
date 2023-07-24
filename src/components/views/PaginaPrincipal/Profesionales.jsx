@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+import '../../../../src/Profesionales.css';
 
 const Profesionales = () => {
     return (

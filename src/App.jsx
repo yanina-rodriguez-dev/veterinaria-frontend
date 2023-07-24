@@ -1,20 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Administrador.css";
 import './App.css'
-import "./Profesionales.css";
+import './AcercaDe.css'
 import "./PlanesMarcas.css";
 import './css/Registro.css'
 import Inicio from "./components/views/Inicio"
 import Contacto from "./components/views/Contacto"
-import Login from "./components/views/Login"
+import Login from "./components/views/Login.jsx"
 import Registro from './components/views/Registro';
-import Administrador from "./components/views/Administrador";
+import Administrador from "./components/views/Administrador.jsx";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
+import AcercaDeNosotros from './components/views/AcercaDeNosotros'
 import { BrowserRouter , Route, Routes } from "react-router-dom";
-
 
 
 function App() {
@@ -47,6 +47,7 @@ function App() {
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/registro" element={<Registro></Registro>}></Route>
+          <Route exact path="/nosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
           {/* <Route  path="*" element={<Error404></Error404>}></Route> */}
         </Routes>
         <Footer></Footer>
