@@ -67,9 +67,9 @@ const Footer = () => {
         
         {/* DATA FISCAL */}
         <div className="row">
-        <article className="text-center my-4">
+        {/* <article className="text-center my-4">
           <img src={dataFiscal} alt="data fiscal-logo" className="me-3" />
-        </article>
+        </article> */}
         <hr />
         <p className="text-center">&copy;2023 Huellitas Center - Todos los derechos reservados</p>
         </div>
