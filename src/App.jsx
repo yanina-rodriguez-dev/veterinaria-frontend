@@ -1,6 +1,6 @@
 import './PlanesMarcas.css'
-import './Error404.css'
-import './AcercaDe.css'
+import Marcas from './components/views/PaginaPrincipal/Marcas'
+import Planes from './components/views/PaginaPrincipal/Planes'
 import "bootstrap/dist/css/bootstrap.min.css";
 import AcercaDeNosotros from './components/views/AcercaDeNosotros'
 
