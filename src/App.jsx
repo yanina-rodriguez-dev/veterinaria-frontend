@@ -15,8 +15,6 @@ import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
 import { BrowserRouter , Route, Routes } from "react-router-dom";
 
-
-
 function App() {
   return (
     <>
