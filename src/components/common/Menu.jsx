@@ -7,11 +7,17 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import "../../css/Menu.css";
 import { AiOutlineSearch } from 'react-icons/ai';
 import logo from "../../assets/logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-
-function Menu() {
+function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const expand = "xl";
+  const navegacion = useNavigate();
+  const cerrarSesion = () => {
+    sessionStorage.removeItem("usuario");
+    setUsuarioLogueado({});
+    navegacion("/")
+  }
+
 
   return (
     <>
@@ -51,7 +57,6 @@ function Menu() {
                 <hr />
                 <NavLink end className="nav-item nav-link" to='/nosotros'>Nosotros</NavLink>
                 <hr />
-               
               </Nav>
               <Form className="d-flex">
                 <Form.Control
