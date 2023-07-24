@@ -6,7 +6,7 @@ import {borrarPaciente, obtenerListaPaciente} from "../../helpers/queries";
 
 
 
-const ItemPaciente = ({paciente}) => {
+const ItemPaciente = ({paciente, setPacientes}) => {
 
     const borrar = () => {
 Swal.fire({

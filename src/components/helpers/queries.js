@@ -26,15 +26,6 @@ export const crearPaciente = async (paciente)=>{
     }
 }
 
-export const obtenerPaciente = async (id)=>{
-    try{
-        const respuesta = await fetch(URL_paciente+'/'+id);
-        const paciente = await respuesta.json();
-        return paciente; 
-    }catch(error){
-        console.log(error);
-    }
-}
 
 export const editarPaciente = async(paciente, id)=>{
     try{
@@ -45,7 +36,7 @@ export const editarPaciente = async(paciente, id)=>{
             },
             body: JSON.stringify(paciente)
         });
-      return respuesta; 
+        return respuesta; 
     }catch(error){
         console.log(error)
     }
@@ -56,8 +47,18 @@ export const borrarPaciente = async(id)=>{
         const respuesta = await fetch(URL_paciente+'/'+id,{
             method: "DELETE"
         });
-      return respuesta; 
+        return respuesta; 
     }catch(error){
         console.log(error)
     }
 }
+
+    export const obtenerPaciente = async (id)=>{
+        try{
+            const respuesta = await fetch(URL_paciente+'/'+id);
+            const paciente = await respuesta.json();
+            return paciente; 
+        }catch(error){
+            console.log(error);
+        }
+    }

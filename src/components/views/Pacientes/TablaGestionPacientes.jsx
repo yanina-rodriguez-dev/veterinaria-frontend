@@ -41,7 +41,7 @@ function TablaGestionPacientes() {
       </thead>
       <tbody>
         {
-          pacientes.map((paciente)=> <ItemPaciente key={paciente.id} paciente={paciente}></ItemPaciente>)
+          pacientes.map((paciente)=> <ItemPaciente key={paciente.id} paciente={paciente} setPacientes={setPacientes}></ItemPaciente>)
         }
       </tbody>
       </Table>
