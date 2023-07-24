@@ -11,9 +11,11 @@ import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
 import Marcas from "./components/views/PaginaPrincipal/Marcas";
 import Planes from "./components/views/PaginaPrincipal/Planes";
+import Contacto from "./components/views/Contacto";
 import Profesionales from "./components/views/PaginaPrincipal/profesionales";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
+import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         {/* <Route element={<Menu></Menu>}></Route> */}
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
+          {/* <Route exact path="/contacto" element={<Contacto></Contacto>}></Route> */}
           <Route
             exact
             path="/Profesionales"
@@ -41,6 +44,8 @@ function App() {
           ></Route>
           <Route exact path="/crear-paciente" 
                 element={<CrearPaciente></CrearPaciente>} ></Route>
+          <Route exact path="/editar-paciente" 
+                element={<EditarPaciente></EditarPaciente>} ></Route>
           <Route
             exact
             path="/Administrador"

@@ -50,13 +50,3 @@ export const editarPaciente = async(paciente, id)=>{
         console.log(error)
     }
 }
-export const borrarPaciente = async(id)=>{
-    try{
-        const respuesta = await fetch(URL_paciente+'/'+id,{
-            method: "DELETE"
-        });
-      return respuesta; // el status de la respuesta 200
-    }catch(error){
-        console.log(error)
-    }
-}
