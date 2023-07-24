@@ -1,0 +1,29 @@
+.carousel {
+max-width: fit-content;
+max-height:fit-content;
+display: flex;
+justify-content: center;
+}
+
+.caption{
+    background: none;
+    padding: 0;
+ overflow: hidden;
+ 
+}
+
+.bg-nosotros{
+    background-color: #4d91cd;
+background-image: linear-gradient(0deg, #4d91cd 0%, #f8e4ca 36%, #ffffff 100%);
+color:#1B4C51;
+}
+
+.btn-background{
+    background-color: #f8e4ca !important;
+    border-color: #1B4C51 ;
+    color:#1B4C51 !important;
+    border: solid;
+}
+
+
+

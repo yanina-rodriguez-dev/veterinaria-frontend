@@ -1,6 +1,9 @@
+import './PlanesMarcas.css'
+import './AcercaDe.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Administrador.css";
 import './App.css'
+import './AcercaDe.css'
 import "./Profesionales.css";
 import "./PlanesMarcas.css";
 import './css/Registro.css'
@@ -13,7 +16,9 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
+import AcercaDeNosotros from './components/views/AcercaDeNosotros'
 import { BrowserRouter , Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
@@ -45,6 +50,7 @@ function App() {
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/registro" element={<Registro></Registro>}></Route>
+          <Route exact path="/acercadenosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
           {/* <Route  path="*" element={<Error404></Error404>}></Route> */}
         </Routes>
         <Footer></Footer>
