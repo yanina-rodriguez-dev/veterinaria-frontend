@@ -30,7 +30,7 @@ const Footer = () => {
         </section>
         </div>
        
-        <div className="text-ligh d-flex row">
+        <div className="text-ligh row">
            {/* ITEMS DEL FOOTER */}
           <article className="mt-5 container col-lg-4 col-md-4 col-sm-12 mx-0">
             <h3 className="mb-4">Nosotros</h3>
@@ -56,23 +56,16 @@ const Footer = () => {
             <Nav.Link>Politica de devolucion</Nav.Link>
             <hr />
           </article>
-          <div className="logoFooter pt-5 col-lg-4 col-md-4">
-            <div className="ps-5 ms-3">
-          <img src={logo} className="logoFooter mt-3" alt="logo del sitio" />
-            </div>
-            <h3 className="text-center mt-3">Amamos lo mismo que vos <FaPaw/></h3>
+          <div className="col-lg-4 col-md-4">
+          <img src={logo} className="logoFooter mt-5" alt="logo del sitio" />
+          <h3 className="text-center mt-3">Amamos lo mismo que vos <FaPaw/></h3>
             
         </div>
         </div>
-        
-        {/* DATA FISCAL */}
-        <div className="row">
-        {/* <article className="text-center my-4">
-          <img src={dataFiscal} alt="data fiscal-logo" className="me-3" />
-        </article> */}
-        <hr />
-        <p className="text-center">&copy;2023 Huellitas Center - Todos los derechos reservados</p>
+        <div className="pt-2 text-center">
+        <p>&copy;2023 Huellitas Center - Todos los derechos reservados</p>
         </div>
+        
       </Container>
     </div>
   );
