@@ -4,10 +4,11 @@ import login from "../../css/login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { iniciarSesion } from "../../helpers/queries";
 import Swal from "sweetalert2";
+import { iniciarSesion } from "../../helpers/queries";
 
-const Login = () => {
+
+const Login = ({ setUsuarioLogueado }) => {
   const {
     register,
     handleSubmit,
