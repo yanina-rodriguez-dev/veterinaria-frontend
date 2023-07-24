@@ -7,7 +7,6 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { iniciarSesion } from "../../helpers/queries";
 
-
 const Login = ({ setUsuarioLogueado }) => {
   const {
     register,
@@ -18,7 +17,6 @@ const Login = ({ setUsuarioLogueado }) => {
   const navegacion = useNavigate();
 
   const onSubmit = (usuario) => {
-    console.log(usuario);
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
