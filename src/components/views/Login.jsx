@@ -21,7 +21,6 @@ const Login = ({ setUsuarioLogueado }) => {
     console.log(usuario);
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
-        console.log("aqui esta todo bien con el usuario");
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
         setUsuarioLogueado(respuesta);
         Swal.fire(
