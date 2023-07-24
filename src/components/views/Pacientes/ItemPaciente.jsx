@@ -12,7 +12,7 @@ const ItemPaciente = ({paciente}) => {
         <td>{paciente.nombrePaciente}</td>
         <td>{paciente.especie}</td>
         <td>{paciente.raza}</td>
-        <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
+        <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button className="bg-danger"><TfiTrash /></Button></td>
     </tr>
 
     );

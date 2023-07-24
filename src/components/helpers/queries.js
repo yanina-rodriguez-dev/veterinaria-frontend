@@ -35,3 +35,28 @@ export const obtenerPaciente = async (id)=>{
         console.log(error);
     }
 }
+
+export const editarPaciente = async(paciente, id)=>{
+    try{
+        const respuesta = await fetch(URL_paciente+'/'+id,{
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(paciente)
+        });
+      return respuesta; // el status de la respuesta 200
+    }catch(error){
+        console.log(error)
+    }
+}
+export const borrarPaciente = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_paciente+'/'+id,{
+            method: "DELETE"
+        });
+      return respuesta; // el status de la respuesta 200
+    }catch(error){
+        console.log(error)
+    }
+}
