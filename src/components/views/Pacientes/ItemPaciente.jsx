@@ -20,7 +20,7 @@ Swal.fire({
     cancelButtonText: 'Cancelar'
 }).then((resultado) =>{
 if (resultado.isConfirmed){
-    borrarPaciente(paciente._id).then((respuesta) =>{
+    borrarPaciente(paciente.id).then((respuesta) =>{
        if (respuesta.status === 200){
            obtenerListaPaciente().then((respuesta)=>{
             if (respuesta)
