@@ -23,6 +23,7 @@ const Login = ({ setUsuarioLogueado }) => {
       if (respuesta) {
         console.log("aqui esta todo bien con el usuario");
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
+        setUsuarioLogueado(respuesta);
         Swal.fire(
           "Sesion iniciada con exito!",
           "Los datos ingresados son correctos.",
