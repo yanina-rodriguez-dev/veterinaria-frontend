@@ -18,10 +18,10 @@ const Inicio = () => {
       {/* <Container> */}
         {/* <Row> */}
           <Planes></Planes>
-          <Opiniones />
           <Marcas></Marcas>
           <Servicios></Servicios>
           <Profesionales></Profesionales>
+          <Opiniones />
         {/* </Row> */}
       {/* </Container> */}
       
