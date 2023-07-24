@@ -57,7 +57,10 @@ const Footer = () => {
             <hr />
           </article>
           <div className="col-lg-4 col-md-4">
-          <img src={logo} className="logoFooter mt-5" alt="logo del sitio" />
+            <Container>
+          <img src={logo} className="logoFooter mt-md-5 mt-lg-0 m-2" alt="logo del sitio" />
+
+            </Container>
           <h3 className="text-center mt-3">Amamos lo mismo que vos <FaPaw/></h3>
             
         </div>

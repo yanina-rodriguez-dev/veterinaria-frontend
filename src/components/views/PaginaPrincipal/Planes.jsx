@@ -25,11 +25,11 @@ const Planes = () => {
         <div className="bg-beige p-2">
       <Row xs={1} md={3} lg={3}  className="g-4">
         <Col>
-          <Card className="box p-2 m-3">
+          <Card className="box p-2 m-3 h-100">
             <Card.Img variant="top" className="img-fluid img-thumbnail rounded-3" src="https://images.unsplash.com/photo-1616493039661-8a63de6ead09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=710&q=80" alt="cachorrito de perro y gatito durmiendo juntos" />
-            <Card.Body>
+            <Card.Body className="d-flex flex-column justify-content-between align-items-center">
             <Card.Title>
-              <h3 className="text-verde f-title fw-bold mt-3">Cuidado Completo Primeros Pasos</h3>
+              <h3 className="text-verde f-title fw-bold">Cuidado Completo Primeros Pasos</h3>
             </Card.Title>
             <br />
             <Card.Text className="text-verde f-text fs-5">
@@ -40,9 +40,9 @@ const Planes = () => {
           </Card>
           </Col>
           <Col>
-          <Card className="box p-2 m-3">
+          <Card className="box p-2 m-3 h-100">
             <Card.Img variant="top" className="img-fluid img-thumbnail rounded-3" src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="perro joven corriendo en el mar" />
-            <Card.Body>
+            <Card.Body className="d-flex flex-column justify-content-between align-items-center">
               <Card.Title>
                 <h3 className="text-verde f-title fw-bold"> Cuidado Completo Madurando</h3>
               </Card.Title>
@@ -50,16 +50,16 @@ const Planes = () => {
               <Card.Text className="text-verde f-text fs-5">
                 Para perros y gatos en crecimiento de 5 a 10 años
               </Card.Text>
-              <Button className="btn-beige mt-2">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Button>
+              <Button className="btn-beige mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Button>
             </Card.Body>
           </Card>
           </Col>
           <Col>
-          <Card className="box p-2 m-3">
+          <Card className="box p-2 m-3 h-100">
             <Card.Img variant="top" className="img-fluid img-thumbnail rounded-3" src="https://images.unsplash.com/photo-1594387992816-65f5d74c1de0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGtpdHRlbiUyMGFuZCUyMHB1cHB5fGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="gato adulto acostado en la cama" />
-            <Card.Body>
+            <Card.Body className="d-flex flex-column justify-content-between align-items-center">
               <Card.Title>
-                <h3 className="text-verde f-title fw-bold mt-3"> Cuidado Completo Plus</h3>
+                <h3 className="text-verde f-title fw-bold"> Cuidado Completo Plus</h3>
               </Card.Title>
               <br />
               <Card.Text className="text-verde f-text fs-5">
