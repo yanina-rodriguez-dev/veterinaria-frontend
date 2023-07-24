@@ -11,21 +11,21 @@ import Profesionales from "./PaginaPrincipal/Profesionales"
 
 const Inicio = () => {
   return (
-    <section>
+    <>
       <div className="container-fluid">
         <Banner />
       </div>
-      <Container>
-        <Row>
+      {/* <Container> */}
+        {/* <Row> */}
           <Planes></Planes>
-          <Opiniones />
           <Marcas></Marcas>
           <Servicios></Servicios>
           <Profesionales></Profesionales>
-        </Row>
-      </Container>
+          <Opiniones />
+        {/* </Row> */}
+      {/* </Container> */}
       
-    </section>
+    </>
   );
 };
 

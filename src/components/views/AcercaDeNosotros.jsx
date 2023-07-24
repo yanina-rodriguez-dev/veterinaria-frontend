@@ -69,11 +69,11 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
         </div>
             <h2 className="f-title mt-5">Nuestro equipo</h2>
             <p className="f-text fs-4">Conoce al equipo experto en tecnologia que hace posible nuestra web</p>
-<Container className="carousel mt-5"> 
+<Container className="carouselNosotros mt-5"> 
     <Carousel activeIndex={index} onSelect={handleSelect} showcontrolstouch="true" pause={"hover"}>
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel"
+          className="d-block w-100 carouselNosotros"
           src={perfilyani}
           alt="Yanina Rodriguez"
         />
@@ -84,7 +84,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel"
+          className="d-block w-100 carouselNosotros"
           src={perfilazul}
           alt="Azul De Pol"
         />
@@ -97,7 +97,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       <Carousel.Item>
         <img
 
-          className="d-block w-100 carousel"
+          className="d-block w-100 carouselNosotros"
           src={perfilfede}
           alt="Federico Rueda Leal"
         />
@@ -109,7 +109,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>        
-      <img src={perfilana} alt="Avatar" className="d-block w-100 carousel" />
+      <img src={perfilana} alt="Avatar" className="d-block w-100 carouselNosotros" />
         <Carousel.Caption className="caption">
           <h3 className="text-dark bg-beige">Ana Santillan</h3>
           <p className="text-dark bg-beige">
@@ -119,7 +119,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel"
+          className="d-block w-100 carouselNosotros"
           src={perfilmaxi}
           alt="Maxi Vega"
         />
