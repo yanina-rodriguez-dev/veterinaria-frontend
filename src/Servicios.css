@@ -30,7 +30,7 @@ body {
     background-color: #F8E4CA!important;
 }
 
-.contenedor {
+.contenedorServicios {
     width: 100%;
     height: 300px;
     margin: 30px auto;
@@ -48,7 +48,7 @@ body {
     transition: transform .3s;
 }
 
-.imagen {
+.imagenServicios {
     width: 380px;
     height: 250px;
     object-fit: cover;
@@ -62,7 +62,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.imagen:hover {
+.imagenServicios:hover {
     filter: saturate(100%);
     transition: 350ms;
     width: 430px;
@@ -70,14 +70,14 @@ body {
 }
 
 @media all and (max-width:767px) {
-    .imagen {
+    .imagenServicios {
         width: 260px;
         height: 320px;
         object-position: center;
         transition: .3s;
     }
 
-    .imagen:hover {
+    .imagenServicios:hover {
         filter: saturate(100%);
         transition: 350ms;
         width: 300px;
@@ -86,14 +86,14 @@ body {
 }
 
 @media all and (min-width:768px) and (max-width:991px) {
-    .imagen {
+    .imagenServicios {
         width: 330px;
         height: 270px;
         object-position: center;
         transition: .3s;
     }
 
-    .imagen:hover {
+    .imagenServicios:hover {
         filter: saturate(100%);
         transition: 300ms;
         width: 390px;

@@ -15,7 +15,7 @@ const Inicio = () => {
       <div className="container-fluid">
         <Banner />
       </div>
-      <Container>
+      {/* <Container> */}
         <Row>
           <Planes></Planes>
           <Opiniones />
@@ -23,7 +23,7 @@ const Inicio = () => {
           <Servicios></Servicios>
           <Profesionales></Profesionales>
         </Row>
-      </Container>
+      {/* </Container> */}
       
     </section>
   );
