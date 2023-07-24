@@ -39,12 +39,6 @@
       "especie": "Perro",
       "raza": "Pitbul",
       "id": 4
-    },
-    {
-      "nombreUsuario": "admin",
-      "email": "admin@rollingcode.com",
-      "password": "123456aA",
-      "id": 5
     }
   ]
 }

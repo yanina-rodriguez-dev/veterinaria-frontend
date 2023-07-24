@@ -45,7 +45,18 @@ export const editarPaciente = async(paciente, id)=>{
             },
             body: JSON.stringify(paciente)
         });
-      return respuesta; // el status de la respuesta 200
+      return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}
+
+export const borrarPaciente = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_paciente+'/'+id,{
+            method: "DELETE"
+        });
+      return respuesta; 
     }catch(error){
         console.log(error)
     }
