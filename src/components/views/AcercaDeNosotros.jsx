@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import {Button, Carousel, Collapse, Container} from 'react-bootstrap';
 import React from 'react';
+import perfilfede from '../../assets/perfil-fede.jpg'
+import perfilana from '../../assets/perfil-ana.jpg'
+import perfilazul from '../../assets/perfil-azul.png'
+import perfilmaxi from '../../assets/perfil-maxi.jpg'
+import perfilyani from '../../assets/perfil-yani.jpeg'
 
 const AcercaDeNosotros = () => {
     const [index, setIndex] = useState(0);
@@ -69,7 +74,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       <Carousel.Item>
         <img
           className="d-block w-100 carousel"
-          src="https://nesflismovies.netlify.app/assets/aboutusimg/integrantes/perfil-Yani.jpeg"
+          src={perfilyani}
           alt="Yanina Rodriguez"
         />
         <Carousel.Caption className="caption">
@@ -80,7 +85,7 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       <Carousel.Item>
         <img
           className="d-block w-100 carousel"
-          src='https://trello.com/1/cards/64b330ed817877cd701c5264/attachments/64b9197efd57275413462389/previews/64b9197ffd572754134624f4/download/image.png'
+          src={perfilazul}
           alt="Azul De Pol"
         />
         <Carousel.Caption className="caption rounded-5">
@@ -91,9 +96,9 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </Carousel.Item>
       <Carousel.Item>
         <img
-        style={{maxHeight:900}}
+
           className="d-block w-100 carousel"
-          src="https://avatars.githubusercontent.com/u/107441302?v=4"
+          src={perfilfede}
           alt="Federico Rueda Leal"
         />
         <Carousel.Caption className="caption">
@@ -103,13 +108,8 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-         style={{maxHeight:400, maxWidth:500}}
-         className="d-block w-100 carousel"
-         src="https://helphome.netlify.app/img/avatar4A.png"
-          alt="Ana Santillan"
-        />
+      <Carousel.Item>        
+      <img src={perfilana} alt="Avatar" className="d-block w-100 carousel" />
         <Carousel.Caption className="caption">
           <h3 className="text-dark bg-beige">Ana Santillan</h3>
           <p className="text-dark bg-beige">
@@ -119,9 +119,8 @@ Por eso nuestro equipo esta continuamente buscando mejorar sus habilidades.
       </Carousel.Item>
       <Carousel.Item>
         <img
-          style={{maxHeight:400, maxWidth:500}}
           className="d-block w-100 carousel"
-          src="https://trello.com/1/cards/64b330ed817877cd701c5264/attachments/64b9a680aee23f9d4760fed8/previews/64b9a681aee23f9d4760ffcd/download/Maxi.jpeg.jpg"
+          src={perfilmaxi}
           alt="Maxi Vega"
         />
         <Carousel.Caption className="caption">
