@@ -1,16 +1,6 @@
 {
   "pacientes": [
     {
-      "id": 1,
-      "nombreDueno": "Ana",
-      "email": "anisantillan10@gmail.com",
-      "telefono": 3816810178,
-      "direccion": "Rivadavia 1050",
-      "nombrePaciente": "Bianca",
-      "especie": "Perro",
-      "raza": "Ovejero"
-    },
-    {
       "nombreDueno": "Yanina",
       "email": "yani@gmail.com",
       "telefono": "3816789078",
