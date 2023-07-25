@@ -63,7 +63,7 @@ const EditarUsuario = () => {
 
   return (
     <section className="container mainSection">
-      <h1 className="display-4 mt-5">Editar paciente</h1>
+      <h1 className="display-4 mt-5">Editar Usuario</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formEditarNombreUsuario">

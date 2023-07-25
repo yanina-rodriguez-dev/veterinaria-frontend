@@ -4,6 +4,7 @@ import '../../css/Administrador.css';
 import Button from 'react-bootstrap/Button';
 import { Col, Container, Row } from 'react-bootstrap';
 import TablaGestionUsuarios from './Usuarios/TablaGestionUsuarios';
+import { Link } from 'react-router-dom';
 
 const AdmUsuarios = () => {
   return (
@@ -16,8 +17,10 @@ const AdmUsuarios = () => {
         <Col xs={12} md={9}>
           <div>
             <h2>Administrar Usuarios:</h2>
+            
             <hr />
             <p>Gestiona los Usuarios:</p>
+            <Link to={"/registro"} className="btn btn-success" >Nuevo Usuario</Link>
           </div>
           
           <TablaGestionUsuarios />
