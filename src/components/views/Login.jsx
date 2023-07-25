@@ -7,7 +7,6 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { iniciarSesion } from "../helpers/queries";
 
-
 const Login = ({ setUsuarioLogueado }) => {
   const {
     register,
@@ -30,14 +29,15 @@ const Login = ({ setUsuarioLogueado }) => {
           );
           reset();
           navegacion("/administrador");
-        } else{
+        } else {
+          setUsuarioLogueado(respuesta);
           Swal.fire(
             `Sesion iniciada con exito! `,
             `Bienvenido ${respuesta.nombreUsuario}!`,
             "success"
           );
           reset();
-          navegacion("/")
+          navegacion("/");
         }
       } else {
         Swal.fire("Error!", "El emal o password son incorrectos.", "error");
@@ -60,7 +60,7 @@ const Login = ({ setUsuarioLogueado }) => {
               required: "El email es un dato obligatorio",
               pattern: {
                 value:
-                  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=? ^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a -z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
                 message:
                   "El email debe tener el siguiente formato: 'mail@dominio.com'",
               },

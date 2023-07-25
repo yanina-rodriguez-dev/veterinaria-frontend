@@ -64,24 +64,34 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                 </NavLink>
                 <hr />
                 {usuarioLogueado.nombreUsuario ? (
-                  <>
-                    <hr />
-                    <NavLink
-                      end
-                      className="nav-item nav-link"
-                      to="/Administrador"
-                    >
-                      Administrador
-                    </NavLink>
-                    <hr />
-                    <Button variant="info" onClick={cerrarSesion}>
-                      LogOut
-                    </Button>
-                  </>
+                  usuarioLogueado.esAdmin ? (
+                    <>
+                      <hr />
+                      <NavLink
+                        end
+                        className="nav-item nav-link"
+                        to="/Administrador"
+                      >
+                        Administrador
+                      </NavLink>
+                      <hr />
+                      <Button variant="info" onClick={cerrarSesion}>
+                        LogOut
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Button variant="info" onClick={cerrarSesion}>
+                        LogOut
+                      </Button>
+                    </>
+                  )
                 ) : (
-                  <NavLink end className="nav-item nav-link" to="/Login">
-                    Mi cuenta
-                  </NavLink>
+                  <>
+                    <NavLink end className="nav-item nav-link" to="/Login">
+                      Mi cuenta
+                    </NavLink>
+                  </>
                 )}
               </Nav>
               <Form className="d-flex">
