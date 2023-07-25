@@ -1,19 +1,26 @@
-import React from 'react';
-import { Row } from 'react-bootstrap';
-import Planes from './PaginaPrincipal/Planes';
-import Marcas from './PaginaPrincipal/Marcas';
+import Banner from "./paginaPrincipal/Banner";
+import Opiniones from "./paginaPrincipal/Opiniones";
+import "./paginaPrincipal/banner.css";
+import "./paginaPrincipal/opiniones.css";
+import Planes from "./PaginaPrincipal/Planes";
+import Marcas from "./PaginaPrincipal/Marcas.jsx";
+import Servicios from "./PaginaPrincipal/Servicios";
+import Profesionales from "./PaginaPrincipal/Profesionales";
+import { Container } from "react-bootstrap";
 
 const Inicio = () => {
-    return (
-      <section>
-        <Container>
-            <Row>
-                <Planes></Planes>
-                <Marcas></Marcas>
-            </Row>
-        </Container>
-      </section>
-    );
+  return (
+    <>
+      <Container fluid>
+        <Banner />
+      </Container>
+      <Planes></Planes>
+      <Profesionales />
+      <Servicios />
+      <Opiniones />
+      <Marcas></Marcas>
+    </>
+  );
 };
 
 export default Inicio;
