@@ -9,7 +9,11 @@ const Registro = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (nuevoUsuario) => {};
+  const onSubmit = (nuevoUsuario) => {
+    console.log(nuevoUsuario)
+    reset();
+  };
+
   return (
     <div className="mt-5 mainSection">
       <h3 className="text-center titulos">Registro de Usuarios</h3>
@@ -49,7 +53,7 @@ const Registro = () => {
                 })}
               />
               <Form.Text className="text-danger">
-              {errors.email?.message}
+                {errors.email?.message}
               </Form.Text>
             </Form.Group>
             <Form.Group className="mb-2">
@@ -59,9 +63,7 @@ const Registro = () => {
                 placeholder="Ingrese su DNI"
                 maxLength={30}
                 minLength={7}
-                {...register('El DNI es un campo requerido')
-
-                }
+                {...register("El DNI es un campo requerido")}
               />
             </Form.Group>
             <Form.Group className="mb-2">
