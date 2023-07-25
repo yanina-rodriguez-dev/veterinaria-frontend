@@ -31,21 +31,37 @@
       "id": 4
     }
   ],
-  "turnos": [
-    {
-      "id": 1,
-      "fecha": "23-07-2022 ",
-      "hora": " 09:00 ",
-      "motivoConsulta": "General",
-      "pacienteId": 1
-    }
-  ],
+  "turnos": [],
   "usuarios": [
     {
       "id": 1,
-      "nombreUsuario": "admin",
+      "nombreUsuario": "ADMINFIJO",
       "email": "admin@huellitascenter.com",
-      "password": "Huellita123"
+      "password": "Huellita123",
+      "telefono": "3814992483",
+      "dni": "12345678",
+      "direccion": "capital",
+      "esAdmin": true
+    },
+    {
+      "id": 2,
+      "nombreUsuario": "nombreCliente1",
+      "email": "cliente@huellitascenter.com",
+      "password": "Cliente123",
+      "direccion": "capital",
+      "telefono": "123456789",
+      "dni": "12345678",
+      "esAdmin": false
+    },
+    {
+      "nombreUsuario": "MaxiVega",
+      "direccion": "san martin 1051",
+      "email": "maximilianoVega600@gmail.com",
+      "dni": "44186712",
+      "telefono": "3815881372",
+      "password": "Huellita123",
+      "esAdmin": false,
+      "id": 3
     }
   ]
 }

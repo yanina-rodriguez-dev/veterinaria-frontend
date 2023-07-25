@@ -22,7 +22,7 @@ export const iniciarSesion = async (usuario) => {
     }
   };
     
-
+// Solicitudes GET
 
 export const obtenerListaPaciente = async ()=>{
     try{
@@ -33,6 +33,17 @@ export const obtenerListaPaciente = async ()=>{
         console.log(error);
     }
 }
+export const obtenerListaUsuarios = async ()=>{
+    try{
+        const respuesta = await fetch(URL_usuario);
+        const listaUsuarios = await respuesta.json();
+        return listaUsuarios;
+    }catch(error){
+        console.log(error);
+    }
+}
+
+// Solicitudes POST
 
 export const crearPaciente = async (paciente)=>{
     try{
@@ -44,12 +55,28 @@ export const crearPaciente = async (paciente)=>{
                 },
                 body: JSON.stringify(paciente)
             });
-        return respuesta; // el status de la respuesta es 201
+        return respuesta;
+    }catch(error){
+        console.log(error);
+    }
+}
+export const crearUsuario = async (usuario)=>{
+    try{
+        const respuesta = await fetch(URL_usuario,
+            {
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(usuario)
+            });
+        return respuesta;
     }catch(error){
         console.log(error);
     }
 }
 
+// Solicitudes PUT
 
 export const editarPaciente = async(paciente, id)=>{
     try{
@@ -66,6 +93,24 @@ export const editarPaciente = async(paciente, id)=>{
     }
 }
 
+export const editarUsuario = async(usuario, id)=>{
+    try{
+        const respuesta = await fetch(URL_usuario+'/'+id,{
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(usuario)
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}
+
+// Solicitudes DELETE
+
+
 export const borrarPaciente = async(id)=>{
     try{
         const respuesta = await fetch(URL_paciente+'/'+id,{
@@ -76,12 +121,34 @@ export const borrarPaciente = async(id)=>{
         console.log(error)
     }
 }
+export const borrarUsuario = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_usuario+'/'+id,{
+            method: "DELETE"
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}
+
+// Solicitudes GET por ID
 
     export const obtenerPaciente = async (id)=>{
         try{
             const respuesta = await fetch(URL_paciente+'/'+id);
             const paciente = await respuesta.json();
             return paciente; 
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    export const obtenerUsuario = async (id)=>{
+        try{
+            const respuesta = await fetch(URL_usuario+'/'+id);
+            const usuario = await respuesta.json();
+            return usuario;
         }catch(error){
             console.log(error);
         }

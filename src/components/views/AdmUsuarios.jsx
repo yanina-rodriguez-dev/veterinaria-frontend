@@ -1,11 +1,12 @@
 import React from 'react';
-import TablaGestionPacientes from './Pacientes/TablaGestionPacientes';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
+import Button from 'react-bootstrap/Button';
 import { Col, Container, Row } from 'react-bootstrap';
+import TablaGestionUsuarios from './Usuarios/TablaGestionUsuarios';
 import { Link } from 'react-router-dom';
 
-const AdmPacientes = () => {
+const AdmUsuarios = () => {
   return (
     <>
     <Container fluid className='text-center'>
@@ -15,13 +16,14 @@ const AdmPacientes = () => {
         </Col>
         <Col xs={12} md={9}>
           <div>
-            <h2>Administrar Pacientes:</h2>
+            <h2>Administrar Usuarios:</h2>
+            
             <hr />
-            <p>Gestiona los pacientes:</p>
-            <Link to={"/administrador/admpacientes/crear-paciente"} className="btn btn-success" >Nuevo Paciente</Link>
+            <p>Gestiona los Usuarios:</p>
+            <Link to={"/registro"} className="btn btn-success" >Nuevo Usuario</Link>
           </div>
           
-          <TablaGestionPacientes />
+          <TablaGestionUsuarios />
         </Col>
       </Row>
     </Container>
@@ -29,4 +31,4 @@ const AdmPacientes = () => {
   );
 };
 
-export default AdmPacientes;
+export default AdmUsuarios;

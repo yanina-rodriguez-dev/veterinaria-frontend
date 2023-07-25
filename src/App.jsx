@@ -10,13 +10,23 @@ import Inicio from "./components/views/Inicio";
 import Contacto from "./components/views/Contacto";
 import Login from "./components/views/Login.jsx";
 import Registro from "./components/views/Registro";
+import Administrador from "./components/views/Administrador.jsx";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
+import AdmTurnos from "./components/views/AdmTurnos";
+import AdmPacientes from "./components/views/AdmPacientes";
+import Marcas from "./components/views/PaginaPrincipal/Marcas";
+import Planes from "./components/views/PaginaPrincipal/Planes";
+import Profesionales from "./components/views/PaginaPrincipal/profesionales";
+import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
+import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RutasProtegidas from "./routes/RutasProtegidas";
 import RutasAdministrador from "./routes/RutasAdministrador";
+import AdmUsuarios from "./components/views/admUsuarios";
+import EditarUsuario from "./components/views/Usuarios/EditarUsuario";
 
 function App() {
   const usuarioSessionStorage =
