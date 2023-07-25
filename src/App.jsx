@@ -52,9 +52,7 @@ function App() {
               element={<AdmTurnos></AdmTurnos>}
             ></Route>
             <Route exact path="/crear-turno/:id"
-                  element={<CrearTurno></CrearTurno>} ></Route>
-            <Route exact path="/editar-turno/:id" 
-                  element={<EditarPaciente></EditarPaciente>} ></Route>
+                  element={<CrearTurno></CrearTurno>} ></Route>            
           <Route
             exact
             path="/administrador/admPacientes"

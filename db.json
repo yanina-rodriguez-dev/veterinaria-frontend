@@ -37,9 +37,45 @@
       "detalleCita": "fiebreasda",
       "nombreVeterinario": "messi",
       "nombreMascota": "lucio",
-      "hora": "10:50",
+      "hora": "11:30",
       "fecha": "2024-06-15",
       "id": 1
+    },
+    {
+      "nombreDueno": "fede",
+      "detalleCita": "fiebreasda",
+      "nombreVeterinario": "messi",
+      "nombreMascota": "lucio",
+      "hora": "00:30",
+      "fecha": "2024-06-15",
+      "id": 2
+    },
+    {
+      "nombreDueno": "Di Maria",
+      "detalleCita": "Es muy crack y hace goles",
+      "nombreVeterinario": "Messi",
+      "nombreMascota": "Hulk",
+      "hora": "13:30",
+      "fecha": "2024-05-06",
+      "id": 3
+    },
+    {
+      "nombreDueno": "Otamendi",
+      "detalleCita": "Genio de la defensa",
+      "nombreVeterinario": "Messi",
+      "nombreMascota": "Ironman",
+      "hora": "14:40",
+      "fecha": "2024-05-19",
+      "id": 4
+    },
+    {
+      "nombreDueno": "Scaloni",
+      "detalleCita": "El mejor dt del mundo",
+      "nombreVeterinario": "Messi",
+      "nombreMascota": "Mbappe",
+      "hora": "16:30",
+      "fecha": "2024-08-27",
+      "id": 5
     }
   ],
   "usuarios": [

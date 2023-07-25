@@ -111,12 +111,11 @@ export const obtenerListaTurnos = async () => {
       console.log(error);
     }
   };
-  export const borrarTurno = async (id) => {
+ export const obtenerTurno = async (id) => {
     try {
-      const respuesta = await fetch(URL_turno + '/' + id, {
-        method: "DELETE"
-      });
-      return respuesta;
+      const respuesta = await fetch(URL_turno + '/' + id); // Asegúrate de tener la URL_turno definida en queries.js
+      const turno = await respuesta.json();
+      return turno;
     } catch (error) {
       console.log(error);
     }

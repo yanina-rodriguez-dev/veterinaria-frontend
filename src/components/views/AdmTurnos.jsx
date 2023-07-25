@@ -19,7 +19,7 @@ const AdmTurnos = () => {
             <hr />
             <p>Gestiona los turnos:</p>
           </div>
-          <Button variant="dark" className='m-2'>Nuevo Turno</Button>
+          <Button variant="dark" className='m-2' href='/crear-turno/:id'>Nuevo Turno</Button>
           <TablaGestionTurnos />
         </Col>
       </Row>
