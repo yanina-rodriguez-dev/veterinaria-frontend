@@ -2,7 +2,6 @@ import React from 'react';
 import TablaGestionPacientes from './Pacientes/TablaGestionPacientes';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
-import Button from 'react-bootstrap/Button';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const AdmPacientes = () => {

@@ -1,5 +1,6 @@
-import { Card, Button, Col, Row, Container } from "react-bootstrap";
+import { Card, Col, Row, Container } from "react-bootstrap";
 import { FaPaw } from "react-icons/fa"; 
+import { Link } from "react-router-dom";
 
 const Planes = () => {
   return (
@@ -35,7 +36,7 @@ const Planes = () => {
             <Card.Text className="text-verde f-text fs-5">
               Para cachorros y gatitos de 0 a 5 años.
             </Card.Text>
-            <Button className="btn-beige mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/> </Button>
+            <Link to='/contacto'className="btn btn-primary mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/> </Link>
             </Card.Body>
           </Card>
           </Col>
@@ -50,7 +51,7 @@ const Planes = () => {
               <Card.Text className="text-verde f-text fs-5">
                 Para perros y gatos en crecimiento de 5 a 10 años
               </Card.Text>
-              <Button className="btn-beige mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Button>
+              <Link to='/contacto' className="btn btn-primary mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Link>
             </Card.Body>
           </Card>
           </Col>
@@ -65,7 +66,7 @@ const Planes = () => {
               <Card.Text className="text-verde f-text fs-5">
                 Para perros y gatos adultos de más de 10 años.
               </Card.Text>
-              <Button className="btn-beige mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Button>
+              <Link  to='/contacto' className="btn btn-primary mt-3">Saber más <FaPaw style={{ transform: 'rotate(30deg)' }}/></Link>
             </Card.Body>
           </Card>
         </Col>

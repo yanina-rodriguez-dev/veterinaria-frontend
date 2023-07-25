@@ -23,6 +23,8 @@ import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RutasProtegidas from "./routes/RutasProtegidas";
+import RutasAdministrador from "./routes/RutasAdministrador";
 import AdmUsuarios from "./components/views/admUsuarios";
 import EditarUsuario from "./components/views/Usuarios/EditarUsuario";
 
@@ -46,41 +48,13 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
-
           <Route
-            exact
-            path="/administrador/admPacientes"
-            element={<AdmPacientes></AdmPacientes>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/admTurnos"
-            element={<AdmTurnos></AdmTurnos>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/admUsuarios"
-            element={<AdmUsuarios/>}
-          ></Route>
-          <Route
-            exact
-            path="/crear-paciente"
-            element={<CrearPaciente></CrearPaciente>}
-          ></Route>
-          <Route
-            exact
-            path="/editar-paciente/:id"
-            element={<EditarPaciente></EditarPaciente>}
-          ></Route>
-          <Route
-            exact
-            path="/editar-usuario/:id"
-            element={<EditarUsuario></EditarUsuario>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador"
-            element={<Administrador></Administrador>}
+            path="/administrador/*"
+            element={
+              <RutasProtegidas>
+                <RutasAdministrador></RutasAdministrador>
+              </RutasProtegidas>
+            }
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/registro" element={<Registro></Registro>}></Route>
