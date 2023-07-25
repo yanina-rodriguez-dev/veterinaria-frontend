@@ -22,12 +22,12 @@ const RutasAdministrador = () => {
         ></Route> */}
         <Route
           exact
-          path="/admpacientes"
+          path="administrador/admpacientes/"
           element={<AdmPacientes></AdmPacientes>}
         ></Route>
         <Route
           exact
-          path="/admturnos"
+          path="administrador/admturnos"
           element={<AdmTurnos></AdmTurnos>}
         ></Route>
         <Route
