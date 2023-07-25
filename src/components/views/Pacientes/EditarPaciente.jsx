@@ -40,7 +40,7 @@ const EditarPaciente = () => {
           "success"
         );
         reset();
-        navegacion("/AdmPacientes");
+        navegacion("/administrador/AdmPacientes");
       } else {
         Swal.fire(
           "Ocurrió un error",

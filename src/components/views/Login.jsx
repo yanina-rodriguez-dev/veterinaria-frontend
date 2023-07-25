@@ -5,7 +5,8 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
-import { iniciarSesion } from "../../helpers/queries";
+import { iniciarSesion } from "../helpers/queries";
+
 
 const Login = ({ setUsuarioLogueado }) => {
   const {

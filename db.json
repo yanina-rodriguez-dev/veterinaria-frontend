@@ -4,7 +4,7 @@
       "nombreDueno": "Yanina",
       "email": "yani@gmail.com",
       "telefono": "3816789078",
-      "direccion": "Tafi Viejo",
+      "direccion": "Capital",
       "nombrePaciente": "Toby",
       "especie": "Perro",
       "raza": "Caniche",
@@ -16,7 +16,7 @@
       "telefono": "3816788877",
       "direccion": "San Miguel ",
       "nombrePaciente": "Roco",
-      "especie": "Gato",
+      "especie": "Perro",
       "raza": "Raza de gato",
       "id": 3
     },
