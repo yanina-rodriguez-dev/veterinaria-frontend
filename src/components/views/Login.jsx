@@ -21,14 +21,24 @@ const Login = ({ setUsuarioLogueado }) => {
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
-        setUsuarioLogueado(respuesta);
-        Swal.fire(
-          "Sesion iniciada con exito!",
-          "Los datos ingresados son correctos.",
-          "success"
-        );
-        reset();
-        navegacion("/administrador");
+        if (respuesta.esAdmin) {
+          setUsuarioLogueado(respuesta);
+          Swal.fire(
+            "Sesion administrador iniciada con exito!",
+            "Los datos ingresados son correctos.",
+            "success"
+          );
+          reset();
+          navegacion("/administrador");
+        } else{
+          Swal.fire(
+            `Sesion iniciada con exito! `,
+            `Bienvenido ${respuesta.nombreUsuario}!`,
+            "success"
+          );
+          reset();
+          navegacion("/")
+        }
       } else {
         Swal.fire("Error!", "El emal o password son incorrectos.", "error");
       }
