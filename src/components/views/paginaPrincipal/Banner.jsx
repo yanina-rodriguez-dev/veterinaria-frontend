@@ -1,8 +1,9 @@
 // import React from 'react'
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 // import "./banner.css";
 import { FaPaw } from "react-icons/fa";
 import { FaDog, FaCat, FaKiwiBird } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -23,9 +24,9 @@ const Banner = () => {
             Donde el cuidado excepcional y <br className="d-none d-md-block" />{" "}
             el cariño incondicional se encuentran!
           </span>
-          <Button className="btn btn-lg my-4">
+          <Link to='/contacto' className="btn btn-primary btn-lg my-4">
             Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
-          </Button>
+          </Link>
         </aside>
       </section>
       <Row className="mb-5">
