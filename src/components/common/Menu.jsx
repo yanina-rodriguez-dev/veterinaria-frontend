@@ -5,25 +5,33 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../../css/Menu.css";
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch } from "react-icons/ai";
 import logo from "../../assets/logo.png";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-function Menu() {
+function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const expand = "xl";
+  const navegacion = useNavigate();
+  const cerrarSesion = () => {
+    sessionStorage.removeItem("usuario");
+    setUsuarioLogueado({});
+    navegacion("/");
+  };
 
   return (
     <>
       <Navbar key={expand} expand={expand} className="fondoMenu mb-3">
         <Container fluid className="d-flex justify-space-between">
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="fs-6"/>
-          <Navbar.Brand href="#" className="text-center">
-           
-              <img
-                src={logo}
-                className="logoFooter logoSitio"
-                alt="logo del sitio"
-              />
-           
+          <Navbar.Toggle
+            aria-controls={`offcanvasNavbar-expand-${expand}`}
+            className="fs-6"
+          />
+          <Navbar.Brand as={Link} to="/" className="text-center">
+            <img
+              src={logo}
+              className="logoFooter logoSitio"
+              alt="logo del sitio"
+            />
           </Navbar.Brand>
 
           <Navbar.Offcanvas
@@ -34,24 +42,47 @@ function Menu() {
           >
             <Offcanvas.Header closeButton className="fondoMenu">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-               Huellitas Center
+                Huellitas Center
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="fondoMenu">
               <Nav className="justify-content-end flex-grow-1 pe-3 text-center">
-                <Nav.Link href="#action1">Inicio</Nav.Link>
+                <NavLink end className="nav-item nav-link" to="/">
+                  Inicio
+                </NavLink>
                 <hr />
-                <Nav.Link href="#action1">Mi cuenta</Nav.Link>
+                <NavLink end className="nav-item nav-link" to="/registro">
+                  Registro
+                </NavLink>
                 <hr />
-                <Nav.Link href="#action2">Productos</Nav.Link>
+                <NavLink end className="nav-item nav-link" to="/contacto">
+                  Contacto
+                </NavLink>
                 <hr />
-                <Nav.Link href="#action2">Servicios</Nav.Link>
+                <NavLink end className="nav-item nav-link" to="/nosotros">
+                  Nosotros
+                </NavLink>
                 <hr />
-                <Nav.Link href="#action2">Contacto</Nav.Link>
-                <hr />
-                <Nav.Link href="#action2">Nosotros</Nav.Link>
-                <hr />
-               
+                {usuarioLogueado.nombreUsuario ? (
+                  <>
+                    <hr />
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/Administrador"
+                    >
+                      Administrador
+                    </NavLink>
+                    <hr />
+                    <Button variant="info" onClick={cerrarSesion}>
+                      LogOut
+                    </Button>
+                  </>
+                ) : (
+                  <NavLink end className="nav-item nav-link" to="/Login">
+                    Mi cuenta
+                  </NavLink>
+                )}
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -61,7 +92,7 @@ function Menu() {
                   aria-label="Search"
                 />
                 <Button variant="dark">
-                  <AiOutlineSearch className="text-light"/>
+                  <AiOutlineSearch className="text-light" />
                 </Button>
               </Form>
             </Offcanvas.Body>

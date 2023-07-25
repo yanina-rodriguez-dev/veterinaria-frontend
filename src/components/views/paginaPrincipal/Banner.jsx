@@ -7,7 +7,7 @@ import { FaDog, FaCat, FaKiwiBird } from "react-icons/fa";
 const Banner = () => {
   return (
     <>
-      <section className="bannerContainer my-5 text-light">
+      <section className="bannerContainer mb-5 text-light">
         <aside>
           <img
             className="img-fluid d-md-none"
@@ -15,11 +15,11 @@ const Banner = () => {
             alt="Imagen banner gatito"
           />
         </aside>
-        <aside className=" mt-lg-5 ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-center text-center text-md-start widthBanner">
-          <h1 className="fs-1 mb-md-4 mt-2 mt-md-0 mx-2 mx-md-0">
+        <aside className="ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-center text-center text-md-start widthBanner">
+          <h1 className="fs-1 mt-md-5 mt-2 mt-md-0 mx-2 mx-md-0 fw-bolder">
             Bienvenidos a <br className="d-none d-md-block" /> Huellitas Center!
           </h1>
-          <span className="fs-5 mx-2 ">
+          <span className="fs-5 mx-2 fw-semibold">
             Donde el cuidado excepcional y <br className="d-none d-md-block" />{" "}
             el cariño incondicional se encuentran!
           </span>
@@ -40,7 +40,7 @@ const Banner = () => {
                   style={{ transform: "rotate(30deg)" }}
                 />
               </Card.Title>
-              <Card.Title className="text-center">Perritos </Card.Title>
+              <Card.Title className="text-center fw-semibold">Perritos </Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
@@ -62,7 +62,7 @@ const Banner = () => {
                   style={{ transform: "rotate(30deg)" }}
                 />
               </Card.Title>
-              <Card.Title className="text-center">Gatitos</Card.Title>
+              <Card.Title className="text-center fw-semibold">Gatitos</Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
@@ -84,7 +84,7 @@ const Banner = () => {
                   style={{ transform: "rotate(30deg)" }}
                 />
               </Card.Title>
-              <Card.Title className="text-center">Animalitos</Card.Title>
+              <Card.Title className="text-center fw-semibold">Animalitos</Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos

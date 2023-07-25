@@ -1,4 +1,3 @@
-
 const Marcas = () => {
     return (
       <section className="flex-grow-1">
@@ -56,4 +55,3 @@ const Marcas = () => {
   };
   
   export default Marcas;
-  

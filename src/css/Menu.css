@@ -11,8 +11,20 @@
 }
 .logoFooter{
   border-radius: 172px;
-  height: 150px;
+  height: 50%;
+  width: 100%;
 }
+@media screen and (min-width: 992px) {
+  .logoFooter{
+    border-radius: 200px;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+
+
+
 .colorInstagram {
     border-radius: 15px;
     color: white;

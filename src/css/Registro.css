@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #F8E4CA!important;
+    background-color: #F8E4CA;
     font-family: 'Lato', sans-serif;
 }
 
@@ -12,15 +12,12 @@
     flex-grow: 1;
 }
 
-.imagenProfesionales {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    /* object-position: center; */
-    transition: .3s;
-}
-
 .titulos{
     color: #1B4C51;
     font-family: 'Raleway', sans-serif;
+}
+
+.boton{
+    color: #4D91CD;
+    width: 50%;
 }

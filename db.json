@@ -30,5 +30,22 @@
       "raza": "Pitbul",
       "id": 4
     }
+  ],
+  "turnos": [
+    {
+      "id": 1,
+      "fecha": "23-07-2022 ",
+      "hora": " 09:00 ",
+      "motivoConsulta": "General",
+      "pacienteId": 1
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@huellitascenter.com",
+      "password": "Huellita123"
+    }
   ]
 }
