@@ -1,11 +1,13 @@
 import { Route, Routes } from "react-router";
 import Administrador from "../components/views/Administrador";
 import CrearPaciente from "../components/views/Pacientes/CrearPaciente";
-import EditarPaciente from "../components/views/Pacientes/EditarPaciente";
-import EditarUsuario from "../components/views/Usuarios/EditarUsuario";
+// import EditarPaciente from "../components/views/Pacientes/EditarPaciente";
 import AdmPacientes from "../components/views/AdmPacientes";
 import AdmTurnos from "../components/views/AdmTurnos";
 import AdmUsuarios from "../components/views/AdmUsuarios";
+import EditarUsuario from "../components/views/Usuarios/EditarUsuario";
+import ItemUsuario from "../components/views/Usuarios/ItemUsuario";
+import EditarPaciente from "../components/views/Pacientes/EditarPaciente";
 
 const RutasAdministrador = () => {
   return (
@@ -24,17 +26,17 @@ const RutasAdministrador = () => {
         ></Route> */}
         <Route
           exact
-          path="administrador/admpacientes/"
+          path="admpacientes/"
           element={<AdmPacientes></AdmPacientes>}
         ></Route>
         <Route
           exact
-          path="administrador/admturnos"
+          path="admturnos/"
           element={<AdmTurnos></AdmTurnos>}
         ></Route>
         <Route
           exact
-          path="administrador/admUsuarios"
+          path="admusuarios/"
           element={<AdmUsuarios></AdmUsuarios>}
         ></Route>
         <Route
@@ -44,12 +46,12 @@ const RutasAdministrador = () => {
         ></Route>
         <Route
           exact
-          path="admpaciente/editar-paciente/:id"
+          path="admpacientes/editar-paciente/:id"
           element={<EditarPaciente></EditarPaciente>}
         ></Route>
         <Route
           exact
-          path="admpusuario/editar-usuario/:id"
+          path="admusuarios/editar-usuario/:id"
           element={<EditarUsuario></EditarUsuario>}
         ></Route>
       </Routes>

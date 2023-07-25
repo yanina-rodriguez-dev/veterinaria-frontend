@@ -70,7 +70,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                       <NavLink
                         end
                         className="nav-item nav-link"
-                        to="/Administrador"
+                        to="/administrador"
                       >
                         Administrador
                       </NavLink>

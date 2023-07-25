@@ -50,7 +50,7 @@ const EditarUsuario = () => {
           "success"
         );
         reset();
-        navegacion("/administrador/AdmUsuarios");
+        navegacion("/administrador/admusuarios");
       } else {
         Swal.fire(
           "Ocurrió un error",

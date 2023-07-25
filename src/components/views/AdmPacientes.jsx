@@ -3,6 +3,7 @@ import TablaGestionPacientes from './Pacientes/TablaGestionPacientes';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const AdmPacientes = () => {
   return (
@@ -17,6 +18,7 @@ const AdmPacientes = () => {
             <h2>Administrar Pacientes:</h2>
             <hr />
             <p>Gestiona los pacientes:</p>
+            <Link to={"/administrador/admpacientes/crear-paciente"} className="btn btn-success" >Nuevo Paciente</Link>
           </div>
           
           <TablaGestionPacientes />

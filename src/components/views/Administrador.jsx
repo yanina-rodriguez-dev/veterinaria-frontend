@@ -20,9 +20,9 @@ const Administrador = () => {
             <h2>Bienvenido!</h2>
             <hr />
             <div>
-            <Link to ='administrador/admpacientes/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Pacientes</Link>
-            <Link to ='administrador/admturnos' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Turnos</Link>
-            <Link to ='administrador/admUsuarios' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Usuarios</Link>
+            <Link to ='admpacientes/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Pacientes</Link>
+            <Link to ='admturnos/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Turnos</Link>
+            <Link to ='admusuarios/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Usuarios</Link>
             </div>
           </div>
             <p>Estos son los turnos reservados de los próximos días:</p>
