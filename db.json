@@ -49,19 +49,17 @@
       "direccion": "capital",
       "telefono": "3814992483",
       "dni": "12345678",
-      "esAdmin" : true
-    }
-  ],
-  "usuarioCliente": [
+      "esAdmin": false
+    },
     {
-      "id": 1,
-      "nombreCliente": "nombreCliente1",
+      "id": 2,
+      "nombreUsuario": "nombreCliente1",
       "email": "cliente@huellitascenter.com",
       "password": "Cliente123",
       "direccion": "capital",
       "telefono": "123456789",
       "dni": "12345678",
-      "esAdmin" : false
+      "esAdmin": false
     }
   ]
 }

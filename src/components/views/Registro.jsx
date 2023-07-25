@@ -14,10 +14,12 @@ const Registro = () => {
   } = useForm();
 
   useEffect(() => {
-    const usuariosSession = sessionStorage.getItem("usuario");
-
+    const usuariosSession = JSON.parse(sessionStorage.getItem("usuario"));
+    // console.log(usuariosSession.esAdmin);
     if (usuariosSession) {
-      setUsuarioAdmin(true);
+      if (usuariosSession.esAdmin) {
+        setUsuarioAdmin(true);
+      }
     }
     // Este efecto se ejecutará cada vez que se actualice el estado de usuarioAdmin
     console.log("El estado de usuarioAdmin se ha actualizado:", usuarioAdmin);

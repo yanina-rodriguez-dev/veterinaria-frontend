@@ -1,7 +1,6 @@
 const URL_usuario = import.meta.env.VITE_API_USUARIOS;
 // const URL_turno = import.meta.env.VITE_API_TURNOS;
 const URL_paciente = import.meta.env.VITE_API_PACIENTES;
-const URL_usuarioCliente = import.meta.env.VITE_API_CLIENTES;
 
 export const iniciarSesion = async (usuario) => {
     try {
