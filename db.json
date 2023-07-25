@@ -31,15 +31,7 @@
       "id": 4
     }
   ],
-  "turnos": [
-    {
-      "id": 1,
-      "fecha": "23-07-2022 ",
-      "hora": " 09:00 ",
-      "motivoConsulta": "General",
-      "pacienteId": 1
-    }
-  ],
+  "turnos": [],
   "usuarios": [
     {
       "id": 1,
@@ -60,16 +52,6 @@
       "telefono": "123456789",
       "dni": "12345678",
       "esAdmin": false
-    },
-    {
-      "nombreUsuario": "adminNuevo",
-      "direccion": "san martin 1051",
-      "email": "adminnuevo@gmail.com",
-      "dni": "44186712",
-      "telefono": "3815881372",
-      "password": "Huellita123",
-      "esAdmin": true,
-      "id": 3
     }
   ]
 }

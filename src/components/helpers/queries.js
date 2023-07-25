@@ -102,6 +102,16 @@ export const borrarPaciente = async(id)=>{
         console.log(error)
     }
 }
+export const borrarUsuario = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_usuario+'/'+id,{
+            method: "DELETE"
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}
 
     export const obtenerPaciente = async (id)=>{
         try{

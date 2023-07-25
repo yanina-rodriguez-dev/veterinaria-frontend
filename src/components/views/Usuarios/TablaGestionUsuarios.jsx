@@ -35,14 +35,12 @@ const TablaGestionUsuarios = () => {
             <th>Telefono</th>
             <th>Direccion</th>
             <th>DNI</th>
-            <th>Especie</th>
-            <th>Raza</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           {
-            usuarios.map((usuario)=> <ItemUsuario key={usuario.id} paciente={usuario} setUsuarios={setUsuarios}></ItemUsuario>)
+            usuarios.map((usuario)=> <ItemUsuario key={usuario.id} usuario={usuario} setUsuarios={setUsuarios}></ItemUsuario>)
           }
         </tbody>
         </Table>
