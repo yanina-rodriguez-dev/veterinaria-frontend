@@ -49,6 +49,21 @@ export const crearPaciente = async (paciente)=>{
         console.log(error);
     }
 }
+export const crearUsuario = async (usuario)=>{
+    try{
+        const respuesta = await fetch(URL_usuario,
+            {
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(usuario)
+            });
+        return respuesta;
+    }catch(error){
+        console.log(error);
+    }
+}
 
 
 export const editarPaciente = async(paciente, id)=>{

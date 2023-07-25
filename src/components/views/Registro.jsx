@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { crearUsuario } from "../helpers/queries";
 
 const Registro = () => {
   let [usuarioAdmin, setUsuarioAdmin] = useState(false);
@@ -22,23 +23,60 @@ const Registro = () => {
       }
     }
     // Este efecto se ejecutará cada vez que se actualice el estado de usuarioAdmin
-    console.log("El estado de usuarioAdmin se ha actualizado:", usuarioAdmin);
+    // console.log("El estado de usuarioAdmin se ha actualizado:", usuarioAdmin);
   }, [usuarioAdmin]);
 
   const onSubmit = (cliente) => {
     // Verificar si el usuario es administrador antes de continuar
     if (usuarioAdmin) {
-      const usuarioConAdmin = { ...cliente, esAdmin : true };
+      const usuarioConAdmin = { ...cliente, esAdmin: true };
+      // console.log(usuarioConAdmin);
       // Código a ejecutar si el usuario es administrador
-      console.log("El usuario es administrador. Puedes continuar con la lógica específica para administradores.");
-      console.log(usuarioConAdmin);
+      crearUsuario(usuarioConAdmin).then((respuesta) => {
+        if (respuesta.status === 201) {
+          Swal.fire(
+            "Usuario Administrador creado",
+            `El usuario ${usuarioConAdmin.nombreUsuario} fue creado correctamente`,
+            "success"
+          );
+          reset();
+        } else {
+          Swal.fire(
+            "Ocurrio un error",
+            `El usuario ${usuarioConAdmin.nombreUsuario} no pudo ser creado`,
+            "error"
+          );
+        }
+      });
+      // console.log(
+      //   "El usuario es administrador. Puedes continuar con la lógica específica para administradores."
+      // );
+      // console.log(usuarioConAdmin);
     } else {
-      const usuarioSinAdmin = { ...cliente, esAdmin : false };
+      const usuarioSinAdmin = { ...cliente, esAdmin: false };
       // Código a ejecutar si el usuario NO es administrador
-      console.log("El usuario NO es administrador. Realiza las acciones para usuarios no administradores.");
-      console.log(usuarioSinAdmin);
+      // console.log(usuarioSinAdmin);
+      crearUsuario(usuarioSinAdmin).then((respuesta) => {
+        if (respuesta.status === 201) {
+          Swal.fire(
+            "Usuario creado",
+            `El usuario ${usuarioSinAdmin.nombreUsuario} fue creado correctamente`,
+            "success"
+          );
+          reset();
+        } else {
+          Swal.fire(
+            "Ocurrio un error",
+            `El usuario ${usuarioSinAdmin.nombreUsuario} no pudo ser creado`,
+            "error"
+          );
+        }
+      });
+      // console.log(
+      //   "El usuario NO es administrador. Realiza las acciones para usuarios no administradores."
+      // );
+      // console.log(usuarioSinAdmin);
     }
-
   };
 
   return (
@@ -53,7 +91,7 @@ const Registro = () => {
               <Form.Control
                 type="text"
                 placeholder="Ingrese su apellido"
-                {...register("nombreCliente", {
+                {...register("nombreUsuario", {
                   required: "El nombre del cliente es obligatorio",
                   minLength: {
                     value: 2,
@@ -66,7 +104,7 @@ const Registro = () => {
                 })}
               />
               <Form.Text className="text-danger">
-                {errors.nombreCliente?.message}
+                {errors.nombreUsuario?.message}
               </Form.Text>
             </Form.Group>
             <Form.Group className="mb-2" controlId="formPaciente">
