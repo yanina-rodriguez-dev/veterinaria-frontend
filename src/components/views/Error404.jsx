@@ -8,7 +8,7 @@ const Error404 = () => {
     <section className="error text-center p-5 mainSection">
       <img src={error404} alt="error404" className="w-75" />
       <div>
-        <Link to="/Inicio">
+        <Link to="/">
         <Button variant="default" className="btnError mt-3">Volver al inicio</Button>
         </Link>
       </div>

@@ -15,7 +15,7 @@ function App() {
     <>
 <BrowserRouter>
       <Routes>
-      <Route exact path="/Inicio" element={<Inicio></Inicio>} ></Route>
+      <Route exact path="/" element={<Inicio></Inicio>} ></Route>
         <Route exact path="/*" element={<Error404></Error404>} ></Route>
       </Routes>
       </BrowserRouter>
