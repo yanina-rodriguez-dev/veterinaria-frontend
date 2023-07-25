@@ -49,7 +49,7 @@
       "direccion": "capital",
       "telefono": "3814992483",
       "dni": "12345678",
-      "esAdmin": false
+      "esAdmin": true
     },
     {
       "id": 2,
