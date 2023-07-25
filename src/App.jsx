@@ -11,6 +11,7 @@ import Contacto from "./components/views/Contacto";
 import Login from "./components/views/Login.jsx";
 import Registro from "./components/views/Registro";
 import Administrador from "./components/views/Administrador.jsx";
+import Error404 from "./components/views/Error404"
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import AdmTurnos from "./components/views/AdmTurnos";
@@ -63,7 +64,7 @@ function App() {
             path="/nosotros"
             element={<AcercaDeNosotros></AcercaDeNosotros>}
           ></Route>
-          {/* <Route  path="*" element={<Error404></Error404>}></Route> */}
+          <Route  path="/*" element={<Error404></Error404>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
