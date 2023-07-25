@@ -52,6 +52,16 @@
       "telefono": "123456789",
       "dni": "12345678",
       "esAdmin": false
+    },
+    {
+      "nombreUsuario": "MaxiVega",
+      "direccion": "san martin 1051",
+      "email": "maximilianoVega600@gmail.com",
+      "dni": "44186712",
+      "telefono": "3815881372",
+      "password": "Huellita123",
+      "esAdmin": false,
+      "id": 3
     }
   ]
 }

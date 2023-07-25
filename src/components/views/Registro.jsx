@@ -81,7 +81,7 @@ const Registro = () => {
 
   return (
     <div className="mt-5 mainSection">
-      <h3 className="text-center titulos">Registro de Usuarios</h3>
+      {usuarioAdmin ? (<h3 className="text-center titulos">Registro de Nuevos Administradores</h3>) : (<h3 className="text-center titulos">Registro de Usuarios</h3>)}
       <hr />
       <Row className="justify-content-center w-100 ps-4">
         <Col xs={12} sm={9} md={4}>
@@ -201,7 +201,7 @@ const Registro = () => {
               </Form.Text>
             </Form.Group>
             <Container className="text-center">
-              <Button className="btn boton mb-2" type="submit">
+              <Button className="btn-lg mb-2" type="submit">
                 Registrar
               </Button>
             </Container>
