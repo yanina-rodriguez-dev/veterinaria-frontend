@@ -22,7 +22,7 @@ export const iniciarSesion = async (usuario) => {
     }
   };
     
-
+// Solicitudes GET
 
 export const obtenerListaPaciente = async ()=>{
     try{
@@ -43,7 +43,7 @@ export const obtenerListaUsuarios = async ()=>{
     }
 }
 
-
+// Solicitudes POST
 
 export const crearPaciente = async (paciente)=>{
     try{
@@ -76,6 +76,7 @@ export const crearUsuario = async (usuario)=>{
     }
 }
 
+// Solicitudes PUT
 
 export const editarPaciente = async(paciente, id)=>{
     try{
@@ -91,6 +92,24 @@ export const editarPaciente = async(paciente, id)=>{
         console.log(error)
     }
 }
+
+export const editarUsuario = async(usuario, id)=>{
+    try{
+        const respuesta = await fetch(URL_usuario+'/'+id,{
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(usuario)
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}
+
+// Solicitudes DELETE
+
 
 export const borrarPaciente = async(id)=>{
     try{
@@ -113,11 +132,23 @@ export const borrarUsuario = async(id)=>{
     }
 }
 
+// Solicitudes GET por ID
+
     export const obtenerPaciente = async (id)=>{
         try{
             const respuesta = await fetch(URL_paciente+'/'+id);
             const paciente = await respuesta.json();
             return paciente; 
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    export const obtenerUsuario = async (id)=>{
+        try{
+            const respuesta = await fetch(URL_usuario+'/'+id);
+            const usuario = await respuesta.json();
+            return usuario;
         }catch(error){
             console.log(error);
         }

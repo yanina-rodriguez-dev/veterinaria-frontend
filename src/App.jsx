@@ -24,6 +24,7 @@ import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdmUsuarios from "./components/views/admUsuarios";
+import EditarUsuario from "./components/views/Usuarios/EditarUsuario";
 
 function App() {
   const usuarioSessionStorage =
@@ -70,6 +71,11 @@ function App() {
             exact
             path="/editar-paciente/:id"
             element={<EditarPaciente></EditarPaciente>}
+          ></Route>
+          <Route
+            exact
+            path="/editar-usuario/:id"
+            element={<EditarUsuario></EditarUsuario>}
           ></Route>
           <Route
             exact

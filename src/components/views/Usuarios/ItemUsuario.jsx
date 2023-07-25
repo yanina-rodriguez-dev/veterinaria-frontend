@@ -55,7 +55,7 @@ const ItemUsuario = ({usuario, setUsuarios}) => {
             <td>{usuario.direccion}</td>
             <td>{usuario.dni}</td>
             <td className='text-center'>
-            {/* <Button className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"/editar-paciente/"+paciente.id}><TfiPencil /></Button> */}
+            <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"/editar-usuario/"+usuario.id}><TfiPencil /></Link>
             <Button variant="danger mt-1" onClick={borrar}><TfiTrash /></Button></td>
         </tr>
     
