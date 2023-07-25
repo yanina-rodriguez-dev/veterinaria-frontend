@@ -34,12 +34,14 @@
   "turnos": [],
   "usuarios": [
     {
-      "nombreUsuario": "adminEditado",
+      "id": 1,
+      "nombreUsuario": "quiero ver que onda",
       "email": "admin@huellitascenter.com",
+      "password": "Huellita123",
       "telefono": "3814992483",
       "dni": "12345678",
       "direccion": "capital",
-      "id": 1
+      "esAdmin": true
     },
     {
       "id": 2,
@@ -52,7 +54,7 @@
       "esAdmin": false
     },
     {
-      "nombreUsuario": "maxipruebaemail",
+      "nombreUsuario": "esto tiene que cambiar",
       "direccion": "san martin 1051",
       "email": "maximilianoVega600@gmail.com",
       "dni": "44186712",

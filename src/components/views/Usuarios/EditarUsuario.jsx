@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
@@ -15,9 +15,12 @@ const EditarUsuario = () => {
   } = useForm();
   const { id } = useParams();
   const navegacion = useNavigate();
+  const [usuarioCompleto, setUsuarioCompleto] = useState({});
 
   useEffect(() => {
     obtenerUsuario(id).then((respuesta) => {
+      setUsuarioCompleto(respuesta);
+      console.log(usuarioCompleto);
       if (respuesta) {
         setValue("nombreUsuario", respuesta.nombreUsuario);
         setValue("email", respuesta.email);
@@ -29,12 +32,21 @@ const EditarUsuario = () => {
   }, []);
 
   const onSubmit = (usuarioEditado) => {
-    console.log(usuarioEditado);
-    editarUsuario(usuarioEditado, id).then((respuesta) => {
+    const usuarioEditadoCompleto = {
+      ...usuarioCompleto,
+      nombreUsuario: usuarioEditado.nombreUsuario || nombreUsuario,
+      email: usuarioEditado.email || email,
+      telefono: usuarioEditado.telefono || telefono,
+      dni: usuarioEditado.dni || dni,
+      direccion: usuarioEditado.direccion || direccion,
+    };
+
+    console.log(usuarioEditadoCompleto);
+    editarUsuario(usuarioEditadoCompleto, id).then((respuesta) => {
       if (respuesta) {
         Swal.fire(
           "Usuario editado",
-          `El usuario ${usuarioEditado.nombreUsuario} se editó correctamente`,
+          `El usuario ${usuarioEditadoCompleto.nombreUsuario} se editó correctamente`,
           "success"
         );
         reset();
@@ -42,7 +54,7 @@ const EditarUsuario = () => {
       } else {
         Swal.fire(
           "Ocurrió un error",
-          `El usuario ${usuarioEditado.nombreUsuario} no pudo ser editado`,
+          `El usuario ${usuarioEditadoCompleto.nombreUsuario} no pudo ser editado`,
           "error"
         );
       }
@@ -77,24 +89,22 @@ const EditarUsuario = () => {
         </Form.Group>
 
         <Form.Group className="mb-2" controlId="formEditarEmail">
-              <Form.Label>Correo electronico:</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Ingrese un email"
-                {...register("email", {
-                  required: "El email es un dato obligatorio",
-                  pattern: {
-                    value:
-                    /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
-                    message:
-                      "El email debe tener el siguiente formato: 'mail@dominio.com'",
-                  },
-                })}
-              />
-              <Form.Text className="text-danger">
-                {errors.email?.message}
-              </Form.Text>
-            </Form.Group>
+          <Form.Label>Correo electronico:</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Ingrese un email"
+            {...register("email", {
+              required: "El email es un dato obligatorio",
+              pattern: {
+                value:
+                  /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
+                message:
+                  "El email debe tener el siguiente formato: 'mail@dominio.com'",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">{errors.email?.message}</Form.Text>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formTelefono">
           <Form.Label>Telefono</Form.Label>
           <Form.Control
@@ -113,22 +123,20 @@ const EditarUsuario = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-2" controlId="formEditarDni">
-              <Form.Label>DNI:</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="Ej: 12345678"
-                {...register("dni", {
-                  required: "El DNI es obligatorio",
-                  pattern: {
-                    value: /^[0-9]{8}$/,
-                    message: "Ingresa un número de teléfono válido (8 dígitos)",
-                  },
-                })}
-              />
-              <Form.Text className="text-danger">
-                {errors.dni?.message}
-              </Form.Text>
-            </Form.Group>
+          <Form.Label>DNI:</Form.Label>
+          <Form.Control
+            type="number"
+            placeholder="Ej: 12345678"
+            {...register("dni", {
+              required: "El DNI es obligatorio",
+              pattern: {
+                value: /^[0-9]{8}$/,
+                message: "Ingresa un número de teléfono válido (8 dígitos)",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">{errors.dni?.message}</Form.Text>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formEditarDireccion">
           <Form.Label>Dirección</Form.Label>
           <Form.Control
