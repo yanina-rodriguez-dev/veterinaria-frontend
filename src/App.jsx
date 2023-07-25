@@ -10,16 +10,14 @@ import Inicio from "./components/views/Inicio";
 import Contacto from "./components/views/Contacto";
 import Login from "./components/views/Login.jsx";
 import Registro from "./components/views/Registro";
-import Administrador from "./components/views/Administrador.jsx";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
-import AdmTurnos from "./components/views/AdmTurnos";
-import AdmPacientes from "./components/views/AdmPacientes";
-import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
-import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RutasProtegidas from "./routes/RutasProtegidas";
+import RutasAdministrador from "./routes/RutasAdministrador";
+
 
 function App() {
   const usuarioSessionStorage =
@@ -41,14 +39,13 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
-
-         
           <Route
-            
             path="/administrador/*"
             element={
-          
-          }
+              <RutasProtegidas>
+                <RutasAdministrador></RutasAdministrador>
+              </RutasProtegidas>
+            }
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/registro" element={<Registro></Registro>}></Route>
