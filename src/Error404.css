@@ -1,12 +1,17 @@
 .error{
-    background-color: #F8E4CA;
-    color: #1B4C51;
-    min-width: 100vh;
-    min-height:100vh;
+    background-color: #5f9798;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainSection{
+    flex-grow: 1;
 }
 
 .btnError{
-    background-color: #F8E4CA;
     border-style: double !important;
     border-color: #1B4C51 !important;
 }
