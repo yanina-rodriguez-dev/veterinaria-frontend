@@ -23,6 +23,7 @@ import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AdmUsuarios from "./components/views/admUsuarios";
 
 function App() {
   const usuarioSessionStorage =
@@ -54,6 +55,11 @@ function App() {
             exact
             path="/administrador/admTurnos"
             element={<AdmTurnos></AdmTurnos>}
+          ></Route>
+          <Route
+            exact
+            path="/administrador/admUsuarios"
+            element={<AdmUsuarios/>}
           ></Route>
           <Route
             exact

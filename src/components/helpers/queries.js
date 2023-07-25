@@ -33,6 +33,17 @@ export const obtenerListaPaciente = async ()=>{
         console.log(error);
     }
 }
+export const obtenerListaUsuarios = async ()=>{
+    try{
+        const respuesta = await fetch(URL_usuario);
+        const listaUsuarios = await respuesta.json();
+        return listaUsuarios;
+    }catch(error){
+        console.log(error);
+    }
+}
+
+
 
 export const crearPaciente = async (paciente)=>{
     try{
