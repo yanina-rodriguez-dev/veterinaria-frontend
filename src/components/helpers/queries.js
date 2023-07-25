@@ -1,4 +1,6 @@
-const URL_paciente = import.meta.env.VITE_API_PACIENTE;
+const URL_usuario = import.meta.env.VITE_API_USUARIOS;
+const URL_turno = import.meta.env.VITE_API_TURNOS;
+const URL_paciente = import.meta.env.VITE_API_PACIENTES;
 
 export const obtenerListaPaciente = async ()=>{
     try{

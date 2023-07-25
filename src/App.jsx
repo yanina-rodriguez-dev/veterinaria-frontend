@@ -17,7 +17,6 @@ import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
 import Marcas from "./components/views/PaginaPrincipal/Marcas";
 import Planes from "./components/views/PaginaPrincipal/Planes";
-import Contacto from "./components/views/Contacto";
 import Profesionales from "./components/views/PaginaPrincipal/profesionales";
 import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
 import EditarPaciente from "./components/views/Pacientes/EditarPaciente";

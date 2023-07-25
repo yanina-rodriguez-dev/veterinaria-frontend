@@ -2,29 +2,23 @@ import Banner from "./paginaPrincipal/Banner";
 import Opiniones from "./paginaPrincipal/Opiniones";
 import "./paginaPrincipal/banner.css";
 import "./paginaPrincipal/opiniones.css";
-import { Row } from "react-bootstrap";
 import Planes from "./PaginaPrincipal/Planes";
 import Marcas from "./PaginaPrincipal/Marcas.jsx";
+import Servicios from "./PaginaPrincipal/Servicios";
+import Profesionales from "./PaginaPrincipal/Profesionales";
 import { Container } from "react-bootstrap";
-import Servicios from "./PaginaPrincipal/Servicios"
-import Profesionales from "./PaginaPrincipal/Profesionales"
 
 const Inicio = () => {
   return (
     <>
-      <div className="container-fluid">
+      <Container fluid>
         <Banner />
-      </div>
-      {/* <Container> */}
-        {/* <Row> */}
-          <Planes></Planes>
-          <Marcas></Marcas>
-          <Servicios></Servicios>
-          <Profesionales></Profesionales>
-          <Opiniones />
-        {/* </Row> */}
-      {/* </Container> */}
-      
+      </Container>
+      <Planes></Planes>
+      <Profesionales />
+      <Servicios />
+      <Opiniones />
+      <Marcas></Marcas>
     </>
   );
 };
