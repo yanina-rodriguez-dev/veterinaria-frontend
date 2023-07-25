@@ -49,7 +49,7 @@ const ItemTurno = ({ turno, setTurnos }) => {
   return (
     <tr>
       <td>{turno.id}</td>
-      <td>{turno.nombre}</td>
+      <td>{turno.nombreDueno}</td>
       <td>{turno.detalleCita}</td>
       <td>{turno.nombreVeterinario}</td>
       <td>{turno.nombreMascota}</td>
