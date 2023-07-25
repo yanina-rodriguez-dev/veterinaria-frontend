@@ -45,7 +45,19 @@
       "id": 1,
       "nombreUsuario": "admin",
       "email": "admin@huellitascenter.com",
-      "password": "Huellita123"
+      "password": "Huellita123",
+      "esAdmin" : true
+    }
+  ],
+  "usuarioCliente": [
+    {
+      "id": 1,
+      "nombre": "nombreCliente1",
+      "email": "cliente@huellitascenter.com",
+      "direccion": "capital",
+      "password": "Cliente123",
+      "telefono": "123456789",
+      "esAdmin" : false
     }
   ]
 }
