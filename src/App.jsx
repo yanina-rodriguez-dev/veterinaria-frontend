@@ -18,7 +18,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RutasProtegidas from "./routes/RutasProtegidas";
 import RutasAdministrador from "./routes/RutasAdministrador";
 
-
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
