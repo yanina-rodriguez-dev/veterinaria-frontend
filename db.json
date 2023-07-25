@@ -1,4 +1,36 @@
 {
+  "pacientes": [
+    {
+      "nombreDueno": "Yanina",
+      "email": "yani@gmail.com",
+      "telefono": "3816789078",
+      "direccion": "Capital",
+      "nombrePaciente": "Toby",
+      "especie": "Perro",
+      "raza": "Caniche",
+      "id": 2
+    },
+    {
+      "nombreDueno": "Maxi",
+      "email": "maxi@gmail.com",
+      "telefono": "3816788877",
+      "direccion": "San Miguel ",
+      "nombrePaciente": "Roco",
+      "especie": "Perro",
+      "raza": "Raza de gato",
+      "id": 3
+    },
+    {
+      "nombreDueno": "Fede",
+      "email": "fede@gmail.com",
+      "telefono": "3814786545",
+      "direccion": "Santiago 145",
+      "nombrePaciente": "Coco",
+      "especie": "Perro",
+      "raza": "Pitbul",
+      "id": 4
+    }
+  ],
   "turnos": [
     {
       "id": 1,
@@ -6,17 +38,6 @@
       "hora": " 09:00 ",
       "motivoConsulta": "General",
       "pacienteId": 1
-    }
-  ],
-  "pacientes": [
-    {
-      "id": 1,
-      "nombreDueno": " yanina rodriguez",
-      "telefono": "3815434554",
-      "direccion": "aca va la dire",
-      "nombrePaciente": "Teodoro",
-      "especie": "pichiru",
-      "raza": "Caniche Toy"
     }
   ],
   "usuarios": [

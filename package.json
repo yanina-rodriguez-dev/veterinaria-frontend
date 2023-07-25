@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@esbuild/darwin-x64": "^0.18.16",
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.10.5",
+    "json-server": "^0.17.3",
     "install": "^0.13.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

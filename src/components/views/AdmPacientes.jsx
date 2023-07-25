@@ -3,27 +3,27 @@ import TablaGestionPacientes from './Pacientes/TablaGestionPacientes';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
 import Button from 'react-bootstrap/Button';
-
+import { Col, Container, Row } from 'react-bootstrap';
 
 const AdmPacientes = () => {
   return (
     <>
-    <div className="container-fluid">
-      <div className="row">
-      <div className="col-sm-2 d-none d-sm-block columna-izquierda">
+    <Container fluid className='text-center'>
+      <Row className='text-center'>
+      <Col xs={3} className="d-none d-sm-block">
           <ColumnaIzquierda></ColumnaIzquierda>
-        </div>
-        <div className="col-10">
+        </Col>
+        <Col xs={12} md={9}>
           <div>
             <h2>Administrar Pacientes:</h2>
             <hr />
             <p>Gestiona los pacientes:</p>
           </div>
-          <Button variant="dark" className='m-2'>Nuevo Paciente</Button>
+          
           <TablaGestionPacientes />
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/Administrador.css";
 import './App.css';
+import "./css/Administrador.css";
 import './AcercaDe.css';
 import "./PlanesMarcas.css";
 import './css/Registro.css'
@@ -15,8 +15,13 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
-import { useState } from "react";
+import Marcas from "./components/views/PaginaPrincipal/Marcas";
+import Planes from "./components/views/PaginaPrincipal/Planes";
+import Profesionales from "./components/views/PaginaPrincipal/profesionales";
+import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
+import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 import AcercaDeNosotros from './components/views/AcercaDeNosotros'
+import { useState } from "react";
 import { BrowserRouter , Route, Routes } from "react-router-dom";
 
 function App() {
@@ -33,6 +38,7 @@ function App() {
         ></Menu>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
+          {/* <Route exact path="/contacto" element={<Contacto></Contacto>}></Route> */}
           <Route
             exact
             path="/login"
@@ -49,6 +55,10 @@ function App() {
             path="/administrador/admTurnos"
             element={<AdmTurnos></AdmTurnos>}
           ></Route>
+          <Route exact path="/crear-paciente" 
+                element={<CrearPaciente></CrearPaciente>} ></Route>
+          <Route exact path="/editar-paciente/:id" 
+                element={<EditarPaciente></EditarPaciente>} ></Route>
           <Route
             exact
             path="/administrador"
