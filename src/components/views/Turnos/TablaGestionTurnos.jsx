@@ -20,14 +20,13 @@ function TablaGestionTurnos() {
     <section>
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4">Turnos</h1>
-        <Link className="btn btn-primary" to='/admTurnos/crear-turno'>
+        {/* <Link className="btn btn-primary" to='/admTurnos/crear-turno'>
             Agregar
-        </Link>
+        </Link> */}
       </div>
       <Table striped bordered size="sm" responsive className='text-center'>
         <thead>
           <tr>
-            {/* Ajustar los encabezados de las columnas para los datos de los turnos */}
             <th>#</th>
             <th>Nombre</th>
             <th>Detalle de cita</th>

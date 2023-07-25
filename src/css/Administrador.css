@@ -5,6 +5,8 @@
       padding: 10px;
       height: 100vh;
       text-align: center;
+      margin-left: -12px;
+      margin-top: -18px;
     }
 
   .encabezado {

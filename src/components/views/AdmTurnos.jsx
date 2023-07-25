@@ -2,20 +2,18 @@ import TablaGestionTurnos from './Turnos/TablaGestionTurnos';
 import React from 'react';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
-// import Menu from './Turnos/menu';
 import Button from 'react-bootstrap/Button';
-
+import { Col, Container, Row } from 'react-bootstrap';
 
 const AdmTurnos = () => {
   return (
     <>
-    {/* <Menu></Menu> */}
-    <div className="container-fluid">
-      <div className="row">
-      <div className="col-sm-2 d-none d-sm-block columna-izquierda">
+    <Container fluid className='text-center'>
+      <Row className='text-center'>
+      <Col xs={3} className="d-none d-sm-block">
           <ColumnaIzquierda></ColumnaIzquierda>
-        </div>
-        <div className="col-10">
+        </Col>
+        <Col xs={12} md={9}>
           <div>
             <h2>Administrar Turnos:</h2>
             <hr />
@@ -23,9 +21,9 @@ const AdmTurnos = () => {
           </div>
           <Button variant="dark" className='m-2'>Nuevo Turno</Button>
           <TablaGestionTurnos />
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
     </>
   );
 };

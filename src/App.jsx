@@ -60,7 +60,7 @@ function App() {
             path="/administrador/admPacientes"
             element={<AdmPacientes></AdmPacientes>}
           ></Route>
-          <Route exact path="/crear-paciente" 
+          <Route exact path="/crear-paciente/:id" 
                 element={<CrearPaciente></CrearPaciente>} ></Route>
           <Route exact path="/editar-paciente/:id" 
                 element={<EditarPaciente></EditarPaciente>} ></Route>
