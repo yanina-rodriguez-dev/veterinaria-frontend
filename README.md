@@ -44,7 +44,7 @@ veterinaria, servicios y productos que ofrece.
  <div>
             <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
           <img
-             width="70" height="30" style="max-width: 100%;"
+             width="80" height="40" style="max-width: 100%;"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/512px-MongoDB_Logo.svg.png?20190626143224"
             alt="logo de mongoDB"></img>
             </a>  
@@ -142,8 +142,8 @@ git clone <!--TO DO: agregar link del repo de backend -->
 
 |                          Nombre                          |                       Fotos                        |                               Links                                |
 | :------------------------------------------------------: | :------------------------------------------------: | :----------------------------------------------------------------: |
-| Yanina Rodriguez *Scrum Master/*Fullstack Developer\* \* |  ![Yanina Rodríguez](src/assets/perfil-yani.jpeg)  | [Yanina Rodríguez Github](https://github.com/yanina-rodriguez-dev) |
-|           Ana Santillán _Fullstack Developer_            |    ![Ana Santillán](src/assets/perfil-ana.jpg)     |      [Ana Santillán Github](https://github.com/Ana-Santillan)      |
-|             Maxi Vega _Fullstack Developer_              |      ![Maxi Vega](src/assets/perfil-maxi.jpg)      |          [Maxi Vega Github](https://github.com/maxivega0)          |
-|        Federico Rueda Leal _Fullstack Developer_         | ![Federico Rueda Leal](src/assets/perfil-fede.jpg) |      [Federio Rueda Leal Github](https://github.com/federl94)      |
-|       Azul De Pol _Fullstack Developer/Scrum Sub_        |     ![Azul De Pol](src/assets/perfil-azul.png)     |          [Azul De Pol Github](https://github.com/AzulDP)           |
+| Yanina Rodriguez <br> _Scrum Master/Fullstack Developer_ |  ![Yanina Rodríguez](src/assets/perfil-yani.jpeg)  | [Yanina Rodríguez Github](https://github.com/yanina-rodriguez-dev) |
+|           Ana Santillán <br> _Fullstack Developer_            |    ![Ana Santillán](src/assets/perfil-ana.jpg)     |      [Ana Santillán Github](https://github.com/Ana-Santillan)      |
+|             Maxi Vega <br> _Fullstack Developer_              |      ![Maxi Vega](src/assets/perfil-maxi.jpg)      |          [Maxi Vega Github](https://github.com/maxivega0)          |
+|        Federico Rueda Leal <br> _Fullstack Developer_         | ![Federico Rueda Leal](src/assets/perfil-fede.jpg) |      [Federio Rueda Leal Github](https://github.com/federl94)      |
+|       Azul De Pol <br> _Fullstack Developer/Scrum Sub_        |     ![Azul De Pol](src/assets/perfil-azul.png)     |          [Azul De Pol Github](https://github.com/AzulDP)           |
