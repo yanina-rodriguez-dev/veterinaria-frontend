@@ -71,7 +71,7 @@ const Login = ({ setUsuarioLogueado }) => {
               required: "El password es obligatorio",
               pattern: {
                 value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-                message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos una minúscula y una mayúscula.
                  NO puede tener otros símbolos.`,
               },
             })}
