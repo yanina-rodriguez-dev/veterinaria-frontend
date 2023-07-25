@@ -34,6 +34,8 @@ const Contacto = () => {
                         <Form.Group className="mb-2">
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="Ingrese un email" 
+                            maxLength={100}
+                            minLength={11}
                             {
                                 ...register('email',{
                                   required: 'El mail es un dato obligatorio',
@@ -63,7 +65,11 @@ const Contacto = () => {
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Consulta</Form.Label>
-                            <Form.Control as="textarea" rows={3} />
+                            <Form.Control as="textarea" rows={3} 
+                            {...register('consulta')
+
+                            }
+                            />
                         </Form.Group>
                         <div className="text-center">
                             <Button
