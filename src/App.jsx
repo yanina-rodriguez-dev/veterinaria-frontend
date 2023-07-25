@@ -1,29 +1,22 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
+import "./App.css";
 import "./css/Administrador.css";
-import './AcercaDe.css';
+import "./AcercaDe.css";
 import "./PlanesMarcas.css";
-import './css/Registro.css'
+import "./css/Registro.css";
 import "./Profesionales.css";
 import "./Servicios.css";
-import Inicio from "./components/views/Inicio"
-import Contacto from "./components/views/Contacto"
-import Login from "./components/views/Login.jsx"
-import Registro from './components/views/Registro';
-import Administrador from "./components/views/Administrador.jsx";
+import Inicio from "./components/views/Inicio";
+import Contacto from "./components/views/Contacto";
+import Login from "./components/views/Login.jsx";
+import Registro from "./components/views/Registro";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
-import AdmTurnos from "./components/views/AdmTurnos";
-import AdmPacientes from "./components/views/AdmPacientes";
-/* import Marcas from "./components/views/PaginaPrincipal/Marcas";
-import Planes from "./components/views/PaginaPrincipal/Planes";
-import Profesionales from "./components/views/PaginaPrincipal/profesionales"; */
-import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
-import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
-import AcercaDeNosotros from './components/views/AcercaDeNosotros'
+import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
 import { useState } from "react";
-import { BrowserRouter , Route, Routes } from "react-router-dom";
-import CrearTurno from "./components/views/Turnos/CrearTurno";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RutasProtegidas from "./routes/RutasProtegidas";
+import RutasAdministrador from "./routes/RutasAdministrador";
 
 function App() {
   const usuarioSessionStorage =
@@ -46,30 +39,21 @@ function App() {
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
 
-            <Route
-              exact
-              path="/administrador/admTurnos"
-              element={<AdmTurnos></AdmTurnos>}
-            ></Route>
-            <Route exact path="/crear-turno/:id"
-                  element={<CrearTurno></CrearTurno>} ></Route>            
           <Route
-            exact
-            path="/administrador/admPacientes"
-            element={<AdmPacientes></AdmPacientes>}
-          ></Route>
-          <Route exact path="/crear-paciente/:id" 
-                element={<CrearPaciente></CrearPaciente>} ></Route>
-          <Route exact path="/editar-paciente/:id" 
-                element={<EditarPaciente></EditarPaciente>} ></Route>
-          <Route
-            exact
-            path="/administrador"
-            element={<Administrador></Administrador>}
+            path="/administrador/*"
+            element={
+              <RutasProtegidas>
+                <RutasAdministrador></RutasAdministrador>
+              </RutasProtegidas>
+            }
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/registro" element={<Registro></Registro>}></Route>
-          <Route exact path="/nosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
+          <Route
+            exact
+            path="/nosotros"
+            element={<AcercaDeNosotros></AcercaDeNosotros>}
+          ></Route>
           {/* <Route  path="*" element={<Error404></Error404>}></Route> */}
         </Routes>
         <Footer></Footer>
