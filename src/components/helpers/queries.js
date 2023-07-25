@@ -1,5 +1,5 @@
 const URL_usuario = import.meta.env.VITE_API_USUARIOS;
-// const URL_turno = import.meta.env.VITE_API_TURNOS;
+const URL_turno = import.meta.env.VITE_API_TURNOS;
 const URL_paciente = import.meta.env.VITE_API_PACIENTES;
 
 export const iniciarSesion = async (usuario) => {
@@ -86,4 +86,39 @@ export const borrarPaciente = async(id)=>{
             console.log(error);
         }
     }
-
+////////////////////////////////////
+export const obtenerListaTurnos = async () => {
+    try {
+      const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
+      const listaTurnos = await respuesta.json();
+      return listaTurnos;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  export const crearTurno = async (turno) => {
+    try {
+      const respuesta = await fetch(URL_turno, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(turno)
+      });
+      return respuesta; // el status de la respuesta es 201
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  export const borrarTurno = async (id) => {
+    try {
+      const respuesta = await fetch(URL_turno + '/' + id, {
+        method: "DELETE"
+      });
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  

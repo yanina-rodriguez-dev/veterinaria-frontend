@@ -15,14 +15,15 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import AdmTurnos from "./components/views/AdmTurnos";
 import AdmPacientes from "./components/views/AdmPacientes";
-import Marcas from "./components/views/PaginaPrincipal/Marcas";
+/* import Marcas from "./components/views/PaginaPrincipal/Marcas";
 import Planes from "./components/views/PaginaPrincipal/Planes";
-import Profesionales from "./components/views/PaginaPrincipal/profesionales";
+import Profesionales from "./components/views/PaginaPrincipal/profesionales"; */
 import CrearPaciente from "./components/views/Pacientes/CrearPaciente";
 import EditarPaciente from "./components/views/Pacientes/EditarPaciente";
 import AcercaDeNosotros from './components/views/AcercaDeNosotros'
 import { useState } from "react";
 import { BrowserRouter , Route, Routes } from "react-router-dom";
+import CrearTurno from "./components/views/Turnos/CrearTurno";
 
 function App() {
   const usuarioSessionStorage =
@@ -45,15 +46,19 @@ function App() {
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
 
+            <Route
+              exact
+              path="/administrador/admTurnos"
+              element={<AdmTurnos></AdmTurnos>}
+            ></Route>
+            <Route exact path="/crear-turno/:id"
+                  element={<CrearTurno></CrearTurno>} ></Route>
+            <Route exact path="/editar-turno/:id" 
+                  element={<EditarPaciente></EditarPaciente>} ></Route>
           <Route
             exact
             path="/administrador/admPacientes"
             element={<AdmPacientes></AdmPacientes>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador/admTurnos"
-            element={<AdmTurnos></AdmTurnos>}
           ></Route>
           <Route exact path="/crear-paciente" 
                 element={<CrearPaciente></CrearPaciente>} ></Route>
