@@ -33,7 +33,7 @@
   ],
   "turnos": [
     {
-      "nombreDueno": "Juan perez",
+      "nombreDueno": "MARTINA PEDRAZA",
       "detalleCita": "fiebreasda",
       "nombreVeterinario": "messi",
       "nombreMascota": "lucio",
@@ -42,7 +42,7 @@
       "id": 1
     },
     {
-      "nombreDueno": "fede",
+      "nombreDueno": "dwyne johnson",
       "detalleCita": "fiebreasda",
       "nombreVeterinario": "messi",
       "nombreMascota": "lucio",
@@ -85,6 +85,48 @@
       "hora": "10:10",
       "fecha": "2023-10-16",
       "id": 6
+    },
+    {
+      "nombreDueno": "Juan  MARTIN ",
+      "detalleCita": "JSVHJLDFJLFV",
+      "nombreVeterinario": "gerartdo",
+      "nombreMascota": "teodoro",
+      "hora": "10:10",
+      "fecha": "2023-10-16",
+      "id": 7
+    },
+    {
+      "nombreDueno": "YANINANININ",
+      "detalleCita": "JSVHJLDFJLFV",
+      "nombreVeterinario": "LIOnel scaloni",
+      "nombreMascota": "manuelita",
+      "hora": "11:00",
+      "fecha": "2023-07-28",
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "nombreDueno": "Juan  MARTIN ",
+      "detalleCita": "fdhdfhdkjbkbjkhjbkbkj",
+      "nombreVeterinario": "fhdfh",
+      "nombreMascota": "teodoro",
+      "hora": "10:21",
+      "fecha": "2023-11-13",
+      "id": 11
+    },
+    {
+      "nombreDueno": "Juan  MARTIN ",
+      "detalleCita": "JSVHJLDFJLFV",
+      "nombreVeterinario": "fhdfh",
+      "nombreMascota": "zxvzxv",
+      "hora": "23:16",
+      "fecha": "2023-10-16",
+      "id": 12
     }
   ],
   "usuarios": [

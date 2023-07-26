@@ -122,7 +122,7 @@ export const obtenerListaTurnos = async () => {
   };
   export const editarTurno = async (turno) => {
     try {
-      const respuesta = await fetch(URL_turno, {
+      const respuesta = await fetch(URL_turno + '/' + turno.id , {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
