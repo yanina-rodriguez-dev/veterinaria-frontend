@@ -1,6 +1,5 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { FaUserCircle, FaStar, FaQuoteLeft } from "react-icons/fa";
-// import "./opiniones.css";
 
 const Opiniones = () => {
   return (
