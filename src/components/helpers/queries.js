@@ -120,9 +120,10 @@ export const obtenerListaTurnos = async () => {
       console.log(error);
     }
   };
-  export const editarTurno = async (turno) => {
+  export const editarTurno = async (turno, id) => {
+    console.log("entro a editar turno");
     try {
-      const respuesta = await fetch(URL_turno, {
+      const respuesta = await fetch(URL_turno+'/'+id, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"

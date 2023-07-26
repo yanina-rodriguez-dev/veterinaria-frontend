@@ -31,15 +31,15 @@ const EditarTurno = () => {
   }, []);
   const onSubmit = (turnoeditado) => {
     console.log(turnoeditado);
-    editarTurno(turnoeditado).then((respuesta) => {
-      if (respuesta.status === 201) {
+    editarTurno(turnoeditado, id).then((respuesta) => {
+      if (respuesta.status === 200) {
         Swal.fire(
           "Turno modificado",
           `El turno fue modificado correctamente`,
           "success"
         );
         reset();
-        navegacion("/admTurno")
+        navegacion("/administrador/admturnos")
       } else {
         Swal.fire(
           "Ocurrió un error",
