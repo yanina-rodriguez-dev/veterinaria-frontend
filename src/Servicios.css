@@ -70,7 +70,6 @@ body {
     height: 350px;
 }
 
-/**/
 .textoServicio {
     position: absolute;
     top: 50%;
@@ -87,7 +86,6 @@ body {
   .contenedor-imagen:hover .textoServicio {
     display: block;
   }
-  /**/
 
 @media all and (max-width:767px) {
     .imagenServicios {
