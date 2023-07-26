@@ -1,9 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import login from "../../css/login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import Swal from "sweetalert2";
 import { iniciarSesion } from "../helpers/queries";
 
@@ -55,9 +53,11 @@ const Login = ({ setUsuarioLogueado }) => {
           <Form.Label>Correo electronico</Form.Label>
           <Form.Control
             type="email"
+            maxLength={80}
+            minLength={5}
             placeholder="Ingrese un email"
             {...register("email", {
-              required: "El email es un dato obligatorio",
+              required: "El email es un dato obligatorio",                            
               pattern: {
                 value:
                   /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
@@ -65,6 +65,7 @@ const Login = ({ setUsuarioLogueado }) => {
                   "El email debe tener el siguiente formato: 'mail@dominio.com'",
               },
             })}
+                  
           />
           <Form.Text className="text-danger">
             Nunca compartiremos tu contraseña.<br></br>
@@ -77,8 +78,11 @@ const Login = ({ setUsuarioLogueado }) => {
           <Form.Control
             type="password"
             placeholder="Ingrese una contraseña"
+            maxLength={16}
+            minLength={8}
             {...register("password", {
               required: "El password es obligatorio",
+
               pattern: {
                 value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
                 message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos una minúscula y una mayúscula.
