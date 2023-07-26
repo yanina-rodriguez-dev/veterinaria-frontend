@@ -12,7 +12,7 @@ const ItemTurno = ({ turno }) => {
       <td>{turno.hora}</td>
       <td>{turno.fecha}</td>
       <td className='text-center'>
-        <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"/editar-turno/" + turno.id}><TfiPencil /></Link>
+        <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"editar-turno/" + turno.id}><TfiPencil /></Link>
       </td>
     </tr>
   );

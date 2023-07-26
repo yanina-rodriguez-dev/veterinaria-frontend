@@ -120,4 +120,17 @@ export const obtenerListaTurnos = async () => {
       console.log(error);
     }
   };
-  
+  export const editarTurno = async (turno) => {
+    try {
+      const respuesta = await fetch(URL_turno, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(turno)
+      });
+      return respuesta; 
+    } catch (error) {
+      console.log(error);
+    }
+  };
