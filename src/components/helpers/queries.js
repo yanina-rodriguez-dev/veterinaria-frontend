@@ -1,4 +1,5 @@
 const URL_usuario = import.meta.env.VITE_API_USUARIOS;
+const URL_turno = import.meta.env.VITE_API_TURNOS;
 const URL_paciente = import.meta.env.VITE_API_PACIENTES;
 
 export const iniciarSesion = async (usuario) => {
@@ -31,7 +32,7 @@ export const obtenerListaPaciente = async ()=>{
     }catch(error){
         console.log(error);
     }
-}
+};
 export const obtenerListaUsuarios = async ()=>{
     try{
         const respuesta = await fetch(URL_usuario);
@@ -142,14 +143,63 @@ export const borrarUsuario = async(id)=>{
             console.log(error);
         }
     }
-
-    export const obtenerUsuario = async (id)=>{
-        try{
-            const respuesta = await fetch(URL_usuario+'/'+id);
-            const usuario = await respuesta.json();
-            return usuario;
-        }catch(error){
-            console.log(error);
-        }
+////////////////////////////////////
+export const obtenerListaTurnos = async () => {
+    try {
+      const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
+      const listaTurnos = await respuesta.json();
+      return listaTurnos;
+    } catch (error) {
+      console.log(error);
     }
+  };
+  
+  export const crearTurno = async (turno) => {
+    try {
+      const respuesta = await fetch(URL_turno, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(turno)
+      });
+      return respuesta; // el status de la respuesta es 201
+    } catch (error) {
+      console.log(error);
+    }
+  };
+ export const obtenerTurno = async (id) => {
+    try {
+      const respuesta = await fetch(URL_turno + '/' + id); // Asegúrate de tener la URL_turno definida en queries.js
+      const turno = await respuesta.json();
+      return turno;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  export const editarTurno = async (turno, id) => {
+    console.log("entro a editar turno");
+    try {
+      const respuesta = await fetch(URL_turno + '/' + turno.id , {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(turno)
+      });
+      return respuesta; 
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  export const borrarTurno = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_turno+'/'+id,{
+            method: "DELETE"
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}

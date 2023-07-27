@@ -1,15 +1,19 @@
 import React from "react";
 import TablaTurnos from "./Turnos/TablaTurnos";
 import "../../App.css";
+import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 const Administrador = () => {
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-10">
-            <div className="d-flex">
-              <h2>Bienvenido!</h2>
+    <Container fluid className='text-center'>
+      <Row className='text-center'>
+      <Col xs={3} className="d-none d-sm-block">
+          <ColumnaIzquierda></ColumnaIzquierda>
+        </Col>
+        <Col xs={12} md={9}>
+          <div>
+            <h2>Bienvenido!</h2>
               <hr />
               <div>
                 <Link
@@ -30,13 +34,13 @@ const Administrador = () => {
                 >
                   Usuarios
                 </Link>
-              </div>
-            </div>
             <p>Estos son los turnos reservados de los próximos días:</p>
-            <TablaTurnos />
+              </div>
           </div>
-        </div>
-      </div>
+          <TablaTurnos />
+        </Col>
+      </Row>
+    </Container>
     </>
   );
 };
