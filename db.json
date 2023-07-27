@@ -33,24 +33,6 @@
   ],
   "turnos": [
     {
-      "nombreDueno": "MARTINA PEDRAZA",
-      "detalleCita": "fiebreasda",
-      "nombreVeterinario": "messi",
-      "nombreMascota": "lucio",
-      "hora": "11:30",
-      "fecha": "2024-06-15",
-      "id": 1
-    },
-    {
-      "nombreDueno": "dwyne johnson",
-      "detalleCita": "fiebreasda",
-      "nombreVeterinario": "messi",
-      "nombreMascota": "lucio",
-      "hora": "00:30",
-      "fecha": "2024-06-15",
-      "id": 2
-    },
-    {
       "nombreDueno": "Di Maria",
       "detalleCita": "Es muy crack y hace goles",
       "nombreVeterinario": "Messi",
@@ -127,6 +109,24 @@
       "hora": "23:16",
       "fecha": "2023-10-16",
       "id": 12
+    },
+    {
+      "nombreDueno": "LEANDRO PAREDES",
+      "detalleCita": "SE DERRITE DE LO BOMBON QUE ES ",
+      "nombreVeterinario": "YANINA RODRIGUEZ",
+      "nombreMascota": "YO",
+      "hora": "03:30",
+      "fecha": "2023-07-23",
+      "id": 13
+    },
+    {
+      "nombreDueno": "LAUTARO MARTINEZ",
+      "detalleCita": "DOLOR DE SER TAN FACHERO",
+      "nombreVeterinario": "RODRIGUEZ YANINA",
+      "nombreMascota": "YO",
+      "hora": "20:20",
+      "fecha": "2023-07-27",
+      "id": 14
     }
   ],
   "usuarios": [
