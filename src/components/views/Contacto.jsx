@@ -14,8 +14,8 @@ const Contacto = () => {
                 type="text"
                 placeholder="Ingrese un nombre y apellido"
                 required
-                minlength="2"
-                maxlength="80"
+                minLength="2"
+                maxLength="80"
               />
             </Form.Group>
             <Form.Group className="mb-2">
@@ -24,8 +24,8 @@ const Contacto = () => {
                 type="email"
                 placeholder="Ingrese un email"
                 required
-                minlength="10"
-                maxlength="50"
+                minLength="10"
+                maxLength="70"
               />
             </Form.Group>
             <Form.Group className="mb-2">
@@ -44,8 +44,8 @@ const Contacto = () => {
                 as="textarea"
                 rows={3}
                 required
-                minlength="10"
-                maxlength="500"
+                minLength="10"
+                maxLength="500"
               />
             </Form.Group>
             <div className="text-center">
@@ -54,7 +54,7 @@ const Contacto = () => {
               </Button>
             </div>
           </Form>
-        </div>
+        </div>        
       </div>
     </div>
   );

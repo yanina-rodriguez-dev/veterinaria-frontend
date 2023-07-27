@@ -12,7 +12,7 @@ const RutasProtegidas = ({ children }) => {
       console.log("if de administrador");
       return children;
     }
-  }else{
+  } else {
     return <Navigate to="/login"></Navigate>;
   }
 };
