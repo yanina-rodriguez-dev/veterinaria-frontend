@@ -134,3 +134,14 @@ export const obtenerListaTurnos = async () => {
       console.log(error);
     }
   };
+
+  export const borrarTurno = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_turno+'/'+id,{
+            method: "DELETE"
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}

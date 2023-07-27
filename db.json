@@ -33,24 +33,6 @@
   ],
   "turnos": [
     {
-      "nombreDueno": "MARTINA PEDRAZA",
-      "detalleCita": "fiebreasda",
-      "nombreVeterinario": "messi",
-      "nombreMascota": "lucio",
-      "hora": "11:30",
-      "fecha": "2024-06-15",
-      "id": 1
-    },
-    {
-      "nombreDueno": "dwyne johnson",
-      "detalleCita": "fiebreasda",
-      "nombreVeterinario": "messi",
-      "nombreMascota": "lucio",
-      "hora": "00:30",
-      "fecha": "2024-06-15",
-      "id": 2
-    },
-    {
       "nombreDueno": "Di Maria",
       "detalleCita": "Es muy crack y hace goles",
       "nombreVeterinario": "Messi",
