@@ -33,15 +33,6 @@
   ],
   "turnos": [
     {
-      "nombreDueno": "Di Maria",
-      "detalleCita": "Es muy crack y hace goles",
-      "nombreVeterinario": "Messi",
-      "nombreMascota": "Hulk",
-      "hora": "13:30",
-      "fecha": "2024-05-06",
-      "id": 3
-    },
-    {
       "nombreDueno": "Otamendi",
       "detalleCita": "Genio de la defensa",
       "nombreVeterinario": "Messi",
@@ -62,15 +53,6 @@
     {
       "nombreDueno": "Juan  MARTIN ",
       "detalleCita": "JSVHJLDFJLFV",
-      "nombreVeterinario": "LIO ",
-      "nombreMascota": "teodoro",
-      "hora": "10:10",
-      "fecha": "2023-10-16",
-      "id": 6
-    },
-    {
-      "nombreDueno": "Juan  MARTIN ",
-      "detalleCita": "JSVHJLDFJLFV",
       "nombreVeterinario": "gerartdo",
       "nombreMascota": "teodoro",
       "hora": "10:10",
@@ -85,30 +67,6 @@
       "hora": "11:00",
       "fecha": "2023-07-28",
       "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "nombreDueno": "Juan  MARTIN ",
-      "detalleCita": "fdhdfhdkjbkbjkhjbkbkj",
-      "nombreVeterinario": "fhdfh",
-      "nombreMascota": "teodoro",
-      "hora": "10:21",
-      "fecha": "2023-11-13",
-      "id": 11
-    },
-    {
-      "nombreDueno": "Juan  MARTIN ",
-      "detalleCita": "JSVHJLDFJLFV",
-      "nombreVeterinario": "fhdfh",
-      "nombreMascota": "zxvzxv",
-      "hora": "23:16",
-      "fecha": "2023-10-16",
-      "id": 12
     },
     {
       "nombreDueno": "LEANDRO PAREDES",

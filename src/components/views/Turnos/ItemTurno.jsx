@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 import { obtenerListaTurnos, borrarTurno } from '../../helpers/queries';
 import Swal from 'sweetalert2';
+import { useEffect } from 'react';
 
 const ItemTurno = ({ turno, setTurno }) => {
   const eliminarTurno = () => {
@@ -43,7 +44,16 @@ const ItemTurno = ({ turno, setTurno }) => {
            })
         }
     })
-        }
+  }
+  useEffect(() => {
+    obtenerListaTurnos().then((respuesta) => {
+      if (respuesta) {
+        setTurno(respuesta);
+      } else {
+        Swal.fire("Error", "Intente realizar esta operacion en unos minutos", "error");
+      }
+    });
+  }, [setTurno]); 
   return (
     <tr>
       <td>{turno.id}</td>
