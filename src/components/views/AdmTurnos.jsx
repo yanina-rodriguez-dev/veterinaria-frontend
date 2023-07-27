@@ -2,8 +2,9 @@ import TablaGestionTurnos from './Turnos/TablaGestionTurnos';
 import React from 'react';
 import ColumnaIzquierda from './Turnos/Columna';
 import '../../css/Administrador.css';
-import Button from 'react-bootstrap/Button';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 
 const AdmTurnos = () => {
   return (
@@ -19,7 +20,7 @@ const AdmTurnos = () => {
             <hr />
             <p>Gestiona los turnos:</p>
           </div>
-          <Button variant="dark" className='m-2' href='/crear-turno/:id'>Nuevo Turno</Button>
+          <Link to={"crear-turno"} className="btn btn-success" >Nuevo Turno</Link>
           <TablaGestionTurnos />
         </Col>
       </Row>
