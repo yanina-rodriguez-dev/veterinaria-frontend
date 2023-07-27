@@ -5,9 +5,7 @@ import Swal from "sweetalert2";
 import {borrarPaciente, obtenerListaPaciente} from "../../helpers/queries";
 
 
-
 const ItemPaciente = ({paciente, setPacientes}) => {
-
     const borrar = () => {
 Swal.fire({
     title: 'Seguro que quiere borrar el siguiente paciente?',
@@ -60,9 +58,9 @@ if (resultado.isConfirmed){
         <td>{paciente.raza}</td>
         <td className='text-center'>
             <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"/editar-paciente/"+paciente.id}><TfiPencil /></Link>
-        <Button variant="danger mt-1" onClick={borrar}><TfiTrash /></Button></td>
+        <Button variant="danger mt-1" onClick={borrar}><TfiTrash /></Button>
+        </td>
     </tr>
-
     );
 };
 

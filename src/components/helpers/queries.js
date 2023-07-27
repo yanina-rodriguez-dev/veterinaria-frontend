@@ -32,7 +32,7 @@ export const obtenerListaPaciente = async ()=>{
     }catch(error){
         console.log(error);
     }
-}
+};
 
 export const crearPaciente = async (paciente)=>{
     try{
