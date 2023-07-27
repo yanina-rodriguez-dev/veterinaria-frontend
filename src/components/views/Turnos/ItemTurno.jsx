@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import { obtenerListaTurnos, borrarTurno } from '../../helpers/queries';
 import Swal from 'sweetalert2';
 
-const ItemTurno = ({ turno, setTurno }) => {
+const ItemTurno = ({ turno, setTurnos }) => {
   const eliminarTurno = () => {
     Swal.fire({
         title: 'Seguro que quiere borrar el turno?',
@@ -22,7 +22,7 @@ const ItemTurno = ({ turno, setTurno }) => {
                obtenerListaTurnos().then((respuesta)=>{
                 if (respuesta)
     {
-        setTurno(respuesta);
+        setTurnos(respuesta);
     } else{
         Swal.fire("Error", "Intente realizar esta operacion en unos minutos", "error");
     }    

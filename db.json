@@ -34,7 +34,7 @@
   "turnos": [
     {
       "nombreDueno": "Otamendi",
-      "detalleCita": "Genio de la defensa",
+      "detalleCita": "Genio de la defensa.",
       "nombreVeterinario": "Messi",
       "nombreMascota": "Ironman",
       "hora": "14:40",
@@ -47,7 +47,7 @@
       "nombreVeterinario": "Messi",
       "nombreMascota": "Mbappe",
       "hora": "16:30",
-      "fecha": "2024-08-27",
+      "fecha": "2023-08-27",
       "id": 5
     },
     {
@@ -85,7 +85,25 @@
       "hora": "20:20",
       "fecha": "2023-07-27",
       "id": 14
-      }      
+    },
+    {
+      "nombreDueno": "maxi",
+      "detalleCita": "tos y fiebre",
+      "nombreVeterinario": "jorge",
+      "nombreMascota": "maki",
+      "hora": "18:00",
+      "fecha": "2020-10-28",
+      "id": 15
+    },
+    {
+      "nombreDueno": "maxi",
+      "detalleCita": "quiero probar algo",
+      "nombreVeterinario": "especifico",
+      "nombreMascota": "el turno",
+      "hora": "03:59",
+      "fecha": "2023-01-01",
+      "id": 16
+    }
   ],
   "usuarios": [
     {
