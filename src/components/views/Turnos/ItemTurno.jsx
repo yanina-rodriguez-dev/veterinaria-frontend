@@ -1,7 +1,49 @@
-import { TfiPencil } from 'react-icons/tfi';
+import { TfiPencil, TfiTrash } from 'react-icons/tfi';
 import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
+import { obtenerListaTurnos, borrarTurno } from '../../helpers/queries';
+import Swal from 'sweetalert2';
 
-const ItemTurno = ({ turno }) => {
+const ItemTurno = ({ turno, setTurno }) => {
+  const eliminarTurno = () => {
+    Swal.fire({
+        title: 'Seguro que quiere borrar el turno?',
+        text: "El siguiente cambio no podra ser revertido",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#4D91CD',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, quiero borrar!',
+        cancelButtonText: 'Cancelar'
+    }).then((resultado) =>{
+    if (resultado.isConfirmed){
+        borrarTurno(turno.id).then((respuesta) =>{
+           if (respuesta.status === 200){
+               obtenerListaTurnos().then((respuesta)=>{
+                if (respuesta)
+    {
+        setTurno(respuesta);
+    } else{
+        Swal.fire("Error", "Intente realizar esta operacion en unos minutos", "error");
+    }    
+          })
+          Swal.fire(
+            "Borrado!",
+            "El turno fue eliminado correctamente.",
+            "success"
+          )
+          }else{
+            Swal.fire({
+                title: "Lo siento!",
+                text: "El turno no pudo ser eliminado.",
+                icon: "error",
+                confirmButtonColor:" #4D91CD",
+            });
+          }
+           })
+        }
+    })
+  }
   return (
     <tr>
       <td>{turno.id}</td>
@@ -13,6 +55,8 @@ const ItemTurno = ({ turno }) => {
       <td>{turno.fecha}</td>
       <td className='text-center'>
         <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"editar-turno/" + turno.id}><TfiPencil /></Link>
+        <Button variant="danger mt-1" onClick={eliminarTurno}><TfiTrash /></Button>
+        
       </td>
     </tr>
   );

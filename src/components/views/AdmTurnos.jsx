@@ -16,11 +16,13 @@ const AdmTurnos = () => {
         </Col>
         <Col xs={12} md={9}>
           <div>
-            <h2>Administrar Turnos:</h2>
+            <h1 className='pt-4 pb-3'>Administrador de Turnos</h1>
             <hr />
-            <p>Gestiona los turnos:</p>
           </div>
-          <Link to={"crear-turno"} className="btn btn-success" >Nuevo Turno</Link>
+          <div>
+
+          <Link to={"crear-turno"} className="btn btn-success me-auto" >Nuevo Turno</Link>
+          </div>
           <TablaGestionTurnos />
         </Col>
       </Row>

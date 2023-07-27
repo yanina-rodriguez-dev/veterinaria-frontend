@@ -32,7 +32,7 @@ export const obtenerListaPaciente = async ()=>{
     }catch(error){
         console.log(error);
     }
-}
+};
 
 export const crearPaciente = async (paciente)=>{
     try{
@@ -123,7 +123,7 @@ export const obtenerListaTurnos = async () => {
   export const editarTurno = async (turno, id) => {
     console.log("entro a editar turno");
     try {
-      const respuesta = await fetch(URL_turno+'/'+id, {
+      const respuesta = await fetch(URL_turno + '/' + turno.id , {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -135,3 +135,14 @@ export const obtenerListaTurnos = async () => {
       console.log(error);
     }
   };
+
+  export const borrarTurno = async(id)=>{
+    try{
+        const respuesta = await fetch(URL_turno+'/'+id,{
+            method: "DELETE"
+        });
+        return respuesta; 
+    }catch(error){
+        console.log(error)
+    }
+}
