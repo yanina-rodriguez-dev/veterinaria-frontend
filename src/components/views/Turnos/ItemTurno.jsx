@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 import { obtenerListaTurnos, borrarTurno } from '../../helpers/queries';
 import Swal from 'sweetalert2';
-import { useEffect } from 'react';
 
 const ItemTurno = ({ turno, setTurno }) => {
   const eliminarTurno = () => {
