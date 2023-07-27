@@ -43,6 +43,7 @@ body {
 }
 
 .contenedor-imagen {
+    position: relative;
     width: auto;
     height: auto;
     transition: transform .3s;
@@ -68,6 +69,23 @@ body {
     width: 430px;
     height: 350px;
 }
+
+.textoServicio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(150, 148, 148, 0.5);
+    color: #1B4C51;
+    padding: 10px 20px;
+    display: none;    
+  }
+  
+  .contenedor-imagen:hover .textoServicio {
+    display: block;
+  }
 
 @media all and (max-width:767px) {
     .imagenServicios {
