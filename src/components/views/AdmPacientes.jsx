@@ -1,6 +1,6 @@
 import React from "react";
 import TablaGestionPacientes from "./Pacientes/TablaGestionPacientes";
-import ColumnaIzquierda from "./Turnos/Columna";
+import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
 import "../../css/Administrador.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";

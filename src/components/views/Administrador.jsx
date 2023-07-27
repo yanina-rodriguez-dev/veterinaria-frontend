@@ -2,6 +2,7 @@ import React from "react";
 import TablaTurnos from "./Turnos/TablaTurnos";
 import "../../App.css";
 import { Col, Container, Row } from 'react-bootstrap';
+import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
 import { Link } from "react-router-dom";
 const Administrador = () => {
   return (
@@ -34,7 +35,7 @@ const Administrador = () => {
                 >
                   Usuarios
                 </Link>
-            <p>Estos son los turnos reservados de los próximos días:</p>
+            <p className="my-3">Estos son los turnos reservados de los próximos días:</p>
               </div>
           </div>
           <TablaTurnos />

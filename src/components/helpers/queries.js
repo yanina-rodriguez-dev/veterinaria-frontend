@@ -143,6 +143,16 @@ export const borrarUsuario = async(id)=>{
             console.log(error);
         }
     }
+    
+    export const obtenerUsuario = async (id)=>{
+        try{
+            const respuesta = await fetch(URL_usuario+'/'+id);
+            const usuario = await respuesta.json();
+            return usuario; 
+        }catch(error){
+            console.log(error);
+        }
+    }
 ////////////////////////////////////
 export const obtenerListaTurnos = async () => {
     try {
