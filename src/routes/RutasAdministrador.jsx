@@ -5,7 +5,6 @@ import AdmPacientes from "../components/views/AdmPacientes";
 import AdmTurnos from "../components/views/AdmTurnos";
 import AdmUsuarios from "../components/views/AdmUsuarios";
 import EditarUsuario from "../components/views/Usuarios/EditarUsuario";
-import ItemUsuario from "../components/views/Usuarios/ItemUsuario";
 import EditarPaciente from "../components/views/Pacientes/EditarPaciente";
 
 const RutasAdministrador = () => {
