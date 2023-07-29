@@ -17,14 +17,17 @@ const AdmTurnos = () => {
             <div>
               <h1 className="pt-4 pb-3">Administrador de Turnos</h1>
               <hr />
-            <p>Gestionar Turnos:</p>
+              <p>Gestionar Turnos:</p>
             </div>
             <div>
-              <Link to={"crear-turno"} className="btn btn-lg btn-success me-auto">
+              <Link
+                to={"crear-turno"}
+                className="btn btn-lg btn-success me-auto"
+              >
                 Nuevo Turno
               </Link>
             </div>
-            <TablaGestionTurnos/>
+            <TablaGestionTurnos />
           </Col>
         </Row>
       </Container>
