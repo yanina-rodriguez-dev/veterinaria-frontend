@@ -98,7 +98,9 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
+
             {errors.nombreVeterinario?.message}
+
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPaciente">
@@ -119,6 +121,7 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
+
             {errors.nombreMascota?.message}
           </Form.Text>
         </Form.Group>
@@ -140,6 +143,7 @@ const CrearTurno = () => {
   </Form.Select>
           <Form.Text className="text-danger">
             {errors.hora?.message}
+
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPaciente">
@@ -152,7 +156,9 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
+
             {errors.fecha?.message}
+
           </Form.Text>
         </Form.Group>
 

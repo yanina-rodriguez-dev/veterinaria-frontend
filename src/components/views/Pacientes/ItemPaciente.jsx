@@ -1,8 +1,9 @@
-import { TfiPencil, TfiTrash } from 'react-icons/tfi';
-import { Button } from 'react-bootstrap';
+import { TfiPencil, TfiTrash } from "react-icons/tfi";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import {borrarPaciente, obtenerListaPaciente} from "../../helpers/queries";
+import { borrarPaciente, obtenerListaPaciente } from "../../helpers/queries";
+
 
 
 const ItemPaciente = ({paciente, setPacientes}) => {
@@ -39,15 +40,15 @@ if (resultado.isConfirmed){
             text: "El producto no pudo ser eliminado.",
             icon: "error",
             confirmButtonColor:" #4D91CD",
+
         });
       }
-       })
-    }
-})
-    }
+    });
+  };
 
-    return (
+  return (
     <tr>
+
         <td>{paciente.id}</td>
         <td>{paciente.nombreDueno}</td>
         <td>{paciente.email}</td>
@@ -62,6 +63,7 @@ if (resultado.isConfirmed){
         </td>
     </tr>
     );
+
 };
 
 export default ItemPaciente;

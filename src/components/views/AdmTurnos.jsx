@@ -5,9 +5,11 @@ import "../../css/Administrador.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
 const AdmTurnos = () => {
   return (
     <>
+
       <Container fluid className="text-center">
         <Row className="text-center">
           <Col xs={3} className="d-none d-sm-block">
@@ -31,6 +33,7 @@ const AdmTurnos = () => {
           </Col>
         </Row>
       </Container>
+
     </>
   );
 };

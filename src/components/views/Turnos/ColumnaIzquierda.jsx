@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import "../../../css/Administrador.css";
 import { Link } from "react-router-dom";
 
+
 const ColumnaIzquierda = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const ColumnaIzquierda = () => {
         <div className="contenido">
           <img src={avatarImage} alt="Avatar" className="avatar" />
           <div className="botones">
+
             <Link
               relative
               to="../admPacientes"
@@ -35,6 +37,8 @@ const ColumnaIzquierda = () => {
             >
               Usuarios
             </Link>
+
+       
           </div>
         </div>
         <div className="salir mb-5">

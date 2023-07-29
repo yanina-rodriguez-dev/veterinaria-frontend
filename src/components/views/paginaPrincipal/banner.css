@@ -34,3 +34,9 @@
     width: 30%;
   }
 }
+
+.card{
+  border-radius: 0px 40px;
+  background: #EDE7FB;
+  
+}

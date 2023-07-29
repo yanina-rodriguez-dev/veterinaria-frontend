@@ -8,10 +8,14 @@ import AdmPacientes from "./AdmPacientes";
 import AdmTurnos from "./AdmTurnos";
 import AdmUsuarios from "./AdmUsuarios";
 
+
+
+
 const Administrador = () => {
   const usuariosSession = JSON.parse(sessionStorage.getItem("usuario"));
   return (
     <>
+
       <Container fluid className="text-center">
         <Row className="text-center">
           <Col xs={3} className="d-none d-md-block">
@@ -34,12 +38,14 @@ const Administrador = () => {
                 </Link>
                 <Link
                   to="admturnos/"
+
                   className="btn btn-primary text-decoration-none text-light mx-2 my-2"
                 >
                   Turnos
                 </Link>
                 <Link
                   to="admusuarios/"
+
                   className="btn btn-primary text-decoration-none text-light"
                 >
                   Usuarios
@@ -51,6 +57,7 @@ const Administrador = () => {
           </Col>
         </Row>
       </Container>
+
     </>
   );
 };
