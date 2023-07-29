@@ -19,12 +19,13 @@ const Administrador = () => {
         </Col>
         <Col xs={12} md={9}>
           <div>
-            <h2>Bienvenido!</h2>
+            <h2 className='fw-semibold'>Bienvenido!</h2>
             <hr />
-            <div className='d-md-none'>
-            <Link to ='admpacientes/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Pacientes</Link>
-            <Link to ='admturnos/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Turnos</Link>
-            <Link to ='admusuarios/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Usuarios</Link>
+            <h3>Gestionar:</h3>
+            <div className='d-md- my-2'>
+            <Link to ='admpacientes/' className='btn btn-primary text-decoration-none text-light'>Pacientes</Link>
+            <Link to ='admturnos/' className='btn btn-primary text-decoration-none text-light mx-2'>Turnos</Link>
+            <Link to ='admusuarios/' className='btn btn-primary text-decoration-none text-light'>Usuarios</Link>
             </div>
           </div>
             <p>Estos son los turnos reservados de los próximos días:</p>
