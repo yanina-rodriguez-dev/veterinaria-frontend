@@ -9,11 +9,8 @@ export const iniciarSesion = async (usuario) => {
     const usuarioBuscado = listaUsuarios.find(
       (itemUsuario) => itemUsuario.email === usuario.email
     );
-    if (usuarioBuscado) {
-      if (usuarioBuscado.password === usuario.password) {
-        return usuarioBuscado;
-      } else {
-      }
+    if (usuarioBuscado && usuarioBuscado.password === usuario.password) {
+      return usuarioBuscado;
     } else {
       return null;
     }
@@ -22,8 +19,15 @@ export const iniciarSesion = async (usuario) => {
   }
 };
 
-
-
+export const obtenerListaTurnos = async () => {
+  try {
+    const respuesta = await fetch(URL_turno);
+    const listaTurnos = await respuesta.json();
+    return listaTurnos;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const obtenerListaPaciente = async () => {
   try {
@@ -34,6 +38,7 @@ export const obtenerListaPaciente = async () => {
     console.log(error);
   }
 };
+
 export const obtenerListaUsuarios = async () => {
   try {
     const respuesta = await fetch(URL_usuario);
@@ -43,39 +48,6 @@ export const obtenerListaUsuarios = async () => {
     console.log(error);
   }
 };
-
-
-export const obtenerListaTurnos = async () => {
-  try {
-    const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
-    const listaTurnos = await respuesta.json();
-    return listaTurnos;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const obtenerListaPaciente = async ()=>{
-    try{
-        const respuesta = await fetch(URL_paciente);
-        const listaPacientes = await respuesta.json();
-        return listaPacientes;
-    }catch(error){
-        console.log(error);
-    }
-};
-export const obtenerListaUsuarios = async ()=>{
-    try{
-        const respuesta = await fetch(URL_usuario);
-        const listaUsuarios = await respuesta.json();
-        return listaUsuarios;
-    }catch(error){
-        console.log(error);
-    }
-}
-
-
-
 
 export const crearPaciente = async (paciente) => {
   try {
@@ -91,6 +63,7 @@ export const crearPaciente = async (paciente) => {
     console.log(error);
   }
 };
+
 export const crearUsuario = async (usuario) => {
   try {
     const respuesta = await fetch(URL_usuario, {
@@ -120,8 +93,6 @@ export const crearTurno = async (turno) => {
     console.log(error);
   }
 };
-
-// Solicitudes PUT
 
 export const editarPaciente = async (paciente, id) => {
   try {
@@ -169,8 +140,6 @@ export const editarTurno = async (turno, id) => {
   }
 };
 
-// Solicitudes DELETE
-
 export const borrarPaciente = async (id) => {
   try {
     const respuesta = await fetch(URL_paciente + "/" + id, {
@@ -181,6 +150,7 @@ export const borrarPaciente = async (id) => {
     console.log(error);
   }
 };
+
 export const borrarUsuario = async (id) => {
   try {
     const respuesta = await fetch(URL_usuario + "/" + id, {
@@ -203,8 +173,6 @@ export const borrarTurno = async (id) => {
   }
 };
 
-// Solicitudes GET por ID
-
 export const obtenerPaciente = async (id) => {
   try {
     const respuesta = await fetch(URL_paciente + "/" + id);
@@ -217,7 +185,7 @@ export const obtenerPaciente = async (id) => {
 
 export const obtenerTurno = async (id) => {
   try {
-    const respuesta = await fetch(URL_turno + "/" + id); // Asegúrate de tener la URL_turno definida en queries.js
+    const respuesta = await fetch(URL_turno + "/" + id);
     const turno = await respuesta.json();
     return turno;
   } catch (error) {
@@ -234,84 +202,3 @@ export const obtenerUsuario = async (id) => {
     console.log(error);
   }
 };
-
-    export const obtenerPaciente = async (id)=>{
-        try{
-            const respuesta = await fetch(URL_paciente+'/'+id);
-            const paciente = await respuesta.json();
-            return paciente; 
-        }catch(error){
-            console.log(error);
-        }
-    }
-    
-    export const obtenerUsuario = async (id)=>{
-        try{
-            const respuesta = await fetch(URL_usuario+'/'+id);
-            const usuario = await respuesta.json();
-            return usuario; 
-        }catch(error){
-            console.log(error);
-        }
-    }
-
-export const obtenerListaTurnos = async () => {
-    try {
-      const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
-      const listaTurnos = await respuesta.json();
-      return listaTurnos;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  
-  export const crearTurno = async (turno) => {
-    try {
-      const respuesta = await fetch(URL_turno, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(turno)
-      });
-      return respuesta; // el status de la respuesta es 201
-    } catch (error) {
-      console.log(error);
-    }
-  };
- export const obtenerTurno = async (id) => {
-    try {
-      const respuesta = await fetch(URL_turno + '/' + id); // Asegúrate de tener la URL_turno definida en queries.js
-      const turno = await respuesta.json();
-      return turno;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  export const editarTurno = async (turno, id) => {
-    console.log("entro a editar turno");
-    try {
-      const respuesta = await fetch(URL_turno + '/' + turno.id , {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(turno)
-      });
-      return respuesta; 
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  export const borrarTurno = async(id)=>{
-    try{
-        const respuesta = await fetch(URL_turno+'/'+id,{
-            method: "DELETE"
-        });
-        return respuesta; 
-    }catch(error){
-        console.log(error)
-    }
-}
-

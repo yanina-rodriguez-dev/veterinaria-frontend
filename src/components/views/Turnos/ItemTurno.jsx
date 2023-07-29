@@ -21,7 +21,6 @@ const ItemTurno = ({ turno, setTurnos }) => {
           if (respuesta.status === 200) {
             obtenerListaTurnos().then((respuesta) => {
               if (respuesta) {
-                // actualizacion de tablaTurnos
                 setTurnos(respuesta);
               } else {
                 Swal.fire(

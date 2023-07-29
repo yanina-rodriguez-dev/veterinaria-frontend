@@ -7,7 +7,6 @@ import AdmTurnos from "../components/views/AdmTurnos";
 import AdmUsuarios from "../components/views/AdmUsuarios";
 import EditarUsuario from "../components/views/Usuarios/EditarUsuario";
 import ItemUsuario from "../components/views/Usuarios/ItemUsuario";
-import EditarPaciente from "../components/views/Pacientes/EditarPaciente";
 import EditarTurno from "../components/views/Turnos/EditarTurno";
 import CrearTurno from "../components/views/Turnos/CrearTurno"
 
