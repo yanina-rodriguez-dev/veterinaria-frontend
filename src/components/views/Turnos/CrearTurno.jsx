@@ -76,7 +76,7 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.nombreDueno?.message}
+            {errors.detalleCita?.message}
           </Form.Text>
         </Form.Group>
 
@@ -98,7 +98,9 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.nombreDueno?.message}
+
+            {errors.nombreVeterinario?.message}
+
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPaciente">
@@ -119,21 +121,29 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.nombreDueno?.message}
+
+            {errors.nombreMascota?.message}
           </Form.Text>
         </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formPaciente">
-          <Form.Label>Hora</Form.Label>
-          <Form.Control
-            type="time"
-            placeholder="--:--"
-            {...register("hora", {
-              required: "La hora del turno es obligatorio",
-            })}
-          />
+        <Form.Group className="mb-3" controlId="formTurno">
+  <Form.Label>Hora</Form.Label>
+  <Form.Select {...register("hora", {
+    required: "La hora del turno es obligatoria",
+  })}
+  aria-label="form" required>
+    <option value="">Elija un horario</option>
+    <option value="8:30">8:30</option>
+    <option value="9:30">9:30</option>
+    <option value="10:30">10:30</option>
+    <option value="11:30">11:30</option>
+    <option value="12:30">12:30</option>
+    <option value="13:30">13:30</option>
+    <option value="14:30">14:30</option>
+    <option value="15:30">15:30</option>
+  </Form.Select>
           <Form.Text className="text-danger">
-            {errors.nombreDueno?.message}
+            {errors.hora?.message}
+
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPaciente">
@@ -146,7 +156,9 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.nombreDueno?.message}
+
+            {errors.fecha?.message}
+
           </Form.Text>
         </Form.Group>
 

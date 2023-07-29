@@ -1,7 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-/* import login from "../../css/login.css";
- */import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 /*  */import Swal from "sweetalert2";
 import { iniciarSesion } from "../helpers/queries";

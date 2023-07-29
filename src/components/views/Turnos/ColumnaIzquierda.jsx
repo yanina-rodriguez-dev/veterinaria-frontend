@@ -2,6 +2,8 @@ import React from "react";
 import avatarImage from "../../../assets/admin.png";
 import Button from "react-bootstrap/Button";
 import "../../../css/Administrador.css";
+import { Link } from "react-router-dom";
+
 
 const ColumnaIzquierda = () => {
   return (
@@ -13,18 +15,30 @@ const ColumnaIzquierda = () => {
         <div className="contenido">
           <img src={avatarImage} alt="Avatar" className="avatar" />
           <div className="botones">
-            <Button variant="success" className="m-2">
-              Inicio
-            </Button>
-            <Button variant="success" className="m-2">
-              Actividades
-            </Button>
-            <Button variant="success" className="m-2">
-              Balance
-            </Button>
-            <Button variant="success" className="m-2">
-              Configuracion
-            </Button>
+
+            <Link
+              relative
+              to="../admPacientes"
+              className="btn btn-success text-decoration-none text-light my-2"
+            >
+              Pacientes
+            </Link>
+            <Link
+              relative
+              to="../admturnos"
+              className="btn btn-success text-decoration-none text-light my-2"
+            >
+              Turnos
+            </Link>
+            <Link
+              relative
+              to="../admusuarios"
+              className="btn btn-success text-decoration-none text-light my-2"
+            >
+              Usuarios
+            </Link>
+
+       
           </div>
         </div>
         <div className="salir mb-5">

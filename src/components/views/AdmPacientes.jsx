@@ -20,7 +20,8 @@ const AdmPacientes = () => {
               <p>Gestiona los pacientes:</p>
               <Link
                 to={"/administrador/admpacientes/crear-paciente"}
-                className="btn btn-success"
+
+                className="btn btn-lg btn-success"
               >
                 Nuevo Paciente
               </Link>

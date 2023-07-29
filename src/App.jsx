@@ -40,6 +40,7 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
+
           <Route
             path="/administrador/*"
             element={
