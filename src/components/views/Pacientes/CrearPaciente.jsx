@@ -20,7 +20,7 @@ const CrearPaciente = () => {
         <section className="container mainSection">
             <h1 className="display-4 mt-5">Nuevo Paciente</h1>
             <hr />
-            <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form onSubmit={handleSubmit(onSubmit)} className="my-4">
                 <Form.Group className="mb-3" controlId="formPaciente">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control

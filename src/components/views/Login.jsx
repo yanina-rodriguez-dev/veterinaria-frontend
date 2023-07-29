@@ -1,12 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-/* import login from "../../css/login.css";
- */import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-/* import { useState } from "react";
- */import Swal from "sweetalert2";
+import { useState } from "react";
+import Swal from "sweetalert2";
 import { iniciarSesion } from "../helpers/queries";
-
+// import login from "../../css/login.css?inline";
 
 const Login = ({ setUsuarioLogueado }) => {
   const {
@@ -21,14 +20,25 @@ const Login = ({ setUsuarioLogueado }) => {
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
-        setUsuarioLogueado(respuesta);
-        Swal.fire(
-          "Sesion iniciada con exito!",
-          "Los datos ingresados son correctos.",
-          "success"
-        );
-        reset();
-        navegacion("/administrador");
+        if (respuesta.esAdmin) {
+          setUsuarioLogueado(respuesta);
+          Swal.fire(
+            "Sesion administrador iniciada con exito!",
+            "Los datos ingresados son correctos.",
+            "success"
+          );
+          reset();
+          navegacion("/administrador");
+        } else {
+          setUsuarioLogueado(respuesta);
+          Swal.fire(
+            `Sesion iniciada con exito! `,
+            `Bienvenido ${respuesta.nombreUsuario}!`,
+            "success"
+          );
+          reset();
+          navegacion("/");
+        }
       } else {
         Swal.fire("Error!", "El emal o password son incorrectos.", "error");
       }
@@ -50,7 +60,7 @@ const Login = ({ setUsuarioLogueado }) => {
               required: "El email es un dato obligatorio",
               pattern: {
                 value:
-                  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=? ^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a -z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
                 message:
                   "El email debe tener el siguiente formato: 'mail@dominio.com'",
               },
@@ -71,7 +81,7 @@ const Login = ({ setUsuarioLogueado }) => {
               required: "El password es obligatorio",
               pattern: {
                 value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-                message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos una minúscula y una mayúscula.
                  NO puede tener otros símbolos.`,
               },
             })}

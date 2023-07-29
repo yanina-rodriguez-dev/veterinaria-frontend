@@ -6,6 +6,8 @@ import AdmPacientes from "../components/views/AdmPacientes";
 import AdmTurnos from "../components/views/AdmTurnos";
 import EditarTurno from "../components/views/Turnos/EditarTurno";
 import CrearTurno from "../components/views/Turnos/CrearTurno"
+import AdmUsuarios from "../components/views/AdmUsuarios";
+import EditarUsuario from "../components/views/Usuarios/EditarUsuario";
 
 const RutasAdministrador = () => {
   return (
@@ -24,13 +26,18 @@ const RutasAdministrador = () => {
         ></Route>
         <Route
           exact
-          path="/admpacientes"
+          path="admpacientes/"
           element={<AdmPacientes></AdmPacientes>}
         ></Route>
         <Route
           exact
-          path="/admturnos"
+          path="admturnos/"
           element={<AdmTurnos></AdmTurnos>}
+        ></Route>
+        <Route
+          exact
+          path="admusuarios/"
+          element={<AdmUsuarios></AdmUsuarios>}
         ></Route>
         <Route
           exact
@@ -39,8 +46,13 @@ const RutasAdministrador = () => {
         ></Route>
         <Route
           exact
-          path="admpaciente/editar-paciente/:id"
+          path="admpacientes/editar-paciente/:id"
           element={<EditarPaciente></EditarPaciente>}
+        ></Route>
+        <Route
+          exact
+          path="admusuarios/editar-usuario/:id"
+          element={<EditarUsuario></EditarUsuario>}
         ></Route>
       </Routes>
     </>
