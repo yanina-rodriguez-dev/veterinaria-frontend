@@ -18,7 +18,7 @@ const AdmPacientes = () => {
             <h2>Administrar Pacientes:</h2>
             <hr />
             <p>Gestiona los pacientes:</p>
-            <Link to={"/administrador/admpacientes/crear-paciente"} className="btn btn-success" >Nuevo Paciente</Link>
+            <Link to={"/administrador/admpacientes/crear-paciente"} className="btn btn-lg btn-success" >Nuevo Paciente</Link>
           </div>
           
           <TablaGestionPacientes />

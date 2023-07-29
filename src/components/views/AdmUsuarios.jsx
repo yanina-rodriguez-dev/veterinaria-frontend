@@ -20,7 +20,7 @@ const AdmUsuarios = () => {
             
             <hr />
             <p>Gestiona los Usuarios:</p>
-            <Link to={"/registro"} className="btn btn-success" >Nuevo Usuario</Link>
+            <Link to={"/registro"} className="btn btn-lg btn-success" >Nuevo Usuario</Link>
           </div>
           
           <TablaGestionUsuarios />

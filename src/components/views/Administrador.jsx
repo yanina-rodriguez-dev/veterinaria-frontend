@@ -10,6 +10,7 @@ import AdmUsuarios from './AdmUsuarios';
 
 
 const Administrador = () => {
+  const usuariosSession = JSON.parse(sessionStorage.getItem("usuario"));
   return (
     <>
     <Container fluid className='text-center'>
@@ -19,7 +20,7 @@ const Administrador = () => {
         </Col>
         <Col xs={12} md={9}>
           <div>
-            <h2 className='fw-semibold'>Bienvenido!</h2>
+            <h2 className='fw-semibold'>Bienvenido {usuariosSession? usuariosSession.nombreUsuario : ""}!</h2>
             <hr />
             <div className='d-md-none my-2'>
             <h3>Gestionar:</h3>
