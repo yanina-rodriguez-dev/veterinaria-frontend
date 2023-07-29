@@ -14,17 +14,17 @@ const Administrador = () => {
     <>
     <Container fluid className='text-center'>
       <Row className='text-center'>
-      <Col xs={3} className="d-none d-sm-block">
+      <Col xs={3} className="d-none d-md-block">
           <ColumnaIzquierda></ColumnaIzquierda>
         </Col>
         <Col xs={12} md={9}>
           <div>
             <h2 className='fw-semibold'>Bienvenido!</h2>
             <hr />
+            <div className='d-md-none my-2'>
             <h3>Gestionar:</h3>
-            <div className='d-md- my-2'>
             <Link to ='admpacientes/' className='btn btn-primary text-decoration-none text-light'>Pacientes</Link>
-            <Link to ='admturnos/' className='btn btn-primary text-decoration-none text-light mx-2'>Turnos</Link>
+            <Link to ='admturnos/' className='btn btn-primary text-decoration-none text-light mx-2 my-2'>Turnos</Link>
             <Link to ='admusuarios/' className='btn btn-primary text-decoration-none text-light'>Usuarios</Link>
             </div>
           </div>
