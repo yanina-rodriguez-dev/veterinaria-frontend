@@ -23,12 +23,6 @@ const AdmUsuarios = () => {
                 Nuevo Usuario
               </Link>
             </div>
-              <hr />
-              <p>Gestiona los Usuarios:</p>
-              <Link to={"/registro"} className="btn btn-success">
-                Nuevo Usuario
-              </Link>
-            </div>
             <TablaGestionUsuarios />
           </Col>
         </Row>

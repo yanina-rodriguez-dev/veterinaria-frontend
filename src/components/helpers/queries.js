@@ -22,10 +22,7 @@ export const iniciarSesion = async (usuario) => {
   }
 };
 
-
-
-
-export const obtenerListaPaciente = async () => {
+export const obtenerListaPacientes = async () => {
   try {
     const respuesta = await fetch(URL_paciente);
     const listaPacientes = await respuesta.json();
@@ -44,7 +41,6 @@ export const obtenerListaUsuarios = async () => {
   }
 };
 
-
 export const obtenerListaTurnos = async () => {
   try {
     const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
@@ -54,28 +50,6 @@ export const obtenerListaTurnos = async () => {
     console.log(error);
   }
 };
-
-export const obtenerListaPaciente = async ()=>{
-    try{
-        const respuesta = await fetch(URL_paciente);
-        const listaPacientes = await respuesta.json();
-        return listaPacientes;
-    }catch(error){
-        console.log(error);
-    }
-};
-export const obtenerListaUsuarios = async ()=>{
-    try{
-        const respuesta = await fetch(URL_usuario);
-        const listaUsuarios = await respuesta.json();
-        return listaUsuarios;
-    }catch(error){
-        console.log(error);
-    }
-}
-
-
-
 
 export const crearPaciente = async (paciente) => {
   try {
@@ -234,84 +208,3 @@ export const obtenerUsuario = async (id) => {
     console.log(error);
   }
 };
-
-    export const obtenerPaciente = async (id)=>{
-        try{
-            const respuesta = await fetch(URL_paciente+'/'+id);
-            const paciente = await respuesta.json();
-            return paciente; 
-        }catch(error){
-            console.log(error);
-        }
-    }
-    
-    export const obtenerUsuario = async (id)=>{
-        try{
-            const respuesta = await fetch(URL_usuario+'/'+id);
-            const usuario = await respuesta.json();
-            return usuario; 
-        }catch(error){
-            console.log(error);
-        }
-    }
-
-export const obtenerListaTurnos = async () => {
-    try {
-      const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
-      const listaTurnos = await respuesta.json();
-      return listaTurnos;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  
-  export const crearTurno = async (turno) => {
-    try {
-      const respuesta = await fetch(URL_turno, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(turno)
-      });
-      return respuesta; // el status de la respuesta es 201
-    } catch (error) {
-      console.log(error);
-    }
-  };
- export const obtenerTurno = async (id) => {
-    try {
-      const respuesta = await fetch(URL_turno + '/' + id); // Asegúrate de tener la URL_turno definida en queries.js
-      const turno = await respuesta.json();
-      return turno;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  export const editarTurno = async (turno, id) => {
-    console.log("entro a editar turno");
-    try {
-      const respuesta = await fetch(URL_turno + '/' + turno.id , {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(turno)
-      });
-      return respuesta; 
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  export const borrarTurno = async(id)=>{
-    try{
-        const respuesta = await fetch(URL_turno+'/'+id,{
-            method: "DELETE"
-        });
-        return respuesta; 
-    }catch(error){
-        console.log(error)
-    }
-}
-

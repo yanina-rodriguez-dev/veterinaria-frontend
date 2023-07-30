@@ -71,7 +71,7 @@ const CrearPaciente = () => {
           />
           <Form.Text className="text-danger">{errors.email?.message}</Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formPrecio">
+        <Form.Group className="mb-3" controlId="formPaciente">
           <Form.Label>Telefono</Form.Label>
           <Form.Control
             type="number"
