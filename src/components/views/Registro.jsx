@@ -1,7 +1,6 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { crearUsuario } from "../helpers/queries";
 
@@ -16,22 +15,16 @@ const Registro = () => {
 
   useEffect(() => {
     const usuariosSession = JSON.parse(sessionStorage.getItem("usuario"));
-    // console.log(usuariosSession.esAdmin);
     if (usuariosSession) {
       if (usuariosSession.esAdmin) {
         setUsuarioAdmin(true);
       }
     }
-    // Este efecto se ejecutará cada vez que se actualice el estado de usuarioAdmin
-    // console.log("El estado de usuarioAdmin se ha actualizado:", usuarioAdmin);
   }, [usuarioAdmin]);
 
   const onSubmit = (cliente) => {
-    // Verificar si el usuario es administrador antes de continuar
     if (usuarioAdmin) {
       const usuarioConAdmin = { ...cliente, esAdmin: true };
-      // console.log(usuarioConAdmin);
-      // Código a ejecutar si el usuario es administrador
       crearUsuario(usuarioConAdmin).then((respuesta) => {
         if (respuesta.status === 201) {
           Swal.fire(
@@ -48,14 +41,8 @@ const Registro = () => {
           );
         }
       });
-      // console.log(
-      //   "El usuario es administrador. Puedes continuar con la lógica específica para administradores."
-      // );
-      // console.log(usuarioConAdmin);
     } else {
       const usuarioSinAdmin = { ...cliente, esAdmin: false };
-      // Código a ejecutar si el usuario NO es administrador
-      // console.log(usuarioSinAdmin);
       crearUsuario(usuarioSinAdmin).then((respuesta) => {
         if (respuesta.status === 201) {
           Swal.fire(
@@ -72,16 +59,18 @@ const Registro = () => {
           );
         }
       });
-      // console.log(
-      //   "El usuario NO es administrador. Realiza las acciones para usuarios no administradores."
-      // );
-      // console.log(usuarioSinAdmin);
     }
   };
 
   return (
     <div className="mt-5 mainSection">
-      {usuarioAdmin ? (<h3 className="text-center titulos">Registro de Nuevos Administradores</h3>) : (<h3 className="text-center titulos">Registro de Usuarios</h3>)}
+      {usuarioAdmin ? (
+        <h3 className="text-center titulos">
+          Registro de Nuevos Administradores
+        </h3>
+      ) : (
+        <h3 className="text-center titulos">Registro de Usuarios</h3>
+      )}
       <hr />
       <Row className="justify-content-center w-100 ps-4">
         <Col xs={12} sm={9} md={4}>
@@ -137,7 +126,7 @@ const Registro = () => {
                   required: "El email es un dato obligatorio",
                   pattern: {
                     value:
-                    /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
+                      /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
                     message:
                       "El email debe tener el siguiente formato: 'mail@dominio.com'",
                   },
@@ -156,7 +145,7 @@ const Registro = () => {
                   required: "El DNI es obligatorio",
                   pattern: {
                     value: /^[0-9]{8}$/,
-                    message: "Ingresa un número de teléfono válido (8 dígitos)",
+                    message: "Ingresa un número de DNI válido (8 dígitos)",
                   },
                 })}
               />
@@ -191,7 +180,7 @@ const Registro = () => {
                   required: "El password es obligatorio",
                   pattern: {
                     value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-                    message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos una minúscula y una mayúscula.
+                    message: `La contraseña debe tener al entre 8 y 16 caracteres, al menos una minúscula, una mayúscula y un número.
                  NO puede tener otros símbolos.`,
                   },
                 })}

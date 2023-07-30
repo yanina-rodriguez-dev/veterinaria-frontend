@@ -1,35 +1,63 @@
-import React from 'react';
-import TablaTurnos from './Turnos/TablaTurnos';
-// import ColumnaIzquierda from './Turnos/Columna';
-import '../../App.css';
-import { Link } from 'react-router-dom';
-import AdmPacientes from './AdmPacientes';
-import AdmTurnos from './AdmTurnos';
+import React from "react";
+import TablaTurnos from "./Turnos/TablaTurnos";
+import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
+import "../../App.css";
+import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import AdmPacientes from "./AdmPacientes";
+import AdmTurnos from "./AdmTurnos";
+import AdmUsuarios from "./AdmUsuarios";
+
+
 
 
 const Administrador = () => {
+  const usuariosSession = JSON.parse(sessionStorage.getItem("usuario"));
   return (
     <>
-    <div className="container-fluid">
-      <div className="row">
-      {/* <div className="col-sm-2 d-none d-sm-block columna-izquierda">
-          <ColumnaIzquierda></ColumnaIzquierda>
-        </div> */}
-        <div className="col-10">
-          <div className='d-flex'>
-            <h2>Bienvenido!</h2>
-            <hr />
+
+      <Container fluid className="text-center">
+        <Row className="text-center">
+          <Col xs={3} className="d-none d-md-block">
+            <ColumnaIzquierda></ColumnaIzquierda>
+          </Col>
+          <Col xs={12} md={9}>
             <div>
-            <Link to ='admpacientes/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Pacientes</Link>
-            <Link to ='admturnos/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Turnos</Link>
-            <Link to ='admusuarios/' className='btn btn-primary text-decoration-none text-light ms-5 me-5'>Usuarios</Link>
+              <h2 className="fw-semibold">
+                Bienvenido{" "}
+                {usuariosSession ? usuariosSession.nombreUsuario : ""}!
+              </h2>
+              <hr />
+              <div className="d-md-none my-2">
+                <h3>Gestionar:</h3>
+                <Link
+                  to="admpacientes/"
+                  className="btn btn-primary text-decoration-none text-light"
+                >
+                  Pacientes
+                </Link>
+                <Link
+                  to="admturnos/"
+
+                  className="btn btn-primary text-decoration-none text-light mx-2 my-2"
+                >
+                  Turnos
+                </Link>
+                <Link
+                  to="admusuarios/"
+
+                  className="btn btn-primary text-decoration-none text-light"
+                >
+                  Usuarios
+                </Link>
+              </div>
             </div>
-          </div>
             <p>Estos son los turnos reservados de los próximos días:</p>
-          <TablaTurnos />
-        </div>
-      </div>
-    </div>
+            <TablaTurnos />
+          </Col>
+        </Row>
+      </Container>
+
     </>
   );
 };

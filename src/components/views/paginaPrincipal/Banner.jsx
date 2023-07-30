@@ -22,13 +22,15 @@ const Banner = () => {
             Donde el cuidado excepcional y <br className="d-none d-md-block" />{" "}
             el cariño incondicional se encuentran!
           </span>
-          <Link to='/nosotros' className="btn btn-primary btn-lg my-4">
+          <Link to="/nosotros" className="btn btn-primary btn-lg my-4">
             Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
           </Link>
         </aside>
       </section>
       <Row className="mb-5">
-        <h1 className="text-center fw-semibold mb-3">¡Nos importan tus mascotas!</h1>
+        <h1 className="text-center fw-semibold mb-3">
+          ¡Nos importan tus mascotas!
+        </h1>
         <Col xs={12} md={4} className="mb-4">
           <Card>
             <Card.Body>
@@ -39,7 +41,9 @@ const Banner = () => {
                   style={{ transform: "rotate(30deg)" }}
                 />
               </Card.Title>
-              <Card.Title className="text-center fw-semibold">Perritos </Card.Title>
+              <Card.Title className="text-center fw-semibold">
+                Perritos{" "}
+              </Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
@@ -61,7 +65,9 @@ const Banner = () => {
                   style={{ transform: "rotate(30deg)" }}
                 />
               </Card.Title>
-              <Card.Title className="text-center fw-semibold">Gatitos</Card.Title>
+              <Card.Title className="text-center fw-semibold">
+                Gatitos
+              </Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
@@ -83,7 +89,9 @@ const Banner = () => {
                   style={{ transform: "rotate(30deg)" }}
                 />
               </Card.Title>
-              <Card.Title className="text-center fw-semibold">Animalitos</Card.Title>
+              <Card.Title className="text-center fw-semibold">
+                Animalitos
+              </Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos

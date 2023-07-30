@@ -1,13 +1,12 @@
-import { TfiPencil, TfiTrash } from 'react-icons/tfi';
-import { Button } from 'react-bootstrap';
+import { TfiPencil, TfiTrash } from "react-icons/tfi";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import {borrarPaciente, obtenerListaPaciente} from "../../helpers/queries";
+import { borrarPaciente, obtenerListaPaciente } from "../../helpers/queries";
 
 
 
 const ItemPaciente = ({paciente, setPacientes}) => {
-
     const borrar = () => {
 Swal.fire({
     title: 'Seguro que quiere borrar el siguiente paciente?',
@@ -41,15 +40,15 @@ if (resultado.isConfirmed){
             text: "El producto no pudo ser eliminado.",
             icon: "error",
             confirmButtonColor:" #4D91CD",
+
         });
       }
-       })
-    }
-})
-    }
+    });
+  };
 
-    return (
+  return (
     <tr>
+
         <td>{paciente.id}</td>
         <td>{paciente.nombreDueno}</td>
         <td>{paciente.email}</td>
@@ -59,11 +58,12 @@ if (resultado.isConfirmed){
         <td>{paciente.especie}</td>
         <td>{paciente.raza}</td>
         <td className='text-center'>
-            <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"editar-paciente/"+paciente.id}><TfiPencil /></Link>
-        <Button variant="danger mt-1" onClick={borrar}><TfiTrash /></Button></td>
+            <Link className="mx-3 p-2 px-2 mb-1 btn btn-primary" to={"/editar-paciente/"+paciente.id}><TfiPencil /></Link>
+        <Button variant="danger mt-1" onClick={borrar}><TfiTrash /></Button>
+        </td>
     </tr>
-
     );
+
 };
 
 export default ItemPaciente;
