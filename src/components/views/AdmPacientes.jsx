@@ -1,6 +1,6 @@
 import React from "react";
 import TablaGestionPacientes from "./Pacientes/TablaGestionPacientes";
-import ColumnaIzquierda from "./Turnos/Columna";
+import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
 import "../../css/Administrador.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -20,7 +20,8 @@ const AdmPacientes = () => {
               <p>Gestiona los pacientes:</p>
               <Link
                 to={"/administrador/admpacientes/crear-paciente"}
-                className="btn btn-success"
+
+                className="btn btn-lg btn-success"
               >
                 Nuevo Paciente
               </Link>

@@ -6,6 +6,7 @@ import "./PlanesMarcas.css";
 import "./css/Registro.css";
 import "./Profesionales.css";
 import "./Servicios.css";
+import "./components/views/paginaPrincipal/opiniones.css"
 import Inicio from "./components/views/Inicio";
 import Contacto from "./components/views/Contacto";
 import Login from "./components/views/Login.jsx";
@@ -39,6 +40,7 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
+
           <Route
             path="/administrador/*"
             element={

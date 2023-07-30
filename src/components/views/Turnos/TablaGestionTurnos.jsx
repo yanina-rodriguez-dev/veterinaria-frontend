@@ -1,75 +1,47 @@
-import React from 'react';
-import { TfiPencil, TfiTrash } from 'react-icons/tfi';
-import { Button, Table } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
+import { obtenerListaTurnos } from '../../helpers/queries'; // Asegúrate de tener esta función implementada en queries.js
+import ItemTurno from './ItemTurno';
 
 function TablaGestionTurnos() {
+  const [turnos, setTurnos] = useState([]);
+
+  useEffect(() => {
+    obtenerListaTurnos().then((respuesta) => {
+      if (respuesta) {
+        setTurnos(respuesta);
+      } else {
+        Swal.fire('Error', 'Intente realizar esta operación en unos minutos', 'error');
+      }
+    });
+  }, []);
+
   return (
-    <Table striped bordered size="sm" responsive className='text-center'>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Detalle de cita</th>
-          <th>Veterinario</th>
-          <th>Mascota</th>
-          <th>Hora</th>
-          <th>Fecha</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>detalle cita 1</td>
-          <td>Lionel Messi</td>
-          <td>Toby</td>
-          <td>16:30</td>
-          <td>14/06/2023</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-        <td>2</td>
-          <td>Mark</td>
-          <td>detalle cita 1</td>
-          <td>Lionel Messi</td>
-          <td>Toby</td>
-          <td>16:30</td>
-          <td>14/06/2023</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-        <td>3</td>
-          <td>Mark</td>
-          <td>detalle cita 1</td>
-          <td>Lionel Messi</td>
-          <td>Toby</td>
-          <td>16:30</td>
-          <td>14/06/2023</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-        <td>4</td>
-          <td>Mark</td>
-          <td>detalle cita 1</td>
-          <td>Lionel Messi</td>
-          <td>Toby</td>
-          <td>16:30</td>
-          <td>14/06/2023</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>
-        <tr>
-        <td>5</td>
-          <td>Mark</td>
-          <td>detalle cita 1</td>
-          <td>Lionel Messi</td>
-          <td>Toby</td>
-          <td>16:30</td>
-          <td>14/06/2023</td>
-          <td className='text-center'><Button className='mx-3'><TfiPencil /></Button><Button><TfiTrash /></Button></td>
-        </tr>        
-      </tbody>
-    </Table>
+    <section>
+      <div className="d-flex justify-content-between align-items-center mt-5">
+        <h1 className="display-4">Turnos</h1>
+        {/* <Link className="btn btn-primary" to='/admTurnos/crear-turno'>
+            Agregar
+        </Link> */}
+      </div>
+      <Table striped bordered size="sm" responsive className='text-center'>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Detalle de cita</th>
+            <th>Veterinario</th>
+            <th>Mascota</th>
+            <th>Hora</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {turnos.map((turno) => <ItemTurno key={turno.id} turno={turno} setTurnos={setTurnos}></ItemTurno>)}
+        </tbody>
+      </Table>
+    </section>
   );
 }
 

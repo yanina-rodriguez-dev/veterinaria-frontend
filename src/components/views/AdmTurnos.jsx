@@ -1,30 +1,39 @@
 import TablaGestionTurnos from "./Turnos/TablaGestionTurnos";
 import React from "react";
-import ColumnaIzquierda from "./Turnos/Columna";
+import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
 import "../../css/Administrador.css";
-import Button from "react-bootstrap/Button";
+import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 const AdmTurnos = () => {
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-2 d-none d-sm-block columna-izquierda">
+
+      <Container fluid className="text-center">
+        <Row className="text-center">
+          <Col xs={3} className="d-none d-sm-block">
             <ColumnaIzquierda></ColumnaIzquierda>
-          </div>
-          <div className="col-10">
+          </Col>
+          <Col xs={12} md={9}>
             <div>
-              <h2>Administrar Turnos:</h2>
+              <h1 className="pt-4 pb-3">Administrador de Turnos</h1>
               <hr />
-              <p>Gestiona los turnos:</p>
+              <p>Gestionar Turnos:</p>
             </div>
-            <Button variant="success" className="m-2">
-              Nuevo Turno
-            </Button>
+            <div>
+              <Link
+                to={"crear-turno"}
+                className="btn btn-lg btn-success me-auto"
+              >
+                Nuevo Turno
+              </Link>
+            </div>
             <TablaGestionTurnos />
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
+
     </>
   );
 };
