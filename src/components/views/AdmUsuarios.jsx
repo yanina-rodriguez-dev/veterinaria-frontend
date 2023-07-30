@@ -14,7 +14,7 @@ const AdmUsuarios = () => {
           <Col xs={3} className="d-none d-sm-block">
             <ColumnaIzquierda></ColumnaIzquierda>
           </Col>
-          <Col xs={12} md={9}>
+          <Col xs={12} sm={9}>
             <div>
               <h2>Administrar Usuarios:</h2>
               <hr />
