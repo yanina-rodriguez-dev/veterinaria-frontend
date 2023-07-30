@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import { obtenerListaPaciente } from "../../helpers/queries";
+import { obtenerListaPacientes } from "../../helpers/queries";
 import ItemPaciente from "./ItemPaciente";
 
 function TablaGestionPacientes() {
   const [pacientes, setPacientes] = useState([]);
 
   useEffect(() => {
-    obtenerListaPaciente().then((respuesta) => {
+    obtenerListaPacientes().then((respuesta) => {
       if (respuesta) {
         setPacientes(respuesta);
       } else {

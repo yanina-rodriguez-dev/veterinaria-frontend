@@ -23,7 +23,6 @@ const EditarUsuario = () => {
       console.log(usuarioCompleto);
       if (respuesta) {
         setValue("nombreUsuario", respuesta.nombreUsuario);
-        setValue("email", respuesta.email);
         setValue("telefono", respuesta.telefono);
         setValue("direccion", respuesta.direccion);
         setValue("dni", respuesta.dni);
@@ -35,7 +34,6 @@ const EditarUsuario = () => {
     const usuarioEditadoCompleto = {
       ...usuarioCompleto,
       nombreUsuario: usuarioEditado.nombreUsuario || nombreUsuario,
-      email: usuarioEditado.email || email,
       telefono: usuarioEditado.telefono || telefono,
       dni: usuarioEditado.dni || dni,
       direccion: usuarioEditado.direccion || direccion,
@@ -87,24 +85,6 @@ const EditarUsuario = () => {
             {errors.nombreUsuario?.message}
           </Form.Text>
         </Form.Group>
-
-        <Form.Group className="mb-2" controlId="formEditarEmail">
-          <Form.Label>Correo electronico:</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Ingrese un email"
-            {...register("email", {
-              required: "El email es un dato obligatorio",
-              pattern: {
-                value:
-                  /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
-                message:
-                  "El email debe tener el siguiente formato: 'mail@dominio.com'",
-              },
-            })}
-          />
-          <Form.Text className="text-danger">{errors.email?.message}</Form.Text>
-        </Form.Group>
         <Form.Group className="mb-3" controlId="formTelefono">
           <Form.Label>Telefono</Form.Label>
           <Form.Control
@@ -143,7 +123,7 @@ const EditarUsuario = () => {
             type="text"
             placeholder="Ej: Rivadavia 1050"
             {...register("direccion", {
-              required: "La dirección del paciente es obligatoria",
+              required: "La dirección del usuario es obligatoria",
               minLength: {
                 value: 5,
                 message: "La cantidad minima de carácteres es 5",
