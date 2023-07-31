@@ -112,7 +112,6 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                     <>
                     <hr />
                       <Button
-                        className="mb-3"
                         variant="info"
                         onClick={()=>{
                           cerrarSesion()
