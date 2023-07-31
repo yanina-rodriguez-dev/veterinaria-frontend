@@ -112,6 +112,15 @@
       "hora": "8:30",
       "fecha": "2023-12-31",
       "id": 17
+    },
+    {
+      "nombreDueno": "MaxiVega",
+      "detalleCita": "prueba de que ",
+      "nombreVeterinario": "funciona",
+      "nombreMascota": "la ruta protegida",
+      "hora": "8:30",
+      "fecha": "2023-12-31",
+      "id": 18
     }
   ],
   "usuarios": [
