@@ -31,7 +31,7 @@ const EditarTurno = () => {
   }, []);
   const onSubmit = (turnoeditado) => {
     console.log(turnoeditado);
-    editarTurno(turnoeditado).then((respuesta) => {
+    editarTurno(turnoeditado._id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire(
           "Turno modificado",

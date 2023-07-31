@@ -130,7 +130,7 @@ export const editarUsuario = async (usuario, id) => {
 export const editarTurno = async (turno, id) => {
   console.log("entro a editar turno");
   try {
-    const respuesta = await fetch(URL_turno + "/" + turno.id, {
+    const respuesta = await fetch(URL_turno + "/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
