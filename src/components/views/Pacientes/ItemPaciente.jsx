@@ -48,7 +48,7 @@ const itemPaciente = ({paciente, setPacientes}) => {
         
     return (
         <tr>
-        <td>{paciente.id}</td>
+        <td>{paciente._id}</td>
         <td>{paciente.nombreDueno}</td>
         <td>{paciente.email}</td>
         <td>{paciente.telefono}</td>

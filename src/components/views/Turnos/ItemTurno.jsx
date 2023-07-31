@@ -17,7 +17,7 @@ const ItemTurno = ({ turno, setTurnos }) => {
       cancelButtonText: "Cancelar",
     }).then((resultado) => {
       if (resultado.isConfirmed) {
-        borrarTurno(turno.id).then((respuesta) => {
+        borrarTurno(turno._id).then((respuesta) => {
           if (respuesta.status === 200) {
             obtenerListaTurnos().then((respuesta) => {
               if (respuesta) {
@@ -50,7 +50,7 @@ const ItemTurno = ({ turno, setTurnos }) => {
   };
   return (
     <tr>
-      <td>{turno.id}</td>
+      <td>{turno._id}</td>
       <td>{turno.nombreDueno}</td>
       <td>{turno.detalleCita}</td>
       <td>{turno.nombreVeterinario}</td>
@@ -60,7 +60,7 @@ const ItemTurno = ({ turno, setTurnos }) => {
       <td className="text-center">
         <Link
           className="mx-3 p-2 px-2 mb-1 btn btn-primary"
-          to={"editar-turno/" + turno.id}
+          to={"editar-turno/" + turno._id}
         >
           <TfiPencil />
         </Link>
