@@ -159,7 +159,7 @@ const CrearTurno = ({usuarioLogueado, setusuarioLogueado}) => {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Guardar
+          Reservar
         </Button>
       </Form>
     </section>

@@ -44,7 +44,7 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/solicitarturno"
+            path="/reservarturno"
             element={<NuevoTurnoUsuario usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></NuevoTurnoUsuario>}
           ></Route>
 

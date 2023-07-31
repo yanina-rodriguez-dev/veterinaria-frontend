@@ -51,9 +51,25 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   Inicio
                 </NavLink>
                 <hr />
-                <NavLink end className="nav-item nav-link" to="/registro">
-                  Registro
-                </NavLink>
+                {usuarioLogueado ? (
+                  !usuarioLogueado.esAdmin ? (
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/reservarturno"
+                    >
+                      Reservar Turno
+                    </NavLink>
+                  ) : (
+                    <NavLink end className="nav-item nav-link" to="/registro">
+                      Registro
+                    </NavLink>
+                  )
+                ) : (
+                  <NavLink end className="nav-item nav-link" to="/registro">
+                    Registro
+                  </NavLink>
+                )}
                 <hr />
                 <NavLink end className="nav-item nav-link" to="/contacto">
                   Contacto
@@ -62,8 +78,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                 <NavLink end className="nav-item nav-link" to="/nosotros">
                   Nosotros
                 </NavLink>
-                <hr />
-                {usuarioLogueado.nombreUsuario ? (
+                {usuarioLogueado.email ? (
                   usuarioLogueado.esAdmin ? (
                     <>
                       <hr />
@@ -81,7 +96,11 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                     </>
                   ) : (
                     <>
-                      <Button variant="info" onClick={cerrarSesion}>
+                      <Button
+                        className="mb-3"
+                        variant="info"
+                        onClick={cerrarSesion}
+                      >
                         LogOut
                       </Button>
                     </>
@@ -94,7 +113,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   </>
                 )}
               </Nav>
-              <Form className="d-flex">
+              <Form className="d-flex mt-3 m--0">
                 <Form.Control
                   type="search"
                   placeholder="Buscar"
