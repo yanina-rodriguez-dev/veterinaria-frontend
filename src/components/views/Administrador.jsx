@@ -54,6 +54,7 @@ const Administrador = () => {
             </div>
             <p>Estos son los turnos reservados de los próximos días:</p>
             <TablaTurnos />
+            
           </Col>
         </Row>
       </Container>

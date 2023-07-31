@@ -44,6 +44,8 @@ const ColumnaIzquierda = () => {
             >
               Usuarios
             </Link>
+
+
           </div>
         </div>
         <span>Version 1.0.1</span>
