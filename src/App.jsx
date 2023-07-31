@@ -19,10 +19,12 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RutasProtegidas from "./routes/RutasProtegidas";
 import RutasAdministrador from "./routes/RutasAdministrador";
+import NuevoTurnoUsuario from "./components/views/Turnos/NuevoTurnoUsuario"
 
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
+    console.log(usuarioSessionStorage);
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
 
   return (
@@ -39,6 +41,11 @@ function App() {
             exact
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
+          ></Route>
+          <Route
+            exact
+            path="/solicitarturno"
+            element={<NuevoTurnoUsuario usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></NuevoTurnoUsuario>}
           ></Route>
 
           <Route
