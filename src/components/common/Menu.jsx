@@ -60,7 +60,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   Inicio
                 </NavLink>
                 <hr />
-                {usuarioLogueado ? (
+                {usuarioLogueado.email ? (
                   !usuarioLogueado.esAdmin ? (
                     <NavLink
                       end
