@@ -30,6 +30,13 @@ const AdmTurnos = () => {
               </Link>
             </div>
             <TablaGestionTurnos />
+            <Link
+              relative
+              to="../"
+              className="btn btn-success text-decoration-none text-light my-2 d-sm-none"
+            >
+              Volver a administrador
+            </Link>
           </Col>
         </Row>
       </Container>

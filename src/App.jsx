@@ -6,12 +6,12 @@ import "./PlanesMarcas.css";
 import "./css/Registro.css";
 import "./Profesionales.css";
 import "./Servicios.css";
-import "./components/views/paginaPrincipal/opiniones.css"
+import "./components/views/paginaPrincipal/opiniones.css";
 import Inicio from "./components/views/Inicio";
 import Contacto from "./components/views/Contacto";
 import Login from "./components/views/Login.jsx";
 import Registro from "./components/views/Registro";
-import Error404 from "./components/views/Error404"
+import Error404 from "./components/views/Error404";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import AcercaDeNosotros from "./components/views/AcercaDeNosotros";
@@ -19,10 +19,13 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RutasProtegidas from "./routes/RutasProtegidas";
 import RutasAdministrador from "./routes/RutasAdministrador";
+import RutasProtegidasCliente from "./routes/RutasProtegidasCliente";
+import RutasCliente from "./routes/RutasCliente";
 
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
+  console.log(usuarioSessionStorage);
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
 
   return (
@@ -40,6 +43,17 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}
           ></Route>
+          <Route
+            path="/reservarturno/*"
+            element={
+              <RutasProtegidasCliente>
+                <RutasCliente
+                  usuarioLogueado={usuarioLogueado}
+                  setUsuarioLogueado={setUsuarioLogueado}
+                ></RutasCliente>
+              </RutasProtegidasCliente>
+            }
+          ></Route>
 
           <Route
             path="/administrador/*"
@@ -56,7 +70,7 @@ function App() {
             path="/nosotros"
             element={<AcercaDeNosotros></AcercaDeNosotros>}
           ></Route>
-          <Route  path="/*" element={<Error404></Error404>}></Route>
+          <Route path="/*" element={<Error404></Error404>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

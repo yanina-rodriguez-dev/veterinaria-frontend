@@ -18,6 +18,13 @@ const ColumnaIzquierda = () => {
 
             <Link
               relative
+              to="../"
+              className="btn btn-success text-decoration-none text-light my-2"
+            >
+              Inicio
+            </Link>
+            <Link
+              relative
               to="../admPacientes"
               className="btn btn-success text-decoration-none text-light my-2"
             >
@@ -38,11 +45,8 @@ const ColumnaIzquierda = () => {
               Usuarios
             </Link>
 
-       
+
           </div>
-        </div>
-        <div className="salir mb-5">
-          <Button variant="success">Salir</Button>
         </div>
         <span>Version 1.0.1</span>
       </div>

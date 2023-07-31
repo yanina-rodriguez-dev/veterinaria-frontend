@@ -17,6 +17,7 @@ const Login = ({ setUsuarioLogueado }) => {
   const onSubmit = (usuario) => {
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
+        delete respuesta.password
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
         if (respuesta.esAdmin) {
           setUsuarioLogueado(respuesta);

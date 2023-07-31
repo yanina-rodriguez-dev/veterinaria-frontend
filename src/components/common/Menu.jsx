@@ -8,6 +8,7 @@ import "../../css/Menu.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import logo from "../../assets/logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const expand = "xl";
@@ -17,12 +18,19 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
     setUsuarioLogueado({});
     navegacion("/");
   };
+  const [offcanvasShow, setOffcanvasShow] = useState(false); // Estado para controlar el Offcanvas
+
+  const cerrarOffcanvas = () => {
+    setOffcanvasShow(false); // Función para cerrar el Offcanvas
+  };
+
 
   return (
     <>
       <Navbar key={expand} expand={expand} className="fondoMenu mb-3">
         <Container fluid className="d-flex justify-space-between">
-          <Navbar.Toggle
+        <Navbar.Toggle
+            onClick={() => setOffcanvasShow((prev) => !prev)} // Alternar estado del Offcanvas al hacer clic en el botón hamburguesa
             aria-controls={`offcanvasNavbar-expand-${expand}`}
             className="fs-6"
           />
@@ -33,8 +41,9 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
               alt="logo del sitio"
             />
           </Navbar.Brand>
-
           <Navbar.Offcanvas
+            show={offcanvasShow} // Asignar el estado del Offcanvas al prop 'show'
+            onHide={cerrarOffcanvas} // Llamar a la función para cerrar el Offcanvas al hacer clic fuera del mismo
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="start"
@@ -47,23 +56,39 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
             </Offcanvas.Header>
             <Offcanvas.Body className="fondoMenu">
               <Nav className="justify-content-end flex-grow-1 pe-3 text-center">
-                <NavLink end className="nav-item nav-link" to="/">
+                <NavLink end className="nav-item nav-link" to="/" onClick={cerrarOffcanvas}>
                   Inicio
                 </NavLink>
                 <hr />
-                <NavLink end className="nav-item nav-link" to="/registro">
-                  Registro
-                </NavLink>
+                {usuarioLogueado.email ? (
+                  !usuarioLogueado.esAdmin ? (
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/reservarturno"
+                      onClick={cerrarOffcanvas}
+                    >
+                      Reservar Turno
+                    </NavLink>
+                  ) : (
+                    <NavLink end className="nav-item nav-link" to="/registro" onClick={cerrarOffcanvas}>
+                      Registro
+                    </NavLink>
+                  )
+                ) : (
+                  <NavLink end className="nav-item nav-link" to="/registro" onClick={cerrarOffcanvas}>
+                    Registro
+                  </NavLink>
+                )}
                 <hr />
-                <NavLink end className="nav-item nav-link" to="/contacto">
+                <NavLink end className="nav-item nav-link" to="/contacto" onClick={cerrarOffcanvas}>
                   Contacto
                 </NavLink>
                 <hr />
-                <NavLink end className="nav-item nav-link" to="/nosotros">
+                <NavLink end className="nav-item nav-link" to="/nosotros" onClick={cerrarOffcanvas}>
                   Nosotros
                 </NavLink>
-                <hr />
-                {usuarioLogueado.nombreUsuario ? (
+                {usuarioLogueado.email ? (
                   usuarioLogueado.esAdmin ? (
                     <>
                       <hr />
@@ -71,30 +96,41 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                         end
                         className="nav-item nav-link"
                         to="/administrador"
+                        onClick={cerrarOffcanvas}
                       >
                         Administrador
                       </NavLink>
                       <hr />
-                      <Button variant="info" onClick={cerrarSesion}>
+                      <Button variant="info" onClick={()=>{
+                        cerrarSesion()
+                        cerrarOffcanvas()
+                      }}>
                         LogOut
                       </Button>
                     </>
                   ) : (
                     <>
-                      <Button variant="info" onClick={cerrarSesion}>
+                    <hr />
+                      <Button
+                        variant="info"
+                        onClick={()=>{
+                          cerrarSesion()
+                          cerrarOffcanvas()
+                        }}>
                         LogOut
                       </Button>
                     </>
                   )
                 ) : (
                   <>
-                    <NavLink end className="nav-item nav-link" to="/Login">
+                  <hr />
+                    <NavLink end className="nav-item nav-link" to="/Login" onClick={cerrarOffcanvas}>
                       Mi cuenta
                     </NavLink>
                   </>
                 )}
               </Nav>
-              <Form className="d-flex">
+              <Form className="d-flex mt-3 m-xl-0">
                 <Form.Control
                   type="search"
                   placeholder="Buscar"
