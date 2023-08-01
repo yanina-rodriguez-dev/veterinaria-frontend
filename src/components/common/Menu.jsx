@@ -90,7 +90,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   <>
                     <NavLink end className="nav-item nav-link" to="/Login">
                       Mi cuenta
-                    </NavLink>
+                    </NavLink><hr /> <br />
                   </>
                 )}
               </Nav>
