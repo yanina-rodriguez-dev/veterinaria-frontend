@@ -37,7 +37,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
           <Navbar.Brand as={Link} to="/" className="text-center">
             <img
               src={logo}
-              className="logoFooter logoSitio"
+              className="logoMenu logoSitio"
               alt="logo del sitio"
             />
           </Navbar.Brand>
@@ -126,7 +126,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   <hr />
                     <NavLink end className="nav-item nav-link" to="/Login" onClick={cerrarOffcanvas}>
                       Mi cuenta
-                    </NavLink>
+                    </NavLink><hr /> <br />
                   </>
                 )}
               </Nav>
