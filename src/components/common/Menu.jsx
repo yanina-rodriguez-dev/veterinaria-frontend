@@ -29,7 +29,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
           <Navbar.Brand as={Link} to="/" className="text-center">
             <img
               src={logo}
-              className="logoFooter logoSitio"
+              className="logoMenu logoSitio"
               alt="logo del sitio"
             />
           </Navbar.Brand>

@@ -71,10 +71,10 @@ const Footer = () => {
             <hr />
           </article>
           <div className="col-lg-4 col-md-4">
-            <Container>
+            <Container className="pt-5 logoCentrado">
               <img
                 src={logo}
-                className="logoFooter mt-md-5 mt-lg-0 m-2"
+                className="logoFooter mt-lg-0 m-2"
                 alt="logo del sitio"
               />
             </Container>
