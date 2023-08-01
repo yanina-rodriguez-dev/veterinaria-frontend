@@ -31,7 +31,7 @@ const EditarTurno = () => {
   }, []);
   const onSubmit = (turnoeditado) => {
     console.log(turnoeditado);
-    editarTurno(turnoeditado).then((respuesta) => {
+    editarTurno(turnoeditado, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire(
           "Turno modificado",
@@ -40,17 +40,15 @@ const EditarTurno = () => {
         );
         reset();
         navegacion("../admturnos");
-    } else {
+      } else {
         Swal.fire(
-            "Ocurrió un error",
-            `El turno no pudo ser modificado`,
-            "error"
-            );
-        }
+          "Ocurrió un error",
+          `El turno no pudo ser modificado`,
+          "error"
+        );
+      }
     });
   };
- 
-
 
   return (
     <section className="container mainSection">
@@ -144,27 +142,26 @@ const EditarTurno = () => {
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formPaciente">
+        <Form.Group className="mb-3" controlId="formTurno">
           <Form.Label>Hora</Form.Label>
-          <Form.Control
-            type="time"
-            placeholder="--:--"
+          <Form.Select
             {...register("hora", {
-              required: "La hora del turno es obligatorio",
+              required: "La hora del turno es obligatoria",
             })}
-          />
+            aria-label="form"
+            required
+          >
+            <option value="">Elija un horario</option>
+            <option value="8:30">8:30</option>
+            <option value="9:30">9:30</option>
+            <option value="10:30">10:30</option>
+            <option value="11:30">11:30</option>
+            <option value="12:30">12:30</option>
+            <option value="13:30">13:30</option>
+            <option value="14:30">14:30</option>
+            <option value="15:30">15:30</option>
+          </Form.Select>
           <Form.Text className="text-danger">{errors.hora?.message}</Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formPaciente">
-          <Form.Label>Fecha</Form.Label>
-          <Form.Control
-            type="date"
-            placeholder="dd/mm/aaaa"
-            {...register("fecha", {
-              required: "La fecha del turno es obligatorio",
-            })}
-          />
-          <Form.Text className="text-danger">{errors.fecha?.message}</Form.Text>
         </Form.Group>
 
         <Button variant="primary" type="submit">

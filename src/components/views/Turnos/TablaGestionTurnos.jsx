@@ -38,7 +38,7 @@ function TablaGestionTurnos() {
           </tr>
         </thead>
         <tbody>
-          {turnos.map((turno) => <ItemTurno key={turno.id} turno={turno} setTurnos={setTurnos}></ItemTurno>)}
+          {turnos.map((turno) => <ItemTurno key={turno._id} turno={turno} setTurnos={setTurnos}></ItemTurno>)}
         </tbody>
       </Table>
     </section>

@@ -27,8 +27,8 @@ function TablaTurnos() {
       </thead>
       <tbody>
         {turnos.map((turno) => (
-          <tr key={turno.id}>
-            <td>{turno.id}</td>
+          <tr key={turno._id}>
+            <td>{turno._id}</td>
             <td>{turno.nombreDueno}</td>
             <td>{turno.fecha}</td>
             <td>{turno.hora}</td>
