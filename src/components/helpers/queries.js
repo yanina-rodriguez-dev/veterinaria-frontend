@@ -21,6 +21,7 @@ export const iniciarSesion = async (usuario) => {
 
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
