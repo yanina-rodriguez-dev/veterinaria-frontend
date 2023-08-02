@@ -4,19 +4,21 @@ const URL_paciente = import.meta.env.VITE_API_PACIENTES;
 
 export const iniciarSesion = async (usuario) => {
   try {
-    const respuesta = await fetch(URL_usuario);
-    const listaUsuarios = await respuesta.json();
-    const usuarioBuscado = listaUsuarios.find(
-      (itemUsuario) => itemUsuario.email === usuario.email
-    );
-    if (usuarioBuscado) {
-      if (usuarioBuscado.password === usuario.password) {
-        return usuarioBuscado;
-      } else {
-      }
-    } else {
-      return null;
-    }
+    const respuesta = await fetch(URL_usuario,{
+      method: "POST",
+      headers:{
+          "Content-Type":"application/json"
+      },
+      body: JSON.stringify(usuario)
+    });
+    
+    const datos = await respuesta.json();
+        return {
+            status: respuesta.status,
+            nombreUsuario: datos.nombreUsuario,
+            esAdmin: datos.esAdmin 
+        }
+
   } catch (error) {
     console.log(error);
   }
