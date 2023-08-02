@@ -24,7 +24,8 @@ const EditarTurno = () => {
         setValue("nombreVeterinario", respuesta.nombreVeterinario);
         setValue("nombreMascota", respuesta.nombreMascota);
         setValue("hora", respuesta.hora);
-        setValue("fecha", respuesta.fecha);
+        const fechaFormateada = new Date(respuesta.fecha).toISOString().split('T')[0];
+        setValue("fecha", fechaFormateada);
         setValue("id", respuesta.id);
       }
     });
@@ -162,6 +163,19 @@ const EditarTurno = () => {
             <option value="15:30">15:30</option>
           </Form.Select>
           <Form.Text className="text-danger">{errors.hora?.message}</Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formPaciente">
+          <Form.Label>Fecha</Form.Label>
+          <Form.Control
+            type="date"
+            placeholder="dd/mm/aaaa"
+            {...register("fecha", {
+              required: "La fecha del turno es obligatorio",
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.fecha?.message}
+          </Form.Text>
         </Form.Group>
 
         <Button variant="primary" type="submit">

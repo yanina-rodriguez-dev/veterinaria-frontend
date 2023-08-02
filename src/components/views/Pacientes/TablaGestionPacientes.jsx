@@ -28,7 +28,6 @@ function TablaGestionPacientes() {
       <Table striped bordered size="sm" responsive className="text-center">
         <thead>
           <tr>
-            <th>#</th>
             <th>Nombre</th>
             <th>Email</th>
             <th>Telefono</th>

@@ -43,11 +43,19 @@ export const obtenerListaUsuarios = async () => {
 
 export const obtenerListaTurnos = async () => {
   try {
-    const respuesta = await fetch(URL_turno); // Asegúrate de tener la URL_turno definida en queries.js
-    const listaTurnos = await respuesta.json();
-    return listaTurnos;
+    const response = await fetch(URL_turno);
+    const data = await response.json();
+
+    const turnosFormateados = data.map((turno) => {
+      return {
+        ...turno,
+        fecha: new Date(turno.fecha).toLocaleDateString("es-AR"),
+      };
+    });
+
+    return turnosFormateados;
   } catch (error) {
-    console.log(error);
+    console.error("Error al obtener la lista de turnos:", error);    
   }
 };
 
@@ -80,18 +88,20 @@ export const crearUsuario = async (usuario) => {
   }
 };
 
-export const crearTurno = async (turno) => {
+export const crearTurno = async (nuevoTurno) => {
+  nuevoTurno.fecha = new Date(nuevoTurno.fecha).toISOString();
+
   try {
-    const respuesta = await fetch(URL_turno, {
+    const response = await fetch(URL_turno, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(turno),
+      body: JSON.stringify(nuevoTurno),
     });
-    return respuesta; // el status de la respuesta es 201
+    return response;
   } catch (error) {
-    console.log(error);
+    console.error("Error al crear el turno:", error);    
   }
 };
 

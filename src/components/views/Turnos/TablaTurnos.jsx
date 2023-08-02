@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
-import { obtenerListaTurnos } from '../../helpers/queries'; // Asegúrate de tener esta función implementada en queries.js
+import { obtenerListaTurnos } from '../../helpers/queries';
 
 function TablaTurnos() {
   const [turnos, setTurnos] = useState([]);
@@ -19,7 +19,6 @@ function TablaTurnos() {
     <Table striped bordered size="sm" responsive>
       <thead>
         <tr>
-          <th>#</th>
           <th>Paciente</th>
           <th>Fecha</th>
           <th>Hora</th>
@@ -28,7 +27,6 @@ function TablaTurnos() {
       <tbody>
         {turnos.map((turno) => (
           <tr key={turno._id}>
-            <td>{turno._id}</td>
             <td>{turno.nombreDueno}</td>
             <td>{turno.fecha}</td>
             <td>{turno.hora}</td>
