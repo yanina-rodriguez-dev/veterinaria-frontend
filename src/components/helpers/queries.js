@@ -78,7 +78,7 @@ export const crearPaciente = async (paciente) => {
 };
 export const crearUsuario = async (usuario) => {
   try {
-    const respuesta = await fetch(URL_usuario, {
+    const respuesta = await fetch(URL_usuario + "/nuevo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -127,7 +127,7 @@ export const editarPaciente = async (paciente, id) => {
 
 export const editarUsuario = async (usuario, id) => {
   try {
-    const respuesta = await fetch(URL_usuario + "/" + id, {
+    const respuesta = await fetch(URL_usuario + "/usuario/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -214,7 +214,7 @@ export const obtenerTurno = async (id) => {
 
 export const obtenerUsuario = async (id) => {
   try {
-    const respuesta = await fetch(URL_usuario + "/" + id);
+    const respuesta = await fetch(URL_usuario + "/usuario/" + id);
     const usuario = await respuesta.json();
     return usuario;
   } catch (error) {

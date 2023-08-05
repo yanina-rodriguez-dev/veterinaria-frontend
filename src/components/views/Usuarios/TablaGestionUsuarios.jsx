@@ -40,7 +40,7 @@ const TablaGestionUsuarios = () => {
         </thead>
         <tbody>
           {
-            usuarios.map((usuario)=> <ItemUsuario key={usuario.id} usuario={usuario} setUsuarios={setUsuarios}></ItemUsuario>)
+            usuarios.map((usuario)=> <ItemUsuario key={usuario._id} usuario={usuario} setUsuarios={setUsuarios}></ItemUsuario>)
           }
         </tbody>
         </Table>
