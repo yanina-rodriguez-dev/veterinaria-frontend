@@ -170,7 +170,7 @@ export const borrarPaciente = async (id) => {
 };
 export const borrarUsuario = async (id) => {
   try {
-    const respuesta = await fetch(URL_usuario + "/" + id, {
+    const respuesta = await fetch(URL_usuario + "/usuario/" + id, {
       method: "DELETE",
     });
     return respuesta;
