@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-/*  */import Swal from "sweetalert2";
+/*  */ import Swal from "sweetalert2";
 import { iniciarSesion } from "../helpers/queries";
 
 const Login = ({ setUsuarioLogueado }) => {
@@ -17,7 +17,7 @@ const Login = ({ setUsuarioLogueado }) => {
   const onSubmit = (usuario) => {
     iniciarSesion(usuario).then((respuesta) => {
       if (respuesta) {
-        delete respuesta.password
+        delete respuesta.password;
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
         if (respuesta.esAdmin) {
           setUsuarioLogueado(respuesta);
@@ -58,7 +58,7 @@ const Login = ({ setUsuarioLogueado }) => {
             minLength={5}
             placeholder="Ingrese un email"
             {...register("email", {
-              required: "El email es un dato obligatorio",                            
+              required: "El email es un dato obligatorio",
               pattern: {
                 value:
                   /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
@@ -66,7 +66,6 @@ const Login = ({ setUsuarioLogueado }) => {
                   "El email debe tener el siguiente formato: 'mail@dominio.com'",
               },
             })}
-                  
           />
           <Form.Text className="text-danger">
             Nunca compartiremos tu contraseña.<br></br>

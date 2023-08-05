@@ -1,32 +1,35 @@
-import React from 'react';
+import React from "react";
 import { useEffect, useState } from "react";
-import { Table } from 'react-bootstrap';
-import { obtenerListaUsuarios } from '../../helpers/queries';
-import ItemUsuario from './ItemUsuario';
+import { Table } from "react-bootstrap";
+import { obtenerListaUsuarios } from "../../helpers/queries";
+import ItemUsuario from "./ItemUsuario";
 
 const TablaGestionUsuarios = () => {
+  const [usuarios, setUsuarios] = useState([]);
 
-    const [usuarios, setUsuarios] = useState([]);
+  useEffect(() => {
+    obtenerListaUsuarios().then((respuesta) => {
+      if (respuesta) {
+        setUsuarios(respuesta);
+      } else {
+        Swal.fire(
+          "Error",
+          "Intente realizar esta operación en unos minutos",
+          "error"
+        );
+      }
+    });
+  }, []);
 
-    useEffect(()=>{
-      obtenerListaUsuarios().then((respuesta)=>{
-        if(respuesta){
-          setUsuarios(respuesta);
-        }else{
-          Swal.fire('Error', 'Intente realizar esta operación en unos minutos', 'error');
-        }
-      })
-    },[])
-
-    return (
-        <section>
-        <div className="d-flex justify-content-between align-items-center mt-5">
-            <h1 className="display-4 ">Usuarios</h1>
-            {/* <Link className="btn btn-primary" to='/admPacientes/crear-paciente'>
+  return (
+    <section>
+      <div className="d-flex justify-content-between align-items-center mt-5">
+        <h1 className="display-4 ">Usuarios</h1>
+        {/* <Link className="btn btn-primary" to='/admPacientes/crear-paciente'>
               Agregar
             </Link> */}
-          </div>
-        <Table striped bordered size="sm" responsive className='text-center'>
+      </div>
+      <Table striped bordered size="sm" responsive className="text-center">
         <thead>
           <tr>
             <th>Rol</th>
@@ -39,13 +42,17 @@ const TablaGestionUsuarios = () => {
           </tr>
         </thead>
         <tbody>
-          {
-            usuarios.map((usuario)=> <ItemUsuario key={usuario._id} usuario={usuario} setUsuarios={setUsuarios}></ItemUsuario>)
-          }
+          {usuarios.map((usuario) => (
+            <ItemUsuario
+              key={usuario._id}
+              usuario={usuario}
+              setUsuarios={setUsuarios}
+            ></ItemUsuario>
+          ))}
         </tbody>
-        </Table>
-      </section>
-    );
+      </Table>
+    </section>
+  );
 };
 
 export default TablaGestionUsuarios;

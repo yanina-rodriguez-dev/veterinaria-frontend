@@ -16,8 +16,7 @@ export const iniciarSesion = async (usuario) => {
       const usuarioAutenticado = await respuesta.json();
       return usuarioAutenticado;
     } else {
-      // Aquí puedes manejar el caso de error de autenticación si lo deseas
-      throw new Error('Error de autenticación');
+      throw new Error("Error de autenticación");
     }
   } catch (error) {
     console.log(error);
@@ -58,7 +57,7 @@ export const obtenerListaTurnos = async () => {
 
     return turnosFormateados;
   } catch (error) {
-    console.error("Error al obtener la lista de turnos:", error);    
+    console.error("Error al obtener la lista de turnos:", error);
   }
 };
 
@@ -104,7 +103,7 @@ export const crearTurno = async (nuevoTurno) => {
     });
     return response;
   } catch (error) {
-    console.error("Error al crear el turno:", error);    
+    console.error("Error al crear el turno:", error);
   }
 };
 
@@ -204,7 +203,7 @@ export const obtenerPaciente = async (id) => {
 
 export const obtenerTurno = async (id) => {
   try {
-    const respuesta = await fetch(URL_turno + "/" + id); // Asegúrate de tener la URL_turno definida en queries.js
+    const respuesta = await fetch(URL_turno + "/" + id);
     const turno = await respuesta.json();
     return turno;
   } catch (error) {
