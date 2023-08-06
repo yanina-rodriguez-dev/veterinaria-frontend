@@ -45,7 +45,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
 
   return (
     <>
-      <Navbar key={expand} expand={expand} className="fondoMenu mb-3">
+      <Navbar key={expand} expand={expand} className="fondoMenu">
         <Container fluid className="d-flex justify-space-between">
           <Navbar.Toggle
             onClick={() => setOffcanvasShow((prev) => !prev)} // Alternar estado del Offcanvas al hacer clic en el botón hamburguesa
