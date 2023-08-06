@@ -23,11 +23,8 @@ const TablaGestionUsuarios = () => {
 
   return (
     <section>
-      <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4 ">Usuarios</h1>
-        {/* <Link className="btn btn-primary" to='/admPacientes/crear-paciente'>
-              Agregar
-            </Link> */}
+      <div className="d-flex justify-content-between align-items-center mt-4">
+        <h2 className="display-6 ">Usuarios</h2>
       </div>
       <Table striped bordered size="sm" responsive className="text-center">
         <thead>
