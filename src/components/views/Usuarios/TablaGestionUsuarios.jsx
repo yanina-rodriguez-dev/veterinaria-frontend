@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { obtenerListaUsuarios } from "../../helpers/queries";
 import ItemUsuario from "./ItemUsuario";
+import Pagination from 'react-bootstrap/Pagination';
 
 const TablaGestionUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const pageSize = 3;
+  const [pacientes] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     obtenerListaUsuarios().then((respuesta) => {
@@ -20,6 +24,14 @@ const TablaGestionUsuarios = () => {
       }
     });
   }, []);
+
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const pacientesPaginados = pacientes.slice(startIndex, endIndex);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <section>
@@ -48,6 +60,31 @@ const TablaGestionUsuarios = () => {
           ))}
         </tbody>
       </Table>
+      <Pagination>
+        <Pagination.First onClick={() => handlePageChange(1)} />
+        <Pagination.Prev
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        />
+        {Array.from({ length: Math.ceil(usuarios.length / pageSize) }).map(
+          (_, index) => (
+            <Pagination.Item
+              key={index + 1}
+              active={index + 1 === currentPage}
+              onClick={() => handlePageChange(index + 1)}
+            >
+              {index + 1}
+            </Pagination.Item>
+          )
+        )}
+        <Pagination.Next
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={endIndex >= usuarios.length}
+        />
+        <Pagination.Last
+          onClick={() => handlePageChange(Math.ceil(usuarios.length / pageSize))}
+        />
+      </Pagination>
     </section>
   );
 };
