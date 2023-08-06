@@ -4,21 +4,23 @@ const URL_paciente = import.meta.env.VITE_API_PACIENTES;
 
 export const iniciarSesion = async (usuario) => {
   try {
-    const respuesta = await fetch(URL_usuario);
-    const listaUsuarios = await respuesta.json();
-    const usuarioBuscado = listaUsuarios.find(
-      (itemUsuario) => itemUsuario.email === usuario.email
-    );
-    if (usuarioBuscado) {
-      if (usuarioBuscado.password === usuario.password) {
-        return usuarioBuscado;
-      } else {
-      }
+    const respuesta = await fetch(URL_usuario, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(usuario),
+    });
+
+    if (respuesta.ok) {
+      const usuarioAutenticado = await respuesta.json();
+      return usuarioAutenticado;
     } else {
-      return null;
+      throw new Error("Error de autenticación");
     }
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -55,7 +57,7 @@ export const obtenerListaTurnos = async () => {
 
     return turnosFormateados;
   } catch (error) {
-    console.error("Error al obtener la lista de turnos:", error);    
+    console.error("Error al obtener la lista de turnos:", error);
   }
 };
 
@@ -75,7 +77,7 @@ export const crearPaciente = async (paciente) => {
 };
 export const crearUsuario = async (usuario) => {
   try {
-    const respuesta = await fetch(URL_usuario, {
+    const respuesta = await fetch(URL_usuario + "/nuevo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,7 +103,7 @@ export const crearTurno = async (nuevoTurno) => {
     });
     return response;
   } catch (error) {
-    console.error("Error al crear el turno:", error);    
+    console.error("Error al crear el turno:", error);
   }
 };
 
@@ -124,7 +126,7 @@ export const editarPaciente = async (paciente, id) => {
 
 export const editarUsuario = async (usuario, id) => {
   try {
-    const respuesta = await fetch(URL_usuario + "/" + id, {
+    const respuesta = await fetch(URL_usuario + "/usuario/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -167,7 +169,7 @@ export const borrarPaciente = async (id) => {
 };
 export const borrarUsuario = async (id) => {
   try {
-    const respuesta = await fetch(URL_usuario + "/" + id, {
+    const respuesta = await fetch(URL_usuario + "/usuario/" + id, {
       method: "DELETE",
     });
     return respuesta;
@@ -201,7 +203,7 @@ export const obtenerPaciente = async (id) => {
 
 export const obtenerTurno = async (id) => {
   try {
-    const respuesta = await fetch(URL_turno + "/" + id); // Asegúrate de tener la URL_turno definida en queries.js
+    const respuesta = await fetch(URL_turno + "/" + id);
     const turno = await respuesta.json();
     return turno;
   } catch (error) {
@@ -211,7 +213,7 @@ export const obtenerTurno = async (id) => {
 
 export const obtenerUsuario = async (id) => {
   try {
-    const respuesta = await fetch(URL_usuario + "/" + id);
+    const respuesta = await fetch(URL_usuario + "/usuario/" + id);
     const usuario = await respuesta.json();
     return usuario;
   } catch (error) {

@@ -9,14 +9,33 @@ import { AiOutlineSearch } from "react-icons/ai";
 import logo from "../../assets/logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function Menu({ usuarioLogueado, setUsuarioLogueado }) {
   const expand = "xl";
   const navegacion = useNavigate();
   const cerrarSesion = () => {
-    sessionStorage.removeItem("usuario");
-    setUsuarioLogueado({});
-    navegacion("/");
+    Swal.fire({
+      title: "¿Estas seguro que quieres cerrar sesion?",
+      text: "No podras revertir esto",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, cerrar sesión.",
+      cancelButtonText: "Cancelar.",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          "¡Sesión cerrada!",
+          "Tu sesión finalizó correctamente.",
+          "success"
+        );
+        sessionStorage.removeItem("usuario");
+        setUsuarioLogueado({});
+        navegacion("/");
+      }
+    });
   };
   const [offcanvasShow, setOffcanvasShow] = useState(false); // Estado para controlar el Offcanvas
 
@@ -24,12 +43,11 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
     setOffcanvasShow(false); // Función para cerrar el Offcanvas
   };
 
-
   return (
     <>
       <Navbar key={expand} expand={expand} className="fondoMenu mb-3">
         <Container fluid className="d-flex justify-space-between">
-        <Navbar.Toggle
+          <Navbar.Toggle
             onClick={() => setOffcanvasShow((prev) => !prev)} // Alternar estado del Offcanvas al hacer clic en el botón hamburguesa
             aria-controls={`offcanvasNavbar-expand-${expand}`}
             className="fs-6"
@@ -56,7 +74,12 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
             </Offcanvas.Header>
             <Offcanvas.Body className="fondoMenu">
               <Nav className="justify-content-end flex-grow-1 pe-3 text-center">
-                <NavLink end className="nav-item nav-link" to="/" onClick={cerrarOffcanvas}>
+                <NavLink
+                  end
+                  className="nav-item nav-link"
+                  to="/"
+                  onClick={cerrarOffcanvas}
+                >
                   Inicio
                 </NavLink>
                 <hr />
@@ -71,21 +94,41 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                       Reservar Turno
                     </NavLink>
                   ) : (
-                    <NavLink end className="nav-item nav-link" to="/registro" onClick={cerrarOffcanvas}>
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/registro"
+                      onClick={cerrarOffcanvas}
+                    >
                       Registro
                     </NavLink>
                   )
                 ) : (
-                  <NavLink end className="nav-item nav-link" to="/registro" onClick={cerrarOffcanvas}>
+                  <NavLink
+                    end
+                    className="nav-item nav-link"
+                    to="/registro"
+                    onClick={cerrarOffcanvas}
+                  >
                     Registro
                   </NavLink>
                 )}
                 <hr />
-                <NavLink end className="nav-item nav-link" to="/contacto" onClick={cerrarOffcanvas}>
+                <NavLink
+                  end
+                  className="nav-item nav-link"
+                  to="/contacto"
+                  onClick={cerrarOffcanvas}
+                >
                   Contacto
                 </NavLink>
                 <hr />
-                <NavLink end className="nav-item nav-link" to="/nosotros" onClick={cerrarOffcanvas}>
+                <NavLink
+                  end
+                  className="nav-item nav-link"
+                  to="/nosotros"
+                  onClick={cerrarOffcanvas}
+                >
                   Nosotros
                 </NavLink>
                 {usuarioLogueado.email ? (
@@ -101,32 +144,42 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                         Administrador
                       </NavLink>
                       <hr />
-                      <Button variant="info" onClick={()=>{
-                        cerrarSesion()
-                        cerrarOffcanvas()
-                      }}>
+                      <Button
+                        variant="info"
+                        onClick={() => {
+                          cerrarSesion();
+                          cerrarOffcanvas();
+                        }}
+                      >
                         LogOut
                       </Button>
                     </>
                   ) : (
                     <>
-                    <hr />
+                      <hr />
                       <Button
                         variant="info"
-                        onClick={()=>{
-                          cerrarSesion()
-                          cerrarOffcanvas()
-                        }}>
+                        onClick={() => {
+                          cerrarSesion();
+                          cerrarOffcanvas();
+                        }}
+                      >
                         LogOut
                       </Button>
                     </>
                   )
                 ) : (
                   <>
-                  <hr />
-                    <NavLink end className="nav-item nav-link" to="/Login" onClick={cerrarOffcanvas}>
+                    <hr />
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/Login"
+                      onClick={cerrarOffcanvas}
+                    >
                       Mi cuenta
-                    </NavLink><hr /> <br />
+                    </NavLink>
+                    <hr /> <br />
                   </>
                 )}
               </Nav>
