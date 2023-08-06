@@ -14,12 +14,15 @@
     background-color: #301b51;
 
 }
-.widthGif{
+/* .widthGif{
     width: 40%;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .widthGif{
         min-width: 100%;
     }
+}
+.fondoError{
+    background-color: rgb(249, 231, 231);
 }
