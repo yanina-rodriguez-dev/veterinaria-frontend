@@ -116,6 +116,7 @@ export const editarPaciente = async (paciente, id) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(paciente),
     });
@@ -162,6 +163,9 @@ export const borrarPaciente = async (id) => {
   try {
     const respuesta = await fetch(URL_paciente + "/" + id, {
       method: "DELETE",
+      headers:{
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
+    },
     });
     return respuesta;
   } catch (error) {
