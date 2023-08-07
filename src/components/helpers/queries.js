@@ -7,7 +7,7 @@ export const iniciarSesion = async (usuario) => {
     const respuesta = await fetch(URL_usuario, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(usuario),
     });
@@ -67,6 +67,7 @@ export const crearPaciente = async (paciente) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(paciente),
     });
