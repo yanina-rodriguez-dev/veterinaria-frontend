@@ -60,8 +60,8 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
             />
           </Navbar.Brand>
           <Navbar.Offcanvas
-            show={offcanvasShow} // Asignar el estado del Offcanvas al prop 'show'
-            onHide={cerrarOffcanvas} // Llamar a la función para cerrar el Offcanvas al hacer clic fuera del mismo
+            show={offcanvasShow}
+            onHide={cerrarOffcanvas}
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="start"

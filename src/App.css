@@ -1,5 +1,6 @@
 .fondoGeneral{
-   background: #e7d0b1;
+   /* background: #e7d0b1; */
+   background-color: rgb(249, 231, 231);
 } 
 .opinion{
    border-radius: 0px 40px;

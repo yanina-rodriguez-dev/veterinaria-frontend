@@ -15,17 +15,14 @@ const Opiniones = () => {
                 <Card.Title className="mb-4 my-3 text-center">
                   {" "}
                   <FaUserCircle className="fs-1 me-2" />
-                  Juan Rodriguez{" "}
+                  Tamara Rodriguez{" "}
                 </Card.Title>
                 <Card.Title className="mb-2">
                   {" "}
                   <FaQuoteLeft className="ms-3" />{" "}
                 </Card.Title>
-                <Card.Text className="mx-lg-5 mx-md-1 mx-5">
-                  También es genial que ofrezcan consejos útiles sobre cuidado y
-                  nutrición para los animales. ¡Sin duda recomendaría esta
-                  clínica veterinaria a todos mis amigos y familiares amantes de
-                  los animales!
+                <Card.Text className="mx-lg-5 mx-md-1 mx-5 h-100">
+                ¡Muchas gracias por haber salvado la vida de mi Tobi! La verdad es que no sé qué hubiera hecho sin ustedes. Desde el primer momento nos brindaron contención y nos sentimos acompañados en todo el proceso, desde la operación hasta su recuperación.
                 </Card.Text>
               </Card.Body>
               <Card.Text className="text-center text-warning mb-4 fs-4">
@@ -39,17 +36,14 @@ const Opiniones = () => {
                 <Card.Title className="mb-4 my-3 text-center">
                   {" "}
                   <FaUserCircle className="fs-1 me-2" />
-                  Juan Rodriguez{" "}
+                  Juan Gonzales{" "}
                 </Card.Title>
                 <Card.Title className="mb-2">
                   {" "}
                   <FaQuoteLeft className="ms-3" />{" "}
                 </Card.Title>
                 <Card.Text className="mx-lg-5 mx-md-1 mx-5">
-                  También es genial que ofrezcan consejos útiles sobre cuidado y
-                  nutrición para los animales. ¡Sin duda recomendaría esta
-                  clínica veterinaria a todos mis amigos y familiares amantes de
-                  los animales!
+                ¡Muchas gracias al Dr. Suárez por el excelente trato que tuvo con Flopi y mi familia, nuestra querida hija de cuatro patas. Nunca habíamos visto a Flopi llevarse tan bien con alguien que no fuera de la familia. Sin duda, recomiendo este centro lleno de profesionales capacitados.
                 </Card.Text>
               </Card.Body>
               <Card.Text className="text-center text-warning mb-4 fs-4">
@@ -71,8 +65,8 @@ const Opiniones = () => {
                 </Card.Title>
                 <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                   También es genial que ofrezcan consejos útiles sobre cuidado y
-                  nutrición para los animales. ¡Sin duda recomendaría esta
-                  clínica veterinaria a todos mis amigos y familiares amantes de
+                  nutrición para los animales, ademas de eso no tengo nada mas para agregar. ¡Sin duda recomendaría esta
+                  clínica veterinaria a todos mis amigos, conocidos y familiares amantes de
                   los animales!
                 </Card.Text>
               </Card.Body>
