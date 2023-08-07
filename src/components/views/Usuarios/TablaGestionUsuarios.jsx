@@ -8,7 +8,6 @@ import Pagination from 'react-bootstrap/Pagination';
 const TablaGestionUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
   const pageSize = 3;
-  const [pacientes] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const TablaGestionUsuarios = () => {
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const pacientesPaginados = pacientes.slice(startIndex, endIndex);
+  const usuariosPaginados = usuarios.slice(startIndex, endIndex);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -51,7 +50,7 @@ const TablaGestionUsuarios = () => {
           </tr>
         </thead>
         <tbody>
-          {usuarios.map((usuario) => (
+          {usuariosPaginados.map((usuario) => (
             <ItemUsuario
               key={usuario._id}
               usuario={usuario}
