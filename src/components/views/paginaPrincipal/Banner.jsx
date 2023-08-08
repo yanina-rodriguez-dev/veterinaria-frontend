@@ -2,6 +2,7 @@ import { Card, Col, Row } from "react-bootstrap";
 import { FaPaw } from "react-icons/fa";
 import { FaDog, FaCat, FaKiwiBird } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "../../../css/banner.css"
 
 const Banner = () => {
   return (

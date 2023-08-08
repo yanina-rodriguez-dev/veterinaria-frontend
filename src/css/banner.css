@@ -13,7 +13,7 @@
 }
 @media screen and (min-width: 768px) {
   .bannerContainer {
-    background-image: url("../../../assets/bannerimg.png");
+    background-image: url("../assets/bannerimg.png");
     width: 100%;
     height: 60vh;
     background-position: center;
@@ -35,8 +35,7 @@
   }
 }
 
-.card{
+.card {
   border-radius: 0px 40px;
-  background: #EDE7FB;
-  
+  background: #ede7fb;
 }

@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import "../../css/Menu.css";
+import "../../css/menu.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import logo from "../../assets/logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -37,10 +37,10 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
       }
     });
   };
-  const [offcanvasShow, setOffcanvasShow] = useState(false); // Estado para controlar el Offcanvas
+  const [offcanvasShow, setOffcanvasShow] = useState(false); 
 
   const cerrarOffcanvas = () => {
-    setOffcanvasShow(false); // Función para cerrar el Offcanvas
+    setOffcanvasShow(false); 
   };
 
   return (
@@ -48,7 +48,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
       <Navbar key={expand} expand={expand} className="fondoMenu">
         <Container fluid className="d-flex justify-space-between">
           <Navbar.Toggle
-            onClick={() => setOffcanvasShow((prev) => !prev)} // Alternar estado del Offcanvas al hacer clic en el botón hamburguesa
+            onClick={() => setOffcanvasShow((prev) => !prev)} 
             aria-controls={`offcanvasNavbar-expand-${expand}`}
             className="fs-6"
           />

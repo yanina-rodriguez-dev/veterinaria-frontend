@@ -1,4 +1,3 @@
-import React from 'react';
 import {Card, Container, Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { FaPaw } from "react-icons/fa";

@@ -1,12 +1,7 @@
-import React from "react";
 import TablaTurnos from "./Turnos/TablaTurnos";
 import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
-import "../../App.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import AdmPacientes from "./AdmPacientes";
-import AdmTurnos from "./AdmTurnos";
-import AdmUsuarios from "./AdmUsuarios";
 
 
 

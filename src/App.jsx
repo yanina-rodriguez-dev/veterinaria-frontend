@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import "./css/Administrador.css";
-import "./AcercaDe.css";
-import "./PlanesMarcas.css";
-import "./css/Registro.css";
-import "./Profesionales.css";
-import "./Servicios.css";
-import "./components/views/paginaPrincipal/opiniones.css";
+import "./css/app.css";
+import "./css/administrador.css";
+import "./css/acercaDe.css";
+import "./css/planesMarcas.css";
+import "./css/registro.css";
+import "./css/profesionales.css";
+import "./css/servicios.css";
+import "./css/opiniones.css";
 import Inicio from "./components/views/Inicio";
 import Contacto from "./components/views/Contacto";
 import Login from "./components/views/Login.jsx";
@@ -37,7 +37,6 @@ function App() {
         ></Menu>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
-          {/* <Route exact path="/contacto" element={<Contacto></Contacto>}></Route> */}
           <Route
             exact
             path="/login"
