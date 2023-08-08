@@ -3,9 +3,12 @@ import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { obtenerListaUsuarios } from "../../helpers/queries";
 import ItemUsuario from "./ItemUsuario";
+import Pagination from 'react-bootstrap/Pagination';
 
 const TablaGestionUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const pageSize = 3;
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     obtenerListaUsuarios().then((respuesta) => {
@@ -21,13 +24,18 @@ const TablaGestionUsuarios = () => {
     });
   }, []);
 
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const usuariosPaginados = usuarios.slice(startIndex, endIndex);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <section>
-      <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4 ">Usuarios</h1>
-        {/* <Link className="btn btn-primary" to='/admPacientes/crear-paciente'>
-              Agregar
-            </Link> */}
+      <div className="d-flex justify-content-between align-items-center mt-4">
+        <h2 className="display-6 ">Usuarios</h2>
       </div>
       <Table striped bordered size="sm" responsive className="text-center">
         <thead>
@@ -42,7 +50,7 @@ const TablaGestionUsuarios = () => {
           </tr>
         </thead>
         <tbody>
-          {usuarios.map((usuario) => (
+          {usuariosPaginados.map((usuario) => (
             <ItemUsuario
               key={usuario._id}
               usuario={usuario}
@@ -51,6 +59,31 @@ const TablaGestionUsuarios = () => {
           ))}
         </tbody>
       </Table>
+      <Pagination>
+        <Pagination.First onClick={() => handlePageChange(1)} />
+        <Pagination.Prev
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        />
+        {Array.from({ length: Math.ceil(usuarios.length / pageSize) }).map(
+          (_, index) => (
+            <Pagination.Item
+              key={index + 1}
+              active={index + 1 === currentPage}
+              onClick={() => handlePageChange(index + 1)}
+            >
+              {index + 1}
+            </Pagination.Item>
+          )
+        )}
+        <Pagination.Next
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={endIndex >= usuarios.length}
+        />
+        <Pagination.Last
+          onClick={() => handlePageChange(Math.ceil(usuarios.length / pageSize))}
+        />
+      </Pagination>
     </section>
   );
 };

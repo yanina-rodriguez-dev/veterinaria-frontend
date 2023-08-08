@@ -17,7 +17,7 @@ const AdmTurnos = () => {
           </Col>
           <Col xs={12} sm={9}>
             <div>
-              <h1 className="pt-4 pb-3">Administrador de Turnos</h1>
+              <h2 className="pt-4 pb-3">Administrador de Turnos</h2>
               <hr />
               <p>Gestionar Turnos:</p>
             </div>
