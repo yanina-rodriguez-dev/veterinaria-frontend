@@ -45,7 +45,7 @@ const Banner = () => {
               <Card.Title className="text-center fw-semibold">
                 Perritos{" "}
               </Card.Title>
-              <Card.Text className="mx-lg-5 mx-md-1 mx-5">
+              <Card.Text className="mx-lg-5 mx-md-1 mx-5 fw-bold">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
                 caninos. Nuestro equipo veterinario altamente capacitado está
@@ -71,10 +71,7 @@ const Banner = () => {
               </Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
-                Nos dedicamos a cuidar y proteger la salud de tus amigos
-                caninos. Nuestro equipo veterinario altamente capacitado está
-                aquí para brindarles el mejor cuidado posible. Confía en
-                nosotros para mantener a tus perros felices y saludables.
+                Cuidamos y velamos por la vitalidad de tus adorables felinos. Nuestro equipo de expertos está dedicado a brindarles el máximo bienestar. Puedes confiar en nosotros para mantener a tus gatitos llenos de alegría y en óptimas condiciones.
               </Card.Text>
               <FaCat className="fs-1"></FaCat>
             </Card.Body>
@@ -95,10 +92,7 @@ const Banner = () => {
               </Card.Title>
               <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
-                Nos dedicamos a cuidar y proteger la salud de tus amigos
-                caninos. Nuestro equipo veterinario altamente capacitado está
-                aquí para brindarles el mejor cuidado posible. Confía en
-                nosotros para mantener a tus perros felices y saludables.
+                Cuidamos y protegemos la vitalidad de tus pequeños amigos. Nuestro equipo experto está comprometido con su bienestar. Confía en nosotros para mantener a tus compañeros pequeños felices y saludables siempre.
               </Card.Text>
               <FaKiwiBird className="fs-1"></FaKiwiBird>
             </Card.Body>

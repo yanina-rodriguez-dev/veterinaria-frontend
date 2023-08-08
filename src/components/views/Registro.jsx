@@ -63,7 +63,7 @@ const Registro = () => {
   };
 
   return (
-    <div className="mt-5 mainSection">
+    <div className="pt-5 mainSection fondoRegistro">
       {usuarioAdmin ? (
         <h3 className="text-center titulos">
           Registro de Nuevos Administradores

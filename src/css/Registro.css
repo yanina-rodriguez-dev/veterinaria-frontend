@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Rajdhani:wght@500&display=swap');
 #root{
     display: flex;
     flex-direction: column;
@@ -11,12 +9,12 @@
     flex-grow: 1;
 }
 
-.titulos{
-    color: #1B4C51;
-    font-family: 'Raleway', sans-serif;
-}
+
 
 .boton{
     color: #4D91CD;
     width: 50%;
+}
+.fondoRegistro{
+    background-image: url(../assets/fondos/Registro2.png);
 }

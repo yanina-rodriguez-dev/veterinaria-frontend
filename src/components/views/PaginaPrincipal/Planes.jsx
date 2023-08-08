@@ -12,8 +12,8 @@ const Planes = () => {
           alt="gatito-chocando-patitas"
         />
         <div className="p-4">
-          <div className="p-4 text-dark bg-beige container mb-4">
-            <h2 className=" text-dark bg-beige fw-bold f-title fs-1 mb-2">
+          <div className="p-4 text-dark container mb-4">
+            <h2 className=" text-dark fw-bold f-title fs-1 mb-2">
               Planes de salud para mascotas
             </h2>
             <br />
@@ -29,9 +29,9 @@ const Planes = () => {
           </div>
         </div>
       </div>
-      <div className="bg-beige">
+      <div>
         <Container fluid className="mb-5">
-          <div className="bg-beige p-2">
+          <div className="py-2">
             <Row xs={1} md={3} lg={3} className="g-4">
               <Col>
                 <Card className="box p-2 m-3 h-100">
@@ -43,12 +43,12 @@ const Planes = () => {
                   />
                   <Card.Body className="d-flex flex-column justify-content-between align-items-center">
                     <Card.Title>
-                      <h3 className="text-verde f-title fw-bold">
+                      <h3 className="f-title fw-bold">
                         Cuidado Completo Primeros Pasos
                       </h3>
                     </Card.Title>
                     <br />
-                    <Card.Text className="text-verde f-text fs-5">
+                    <Card.Text className="f-text fs-5">
                       Para cachorros y gatitos de 0 a 5 años.
                     </Card.Text>
                     <Link to="/contacto" className="btn btn-primary mt-3">
@@ -67,13 +67,13 @@ const Planes = () => {
                   />
                   <Card.Body className="d-flex flex-column justify-content-between align-items-center">
                     <Card.Title>
-                      <h3 className="text-verde f-title fw-bold">
+                      <h3 className="f-title fw-bold">
                         {" "}
                         Cuidado Completo Madurando
                       </h3>
                     </Card.Title>
                     <br />
-                    <Card.Text className="text-verde f-text fs-5">
+                    <Card.Text className="f-text fs-5">
                       Para perros y gatos en crecimiento de 5 a 10 años
                     </Card.Text>
                     <Link to="/contacto" className="btn btn-primary mt-3">
@@ -92,13 +92,13 @@ const Planes = () => {
                   />
                   <Card.Body className="d-flex flex-column justify-content-between align-items-center">
                     <Card.Title>
-                      <h3 className="text-verde f-title fw-bold">
+                      <h3 className="f-title fw-bold">
                         {" "}
                         Cuidado Completo Plus
                       </h3>
                     </Card.Title>
                     <br />
-                    <Card.Text className="text-verde f-text fs-5">
+                    <Card.Text className="f-text fs-5">
                       Para perros y gatos adultos de más de 10 años.
                     </Card.Text>
                     <Link to="/contacto" className="btn btn-primary mt-3">

@@ -1,5 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import MapIframe from './map';
+import '../../css/app.css';
 
 const Contacto = () => {
   return (
