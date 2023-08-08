@@ -7,7 +7,7 @@ export const iniciarSesion = async (usuario) => {
     const respuesta = await fetch(URL_usuario, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(usuario),
     });
@@ -67,6 +67,7 @@ export const crearPaciente = async (paciente) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(paciente),
     });
@@ -98,6 +99,7 @@ export const crearTurno = async (nuevoTurno) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(nuevoTurno),
     });
@@ -115,6 +117,7 @@ export const editarPaciente = async (paciente, id) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(paciente),
     });
@@ -146,6 +149,7 @@ export const editarTurno = async (turno, id) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(turno),
     });
@@ -161,6 +165,9 @@ export const borrarPaciente = async (id) => {
   try {
     const respuesta = await fetch(URL_paciente + "/" + id, {
       method: "DELETE",
+      headers:{
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
+    },
     });
     return respuesta;
   } catch (error) {
@@ -182,6 +189,9 @@ export const borrarTurno = async (id) => {
   try {
     const respuesta = await fetch(URL_turno + "/" + id, {
       method: "DELETE",
+      headers:{
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
+    },
     });
     return respuesta;
   } catch (error) {
