@@ -18,7 +18,7 @@ const itemPaciente = ({paciente, setPacientes}) => {
             cancelButtonText: 'Cancelar'
         }).then((resultado) =>{
         if (resultado.isConfirmed){
-            borrarPaciente(usuario.id).then((respuesta) =>{
+            borrarPaciente(paciente._id).then((respuesta) =>{
                if (respuesta.status === 200){
                    obtenerListaPacientes().then((respuesta)=>{
                     if (respuesta)
