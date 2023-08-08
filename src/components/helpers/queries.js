@@ -99,6 +99,7 @@ export const crearTurno = async (nuevoTurno) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(nuevoTurno),
     });
@@ -148,6 +149,7 @@ export const editarTurno = async (turno, id) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(turno),
     });
@@ -187,6 +189,9 @@ export const borrarTurno = async (id) => {
   try {
     const respuesta = await fetch(URL_turno + "/" + id, {
       method: "DELETE",
+      headers:{
+        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
+    },
     });
     return respuesta;
   } catch (error) {
