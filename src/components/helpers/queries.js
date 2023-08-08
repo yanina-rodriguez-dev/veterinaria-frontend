@@ -82,7 +82,6 @@ export const crearUsuario = async (usuario) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(usuario),
     });
@@ -134,7 +133,6 @@ export const editarUsuario = async (usuario, id) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
       },
       body: JSON.stringify(usuario),
     });
@@ -180,9 +178,6 @@ export const borrarUsuario = async (id) => {
   try {
     const respuesta = await fetch(URL_usuario + "/usuario/" + id, {
       method: "DELETE",
-      headers:{
-        "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
-    },
     });
     return respuesta;
   } catch (error) {
