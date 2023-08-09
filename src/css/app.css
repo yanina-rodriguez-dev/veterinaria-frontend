@@ -42,4 +42,6 @@
      transform: translateX(0);
    }
  }
- 
+ .tipografia{
+   font-family: 'Alkatra', cursive;
+ }

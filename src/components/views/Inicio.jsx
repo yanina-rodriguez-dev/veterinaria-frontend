@@ -11,7 +11,7 @@ import { Container } from "react-bootstrap";
 
 const Inicio = () => {
   return (
-    <div className="fondoGeneral">
+    <div className="fondoGeneral tipografia">
       <Container fluid>
         <Banner />
       </Container>
