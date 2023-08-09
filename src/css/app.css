@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
 .fondoGeneral{
    background-color: rgb(249, 231, 231);
 } 
@@ -9,5 +9,14 @@
 }
 .titulos{
    color: #04022c;
-   font-family:'Edu SA Beginner', cursive;
+   font-family: 'Alkatra', cursive;
 }
+.card:hover {
+   transform: scale(1.1); 
+   transition: transform 0.3s ease; 
+ }
+ 
+ .card.movimiento:hover {
+   transform: translate(5px, -5px);
+   transition: transform 0.3s ease; 
+ }

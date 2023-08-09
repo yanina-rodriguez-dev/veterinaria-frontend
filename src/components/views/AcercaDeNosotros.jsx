@@ -86,8 +86,8 @@ const AcercaDeNosotros = () => {
               alt="Yanina Rodriguez"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark bg-beige">Yanina Rodriguez</h3>
-              <p className="text-dark bg-beige"> Scrum master</p>
+              <h3 className="text-dark">Yanina Rodriguez</h3>
+              <p className="text-dark"> Scrum master</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -97,8 +97,8 @@ const AcercaDeNosotros = () => {
               alt="Azul De Pol"
             />
             <Carousel.Caption className="caption rounded-5">
-              <h3 className="text-dark bg-beige">Azul De Pol</h3>
-              <p className="text-dark bg-beige">
+              <h3 className="text-dark">Azul De Pol</h3>
+              <p className="text-dark">
                 Desarrolladora web fullstack
                 <br />
                 (Scrum suplente)
@@ -112,8 +112,8 @@ const AcercaDeNosotros = () => {
               alt="Federico Rueda Leal"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark bg-beige">Federico Rueda Leal</h3>
-              <p className="text-dark bg-beige">Desarrollador web fullstack</p>
+              <h3 className="text-dark">Federico Rueda Leal</h3>
+              <p className="text-dark">Desarrollador web fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -123,8 +123,8 @@ const AcercaDeNosotros = () => {
               className="d-block w-100 carouselNosotros"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark bg-beige">Ana Santillan</h3>
-              <p className="text-dark bg-beige">Desarrolladora web fullstack</p>
+              <h3 className="text-dark">Ana Santillan</h3>
+              <p className="text-dark">Desarrolladora web fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -134,15 +134,15 @@ const AcercaDeNosotros = () => {
               alt="Maxi Vega"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark bg-beige">Maxi Vega</h3>
-              <p className="text-dark bg-beige">Desarrollador web fullstack</p>
+              <h3 className="text-dark">Maxi Vega</h3>
+              <p className="text-dark">Desarrollador web fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </Container>
 
-      <div className="bg-beige p-2">
-        <h2 className="text-verde text-center f-title fs-1 fw-bold mt-5">
+      <div className="p-2">
+        <h2 className="text-center f-title fs-1 fw-bold mt-5">
           Tecnologias con las que trabajamos
         </h2>
         <div className="container-fluid text-center">
