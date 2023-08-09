@@ -52,7 +52,7 @@ const Opiniones = () => {
             </Card>
           </Col>
           <Col xs={12} md={4} className="mb-xs-4">
-            <Card className="opinion h-100">
+            <Card className="opinion altura">
               <Card.Body>
                 <Card.Title className="mb-3 my-3 text-center">
                   {" "}
@@ -67,7 +67,7 @@ const Opiniones = () => {
                   También es genial que ofrezcan consejos útiles sobre cuidado y
                   nutrición para los animales, ademas de eso no tengo nada mas para agregar. ¡Sin duda recomendaría esta
                   clínica veterinaria a todos mis amigos, conocidos y familiares amantes de
-                  los animales!
+                  los animales! Simplemente Gracias!
                 </Card.Text>
               </Card.Body>
               <Card.Text className="text-center text-warning mb-4 fs-4">

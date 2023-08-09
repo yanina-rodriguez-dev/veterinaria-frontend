@@ -9,7 +9,7 @@ const Contacto = () => {
       <hr />
       <div className="row justify-content-center w-100 ps-4">
         <div className="col-12 col-sm-8 col-md-6 col-xl-4">
-          <Form>
+          <Form className="titulos">
             <Form.Group className="mb-2">
               <Form.Label>Nombre y Apellido</Form.Label>
               <Form.Control

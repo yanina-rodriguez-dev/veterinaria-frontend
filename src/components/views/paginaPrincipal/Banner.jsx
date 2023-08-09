@@ -7,7 +7,7 @@ import "../../../css/banner.css"
 const Banner = () => {
   return (
     <>
-      <section className="bannerContainer mb-5 text-light">
+      <section className="bannerContainer text-light my-2">
         <aside>
           <img
             className="img-fluid d-md-none"
@@ -48,7 +48,7 @@ const Banner = () => {
               <Card.Title className="text-center fw-semibold">
                 Perritos{" "}
               </Card.Title>
-              <Card.Text className="mx-lg-5 mx-md-1 mx-5 fw-bold">
+              <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 {" "}
                 Nos dedicamos a cuidar y proteger la salud de tus amigos
                 caninos. Nuestro equipo veterinario altamente capacitado está

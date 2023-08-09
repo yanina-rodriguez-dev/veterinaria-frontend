@@ -6,7 +6,7 @@ import perfilana from "../../assets/perfil-ana.jpg";
 import perfilazul from "../../assets/perfil-azul.png";
 import perfilmaxi from "../../assets/perfil-maxi.jpg";
 import perfilyani from "../../assets/perfil-yani.jpeg";
-// import mission from '../../assets/mission.png'
+
 
 const AcercaDeNosotros = () => {
   const [index, setIndex] = useState(0);
@@ -20,10 +20,6 @@ const AcercaDeNosotros = () => {
     <section className="bg-nosotros text-center fondoGeneral">
       <div className="mt-5 mb-5 container titulos">
         <h1 className="f-title mb-4 titulos">Misión</h1>
-        {/* <div className="p-5 logoMision">
-
-        <img src={mission} alt="logo de mision" className="p-5 "/>
-        </div> */}
         <h4 className="titulos"> Crear Experiencias Digitales Excepcionales para Huellitas Center con React JS y un Toque Innovador</h4>
  <div>
   <p>Bienvenidos a Huellitas Center, donde transformamos nuestra pasión por las mascotas en soluciones digitales de primer nivel. Este proyecto está respaldado por Data Dreamers, un equipo de desarrollo apasionado que trabaja incansablemente para hacer realidad las visiones a través de la tecnología.</p>
@@ -106,8 +102,8 @@ const AcercaDeNosotros = () => {
               alt="Yanina Rodriguez"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark">Yanina Rodriguez</h3>
-              <p className="text-dark"> Scrum master</p>
+              <h3 className="text-dark bgNombres fs-5">Yanina Rodriguez</h3>
+              <p className="text-dark bgNombres fs-6"> Scrum master</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -117,8 +113,8 @@ const AcercaDeNosotros = () => {
               alt="Azul De Pol"
             />
             <Carousel.Caption className="caption rounded-5">
-              <h3 className="text-dark">Azul De Pol</h3>
-              <p className="text-dark">
+              <h3 className="text-dark bgNombres fs-5">Azul De Pol</h3>
+              <p className="text-dark bgNombres fs-6">
                 Desarrolladora web fullstack
                 <br />
                 (Scrum suplente)
@@ -132,8 +128,8 @@ const AcercaDeNosotros = () => {
               alt="Federico Rueda Leal"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark">Federico Rueda Leal</h3>
-              <p className="text-dark">Desarrollador web fullstack</p>
+              <h3 className="text-dark bgNombres fs-5">Federico Rueda Leal</h3>
+              <p className="text-dark bgNombres fs-5">Desarrollador web fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -143,8 +139,8 @@ const AcercaDeNosotros = () => {
               className="d-block w-100 carouselNosotros"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark">Ana Santillan</h3>
-              <p className="text-dark">Desarrolladora web fullstack</p>
+              <h3 className="text-dark bgNombres fs-5">Ana Santillan</h3>
+              <p className="text-dark bgNombres fs-6">Desarrolladora web fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -154,15 +150,15 @@ const AcercaDeNosotros = () => {
               alt="Maxi Vega"
             />
             <Carousel.Caption className="caption">
-              <h3 className="text-dark">Maxi Vega</h3>
-              <p className="text-dark">Desarrollador web fullstack</p>
+              <h3 className="text-dark bgNombres fs-5">Maxi Vega</h3>
+              <p className="text-dark bgNombres fs-5">Desarrollador web fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </Container>
 
-      <div className="p-2">
-        <h2 className="text-center f-title fs-1 fw-bold mt-5 titulos">
+      <div className="p-5">
+        <h2 className="text-center f-title fs-1 fw-bold my-5 pt-4 titulos">
           Tecnologias con las que trabajamos
         </h2>
         <div className="container-fluid text-center">
