@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Raleway&display=swap');
 #root{
     display: flex;
     flex-direction: column;
@@ -25,9 +24,6 @@
 
 img {
     width: 100%;
-}
-body {
-    background-color: #F8E4CA!important;
 }
 
 .contenedorServicios {
@@ -56,11 +52,6 @@ body {
     object-position: center;
     transition: .3s;
     filter: saturate(40%);
-}
-
-.titulos{
-    color: #1B4C51;
-    font-family: 'Raleway', sans-serif;
 }
 
 .imagenServicios:hover {

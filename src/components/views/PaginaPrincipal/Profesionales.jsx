@@ -1,12 +1,12 @@
 import { Container } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
-import '../../../../src/Profesionales.css';
+import '../../../css/profesionales.css';
 
 const Profesionales = () => {
     return (
-        <Container>
+        <Container  className='mt-5 pt-4'>
             <h1 className='p-3 my-3 titulos text-center'>Nuestros Profesionales</h1>
-        <Carousel>
+        <Carousel >
             <Carousel.Item>
                 <img
                     className="d-block w-100 imagenProfesionales"

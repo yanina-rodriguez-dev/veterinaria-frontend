@@ -1,7 +1,6 @@
 import TablaGestionTurnos from "./Turnos/TablaGestionTurnos";
-import React from "react";
 import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
-import "../../css/Administrador.css";
+import "../../css/administrador.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

@@ -1,5 +1,6 @@
 .fondoMenu{
-  background-color: #4d91cd;
+  background-color: #39a3fa;
+
 }
 .buscar{
   position: absolute;
@@ -70,4 +71,40 @@ color: rgb(92, 230, 73);
   display: flex;
 
 justify-content: space-evenly;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  padding-top: 100px; /* Espacio para el menú fijo */
 }

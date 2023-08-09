@@ -63,7 +63,7 @@ const Registro = () => {
   };
 
   return (
-    <div className="mt-5 mainSection">
+    <div className="pt-5 mainSection fondoRegistro">
       {usuarioAdmin ? (
         <h3 className="text-center titulos">
           Registro de Nuevos Administradores
@@ -74,7 +74,7 @@ const Registro = () => {
       <hr />
       <Row className="justify-content-center w-100 ps-4">
         <Col xs={12} sm={9} md={4}>
-          <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form onSubmit={handleSubmit(onSubmit)} className="titulos">
             <Form.Group className="mb-2" controlId="formRegistroNombre">
               <Form.Label>Nombre y Apellido:</Form.Label>
               <Form.Control

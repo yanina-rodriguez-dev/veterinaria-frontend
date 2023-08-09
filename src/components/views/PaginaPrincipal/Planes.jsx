@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 const Planes = () => {
   return (
     <section>
-      <div className="banner-Planes">
+      <div className="banner-Planes pb-2">
         <img
           className="img-fluid rounded-3"
           src="https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80tos/xulIYVIbYIc"
           alt="gatito-chocando-patitas"
         />
-        <div className="p-4">
-          <div className="p-4 text-dark bg-beige container mb-4">
-            <h2 className=" text-dark bg-beige fw-bold f-title fs-1 mb-2">
+        <div className="p-4 my-4">
+          <div className="p-4 text-dark container cajaPlanes text-center mt-1">
+            <h2 className=" text-dark fw-bold titulos f-title fs-1">
               Planes de salud para mascotas
             </h2>
             <br />
@@ -29,9 +29,9 @@ const Planes = () => {
           </div>
         </div>
       </div>
-      <div className="bg-beige">
-        <Container fluid className="mb-5">
-          <div className="bg-beige p-2">
+      <div>
+        <Container fluid className="mb-5 titulos">
+          <div className="py-2">
             <Row xs={1} md={3} lg={3} className="g-4">
               <Col>
                 <Card className="box p-2 m-3 h-100">
@@ -43,16 +43,16 @@ const Planes = () => {
                   />
                   <Card.Body className="d-flex flex-column justify-content-between align-items-center">
                     <Card.Title>
-                      <h3 className="text-verde f-title fw-bold">
+                      <h3 className="f-title fw-bold">
                         Cuidado Completo Primeros Pasos
                       </h3>
                     </Card.Title>
                     <br />
-                    <Card.Text className="text-verde f-text fs-5">
+                    <Card.Text className="f-text fs-5">
                       Para cachorros y gatitos de 0 a 5 años.
                     </Card.Text>
                     <Link to="/contacto" className="btn btn-primary mt-3">
-                      Saber más <FaPaw style={{ transform: "rotate(30deg)" }} />{" "}
+                      Saber más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />{" "}
                     </Link>
                   </Card.Body>
                 </Card>
@@ -67,17 +67,17 @@ const Planes = () => {
                   />
                   <Card.Body className="d-flex flex-column justify-content-between align-items-center">
                     <Card.Title>
-                      <h3 className="text-verde f-title fw-bold">
+                      <h3 className="f-title fw-bold">
                         {" "}
                         Cuidado Completo Madurando
                       </h3>
                     </Card.Title>
                     <br />
-                    <Card.Text className="text-verde f-text fs-5">
+                    <Card.Text className="f-text fs-5">
                       Para perros y gatos en crecimiento de 5 a 10 años
                     </Card.Text>
                     <Link to="/contacto" className="btn btn-primary mt-3">
-                      Saber más <FaPaw style={{ transform: "rotate(30deg)" }} />
+                      Saber más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
                     </Link>
                   </Card.Body>
                 </Card>
@@ -92,17 +92,17 @@ const Planes = () => {
                   />
                   <Card.Body className="d-flex flex-column justify-content-between align-items-center">
                     <Card.Title>
-                      <h3 className="text-verde f-title fw-bold">
+                      <h3 className="f-title fw-bold">
                         {" "}
                         Cuidado Completo Plus
                       </h3>
                     </Card.Title>
                     <br />
-                    <Card.Text className="text-verde f-text fs-5">
+                    <Card.Text className="f-text fs-5">
                       Para perros y gatos adultos de más de 10 años.
                     </Card.Text>
                     <Link to="/contacto" className="btn btn-primary mt-3">
-                      Saber más <FaPaw style={{ transform: "rotate(30deg)" }} />
+                      Saber más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
                     </Link>
                   </Card.Body>
                 </Card>

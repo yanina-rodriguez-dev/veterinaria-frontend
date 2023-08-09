@@ -1,7 +1,7 @@
 import Banner from "./paginaPrincipal/Banner";
 import Opiniones from "./paginaPrincipal/Opiniones";
-import "./paginaPrincipal/banner.css";
-import "./paginaPrincipal/opiniones.css";
+import "../../css/banner.css";
+import "../../css/opiniones.css";
 import Planes from "./PaginaPrincipal/Planes";
 import Marcas from "./PaginaPrincipal/Marcas.jsx";
 import Productos from "./PaginaPrincipal/Productos.jsx";
@@ -11,17 +11,17 @@ import { Container } from "react-bootstrap";
 
 const Inicio = () => {
   return (
-    <>
+    <div className="fondoGeneral tipografia">
       <Container fluid>
         <Banner />
       </Container>
       <Planes></Planes>
       <Profesionales />
       <Servicios />
-      <Opiniones />
       <Productos></Productos>
+      <Opiniones />
       <Marcas></Marcas>
-    </>
+    </div>
   );
 };
 

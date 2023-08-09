@@ -1,8 +1,8 @@
 const Marcas = () => {
     return (
       <section className="flex-grow-1">
-        <div className="bg-beige p-2">
-          <h2 className="text-verde text-center f-text fs-1 fw-bold">
+        <div className="pt-5 my-5">
+          <h2 className="text-center f-text fs-1 fw-bold titulos mb-5">
             Trabajamos con las mejores marcas en el mercado
           </h2>
           <div className="container-fluid text-center">
