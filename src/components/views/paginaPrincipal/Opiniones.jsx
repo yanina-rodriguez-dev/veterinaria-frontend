@@ -7,7 +7,8 @@ const Opiniones = () => {
     <div>
       <Container>
         <Row className="my-5">
-          <h2 className="fw-semibold mb-3">Opiniones de nuestros clientes:</h2>
+          <h2 className="fw-semibold my-5 titulos">Opiniones de nuestros clientes:<hr /></h2>
+          
           <Col xs={12} md={4} className="mb-4">
             <Card className="opinion h-100">
               <Card.Body>

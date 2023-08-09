@@ -45,7 +45,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
 
   return (
     <>
-      <Navbar key={expand} expand={expand} className="fondoMenu">
+      <Navbar key={expand} expand={expand} className="fondoMenu titulos">
         <Container fluid className="d-flex justify-space-between">
           <Navbar.Toggle
             onClick={() => setOffcanvasShow((prev) => !prev)} 
@@ -68,7 +68,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
             className="fondoMenu"
           >
             <Offcanvas.Header closeButton className="fondoMenu">
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className="fs-bold">
+              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className="fw-bold">
                 Huellitas Center
               </Offcanvas.Title>
             </Offcanvas.Header>
@@ -76,7 +76,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
               <Nav className="justify-content-end flex-grow-1 pe-3 text-center">
                 <NavLink
                   end
-                  className="nav-item nav-link fs-bold"
+                  className="nav-item nav-link fw-bold"
                   to="/"
                   onClick={cerrarOffcanvas}
                 >
@@ -87,7 +87,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   !usuarioLogueado.esAdmin ? (
                     <NavLink
                       end
-                      className="nav-item nav-link"
+                      className="nav-item nav-link fw-bold"
                       to="/reservarturno"
                       onClick={cerrarOffcanvas}
                     >
@@ -96,7 +96,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   ) : (
                     <NavLink
                       end
-                      className="nav-item nav-link"
+                      className="nav-item nav-link fw-bold"
                       to="/registro"
                       onClick={cerrarOffcanvas}
                     >
@@ -106,7 +106,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                 ) : (
                   <NavLink
                     end
-                    className="nav-item nav-link"
+                    className="nav-item nav-link fw-bold"
                     to="/registro"
                     onClick={cerrarOffcanvas}
                   >
@@ -116,7 +116,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                 <hr />
                 <NavLink
                   end
-                  className="nav-item nav-link"
+                  className="nav-item nav-link fw-bold"
                   to="/contacto"
                   onClick={cerrarOffcanvas}
                 >
@@ -125,7 +125,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                 <hr />
                 <NavLink
                   end
-                  className="nav-item nav-link"
+                  className="nav-item nav-link fw-bold"
                   to="/nosotros"
                   onClick={cerrarOffcanvas}
                 >
@@ -137,7 +137,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                       <hr />
                       <NavLink
                         end
-                        className="nav-item nav-link"
+                        className="nav-item nav-link fw-bold"
                         to="/administrador"
                         onClick={cerrarOffcanvas}
                       >
@@ -173,7 +173,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                     <hr />
                     <NavLink
                       end
-                      className="nav-item nav-link"
+                      className="nav-item nav-link fw-bold"
                       to="/Login"
                       onClick={cerrarOffcanvas}
                     >
@@ -183,17 +183,6 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
                   </>
                 )}
               </Nav>
-              <Form className="d-flex mt-3 m-xl-0">
-                <Form.Control
-                  type="search"
-                  placeholder="Buscar"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="dark">
-                  <AiOutlineSearch className="text-light" />
-                </Button>
-              </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>

@@ -32,7 +32,7 @@ const Banner = () => {
         </aside>
       </section>
       <Row className="mb-5">
-        <h1 className="text-center fw-semibold titulos my-4">
+        <h1 className="text-center fw-semibold titulos my-5">
           ¡Nos importan tus mascotas!
         </h1>
         <Col xs={12} md={4} className="mb-4">
