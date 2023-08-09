@@ -20,7 +20,7 @@ function Productos() {
         </Card.Text>
         <br />
         <Link to='/nosotros' className="btn btn-primary btn-lg my-4 mt-5">
-            Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
+            Ver más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>      </Card.Body>
     </Card>
         </Col>
@@ -35,7 +35,7 @@ function Productos() {
         </Card.Text>
         <br />
         <Link to='/nosotros' className="btn btn-primary btn-lg my-4 mt-5">
-            Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
+            Ver más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>      </Card.Body>
     </Card>
         </Col>
@@ -49,7 +49,7 @@ function Productos() {
         Nuestros expertos en cuidado animal están disponibles para brindarte asesoramiento personalizado y recomendaciones sobre cuál es el producto adecuado para tu mascota.
         </Card.Text>
         <Link to='/nosotros' className="btn btn-primary btn-lg my-4">
-            Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
+            Ver más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>      </Card.Body>
     </Card>
         </Col>

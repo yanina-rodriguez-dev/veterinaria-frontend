@@ -68,7 +68,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
             className="fondoMenu"
           >
             <Offcanvas.Header closeButton className="fondoMenu">
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className="fs-bold">
                 Huellitas Center
               </Offcanvas.Title>
             </Offcanvas.Header>
@@ -76,7 +76,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
               <Nav className="justify-content-end flex-grow-1 pe-3 text-center">
                 <NavLink
                   end
-                  className="nav-item nav-link"
+                  className="nav-item nav-link fs-bold"
                   to="/"
                   onClick={cerrarOffcanvas}
                 >

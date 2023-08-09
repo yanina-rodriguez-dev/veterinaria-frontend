@@ -11,17 +11,17 @@ import { Container } from "react-bootstrap";
 
 const Inicio = () => {
   return (
-    <>
+    <div className="fondoGeneral">
       <Container fluid>
         <Banner />
       </Container>
       <Planes></Planes>
       <Profesionales />
       <Servicios />
-      <Opiniones />
       <Productos></Productos>
+      <Opiniones />
       <Marcas></Marcas>
-    </>
+    </div>
   );
 };
 

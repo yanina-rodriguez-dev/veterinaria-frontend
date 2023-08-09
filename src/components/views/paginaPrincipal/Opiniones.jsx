@@ -9,7 +9,7 @@ const Opiniones = () => {
         <Row className="my-5">
           <h2 className="fw-semibold mb-3">Opiniones de nuestros clientes:</h2>
           <Col xs={12} md={4} className="mb-4">
-            <Card className="opinion">
+            <Card className="opinion h-100">
               <Card.Body>
                 <Card.Title className="mb-4 my-3 text-center">
                   {" "}
@@ -20,7 +20,7 @@ const Opiniones = () => {
                   {" "}
                   <FaQuoteLeft className="ms-3" />{" "}
                 </Card.Title>
-                <Card.Text className="mx-lg-5 mx-md-1 mx-5 h-100">
+                <Card.Text className="mx-lg-5 mx-md-1 mx-5">
                 ¡Muchas gracias por haber salvado la vida de mi Tobi! La verdad es que no sé qué hubiera hecho sin ustedes. Desde el primer momento nos brindaron contención y nos sentimos acompañados en todo el proceso, desde la operación hasta su recuperación.
                 </Card.Text>
               </Card.Body>
@@ -30,7 +30,7 @@ const Opiniones = () => {
             </Card>
           </Col>
           <Col xs={12} md={4} className="mb-4">
-            <Card className="opinion">
+            <Card className="opinion h-100">
               <Card.Body>
                 <Card.Title className="mb-4 my-3 text-center">
                   {" "}
@@ -51,9 +51,9 @@ const Opiniones = () => {
             </Card>
           </Col>
           <Col xs={12} md={4} className="mb-xs-4">
-            <Card className="opinion">
+            <Card className="opinion h-100">
               <Card.Body>
-                <Card.Title className="mb-4 my-3 text-center">
+                <Card.Title className="mb-3 my-3 text-center">
                   {" "}
                   <FaUserCircle className="fs-1 me-2" />
                   Juan Rodriguez{" "}

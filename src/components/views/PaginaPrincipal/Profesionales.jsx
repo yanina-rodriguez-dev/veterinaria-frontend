@@ -4,9 +4,9 @@ import '../../../css/profesionales.css';
 
 const Profesionales = () => {
     return (
-        <Container>
+        <Container >
             <h1 className='p-3 my-3 titulos text-center'>Nuestros Profesionales</h1>
-        <Carousel>
+        <Carousel >
             <Carousel.Item>
                 <img
                     className="d-block w-100 imagenProfesionales"

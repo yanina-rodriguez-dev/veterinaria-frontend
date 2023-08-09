@@ -17,23 +17,26 @@ const Banner = () => {
         </aside>
         <aside className="ms-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-end h-100 align-items-center align-items-md-center text-center text-md-start widthBanner">
           <h1 className="fs-1 mt-md-5 mt-2 mt-md-0 mx-2 mx-md-0 fw-bolder">
-            Bienvenidos a <br className="d-none d-md-block" /> Huellitas Center!
+            ¡Bienvenidos a <br className="d-none d-md-block" /> Huellitas Center!
           </h1>
           <span className="fs-5 mx-2 fw-semibold">
             Donde el cuidado excepcional y <br className="d-none d-md-block" />{" "}
             el cariño incondicional se encuentran!
           </span>
-          <Link to="/nosotros" className="btn btn-primary btn-lg my-4">
-            Ver más <FaPaw style={{ transform: "rotate(30deg)" }} />
+          <div className="button-container">
+
+          <Link to="/nosotros" className="btn btn-primary expand-button btn-lg my-4">
+            Ver más <FaPaw  className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>
+          </div>
         </aside>
       </section>
       <Row className="mb-5">
-        <h1 className="text-center fw-semibold mb-3">
+        <h1 className="text-center fw-semibold titulos my-4">
           ¡Nos importan tus mascotas!
         </h1>
         <Col xs={12} md={4} className="mb-4">
-          <Card>
+          <Card className="h-100">
             <Card.Body>
               <Card.Title className="text-end">
                 {" "}
@@ -57,7 +60,7 @@ const Banner = () => {
           </Card>
         </Col>
         <Col xs={12} md={4} className="mb-4">
-          <Card>
+          <Card className="h-100">
             <Card.Body>
               <Card.Title className="text-end">
                 {" "}
@@ -78,7 +81,7 @@ const Banner = () => {
           </Card>
         </Col>
         <Col xs={12} md={4} className="mb-4">
-          <Card>
+          <Card className="h-100">
             <Card.Body>
               <Card.Title className="text-end">
                 {" "}
