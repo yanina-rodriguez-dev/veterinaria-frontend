@@ -9,12 +9,25 @@ import perfilyani from "../../assets/perfil-yani.jpeg";
 
 
 const AcercaDeNosotros = () => {
-const [index, setIndex] = useState(0);
+  const iniciarCollapse = {
+    gatoEncerrado: false,
+    caballoGrande: false,
+    cazadorLiebre: false,
+  };
+  const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
-  const [open, setOpen] = useState(false);
+
+  const [collapseState, setCollapseState] = useState(iniciarCollapse);
+
+  const handleCollapseToggle = (key) => {
+    setCollapseState((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key],
+    }));
+  };
 
   return (
     <section className="bg-nosotros text-center fondoGeneral">
@@ -31,55 +44,47 @@ const [index, setIndex] = useState(0);
 <br />
 <p>Somos más que un equipo de desarrollo; somos narradores de la relación especial entre las mascotas y sus dueños. A través de la tecnología, llevamos esta relación a nuevas alturas, asegurándonos de que Huellitas Center sea más que una plataforma digital: sea un hogar virtual donde el amor por las mascotas florezca y se nutra.</p>
  </div>
-
-        <>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="mision-collapse-text"
-            aria-expanded={open}
-            className="btn-background m-3"
-          >
-            Aqui no hay gato encerrado
-          </Button>
-          <Collapse in={open}>
-            <div id="mision-collapse-text" className="p-2">
-              Desarrollamos webs de la mejor calidad, con profesionalismo y
-              dedicacion.
-            </div>
-          </Collapse>
-        </>
-        <>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="mision-collapse-text"
-            aria-expanded={open}
-            className="btn-background m-3"
-          >
-            No somos de caballo grande, ande o no ande
-          </Button>
-          <Collapse in={open}>
-            <div id="mision-collapse-text p-2" className="p-2">
-              Valoramos como funciona tu web tanto como se luce.{" "}
-            </div>
-          </Collapse>
-        </>
-        <>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="mision-collapse-text"
-            aria-expanded={open}
-            className="btn-background m-3"
-          >
-            Hasta al mejor cazador, se le va la liebre
-          </Button>
-          <Collapse in={open}>
-            <div id="mision-collapse-text" className="p-2">
-              Aun las personas expertas en ciertas áreas, pueden fallar. Por eso
-              nuestro equipo esta continuamente buscando mejorar sus
-              habilidades.
-            </div>
-          </Collapse>
-        </>
+        <Button
+          onClick={() => handleCollapseToggle("gatoEncerrado")}
+          aria-controls="mision-collapse-text"
+          aria-expanded={collapseState.gatoEncerrado}
+          className="btn-background m-3"
+        >
+          Aqui no hay gato encerrado
+        </Button>
+        <Collapse in={collapseState.gatoEncerrado}>
+          <div id="mision-collapse-text" className="p-2">
+            Desarrollamos webs de la mejor calidad, con profesionalismo y
+            dedicacion.
+          </div>
+        </Collapse>
+        <Button
+          onClick={() => handleCollapseToggle("caballoGrande")}
+          aria-controls="mision-collapse-text"
+          aria-expanded={collapseState.caballoGrande}
+          className="btn-background m-3"
+        >
+          No somos de caballo grande, ande o no ande
+        </Button>
+        <Collapse in={collapseState.caballoGrande}>
+          <div id="mision-collapse-text p-2" className="p-2">
+            Valoramos como funciona tu web tanto como se luce.
+          </div>
+        </Collapse>
+        <Button
+          onClick={() => handleCollapseToggle("cazadorLiebre")}
+          aria-controls="mision-collapse-text"
+          aria-expanded={collapseState.cazadorLiebre}
+          className="btn-background m-3"
+        >
+          Hasta al mejor cazador, se le va la liebre
+        </Button>
+        <Collapse in={collapseState.cazadorLiebre}>
+          <div id="mision-collapse-text" className="p-2">
+            Aun las personas expertas en ciertas áreas, pueden fallar. Por eso
+            nuestro equipo esta continuamente buscando mejorar sus habilidades.
+          </div>
+        </Collapse>
       </div>
       <h2 className="f-title mt-5 titulos">Nuestro equipo</h2>
       <p className="f-text fs-4">
@@ -100,7 +105,7 @@ const [index, setIndex] = useState(0);
             />
             <Carousel.Caption className="caption">
               <h3 className="text-dark bgNombres fs-5">Yanina Rodriguez</h3>
-              <p className="text-dark bgNombres fs-6"> Scrum master</p>
+              <p className="text-dark bgNombres fs-6"> Scrum master <br /> Desarrolladora web Fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
