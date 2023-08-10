@@ -31,7 +31,6 @@ const EditarTurno = () => {
     });
   }, []);
   const onSubmit = (turnoeditado) => {
-    console.log(turnoeditado);
     editarTurno(turnoeditado, id).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire(

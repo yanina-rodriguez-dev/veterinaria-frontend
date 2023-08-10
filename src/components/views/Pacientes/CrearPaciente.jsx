@@ -11,7 +11,6 @@ const CrearPaciente = () => {
     reset,
   } = useForm();
   const onSubmit = (pacienteNuevo) => {
-    console.log(pacienteNuevo);
     crearPaciente(pacienteNuevo).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire(

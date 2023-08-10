@@ -15,12 +15,12 @@ const Inicio = () => {
       <Container fluid>
         <Banner />
       </Container>
-      <Planes></Planes>
+      <Planes />
       <Profesionales />
       <Servicios />
-      <Productos></Productos>
+      <Productos />
       <Opiniones />
-      <Marcas></Marcas>
+      <Marcas />
     </div>
   );
 };

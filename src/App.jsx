@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/app.css";
-import "./css/administrador.css";
+import "./css/Administrador.css";
 import "./css/acercaDe.css";
 import "./css/planesMarcas.css";
-import "./css/registro.css";
+import "./css/Registro.css";
 import "./css/profesionales.css";
 import "./css/servicios.css";
 import "./css/opiniones.css";
@@ -25,7 +25,6 @@ import RutasCliente from "./routes/RutasCliente";
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
-  console.log(usuarioSessionStorage);
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
 
   return (

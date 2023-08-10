@@ -15,7 +15,6 @@ const CrearTurno = () => {
   const navegacion = useNavigate();
 
   const onSubmit = (nuevoTurno) => {
-    console.log(nuevoTurno);
     crearTurno(nuevoTurno).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire(
