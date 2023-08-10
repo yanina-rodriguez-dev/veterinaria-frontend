@@ -38,7 +38,7 @@ const CrearPaciente = () => {
         <Col xs={12} sm={9} md={4}>
       <Form onSubmit={handleSubmit(onSubmit)} className="my-4">
         <Form.Group className="mb-3" controlId="formPaciente">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label>Nombre y Apellido</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: Ana"

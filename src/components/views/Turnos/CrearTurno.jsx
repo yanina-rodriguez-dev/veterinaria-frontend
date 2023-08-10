@@ -32,7 +32,8 @@ const CrearTurno = () => {
   };
 
   return (
-    <section className="container mainSection">
+    <section className="mainSection fondoRegistro titulos">
+      <div className="container">
       <h1 className="display-4 mt-5">Nuevo Turno</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -166,6 +167,7 @@ const CrearTurno = () => {
           Guardar
         </Button>
       </Form>
+      </div>
     </section>
   );
 };
