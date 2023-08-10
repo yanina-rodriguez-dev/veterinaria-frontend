@@ -1,0 +1,36 @@
+.carouselNosotros {
+  max-width: fit-content;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.caption {
+  background: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* .bg-nosotros {
+  background-color: #4d91cd;
+  background-image: linear-gradient(
+    0deg,
+    #4d91cd 0%,
+    #f8e4ca 36%,
+    #ffffff 100%
+  );
+  color: #1b4c51;
+} */
+
+.btn-background {
+  background-color: #c3abd1 !important;
+  border-color: #1b4c51;
+  color: #1b4c51 !important;
+  border: solid;
+}
+.logoMision{
+  padding: 600px;
+}
+.bgNombres{
+background-color: rgb(245, 210, 165);
+}

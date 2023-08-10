@@ -1,0 +1,158 @@
+{
+  "pacientes": [
+    {
+      "nombreDueno": "Yanina  cEMEWLO",
+      "email": "yani@gmail.com",
+      "telefono": "3816789078",
+      "direccion": "Capital",
+      "nombrePaciente": "Toby",
+      "especie": "Perro",
+      "raza": "Caniche",
+      "id": 2
+    },
+    {
+      "nombreDueno": "Maxi",
+      "email": "maxi@gmail.com",
+      "telefono": "3816788877",
+      "direccion": "San Miguel ",
+      "nombrePaciente": "Roco",
+      "especie": "Perro",
+      "raza": "Raza de gato",
+      "id": 3
+    },
+    {
+      "nombreDueno": "Fede",
+      "email": "fede@gmail.com",
+      "telefono": "3814786545",
+      "direccion": "Santiago 145",
+      "nombrePaciente": "Coco",
+      "especie": "Perro",
+      "raza": "Pitbul",
+      "id": 4
+    }
+  ],
+  "turnos": [
+    {
+      "nombreDueno": "Otamendi",
+      "detalleCita": "Genio de la defensa.",
+      "nombreVeterinario": "Messi",
+      "nombreMascota": "Ironman",
+      "hora": "14:40",
+      "fecha": "2024-05-19",
+      "id": 4
+    },
+    {
+      "nombreDueno": "Scaloni",
+      "detalleCita": "El mejor dt del mundo",
+      "nombreVeterinario": "Messi",
+      "nombreMascota": "Mbappe",
+      "hora": "16:30",
+      "fecha": "2023-08-27",
+      "id": 5
+    },
+    {
+      "nombreDueno": "Juan  MARTIN ",
+      "detalleCita": "JSVHJLDFJLFV",
+      "nombreVeterinario": "gerartdo",
+      "nombreMascota": "teodoro",
+      "hora": "10:10",
+      "fecha": "2023-10-16",
+      "id": 7
+    },
+    {
+      "nombreDueno": "YANINANININ",
+      "detalleCita": "JSVHJLDFJLFV",
+      "nombreVeterinario": "LIOnel scaloni",
+      "nombreMascota": "manuelita",
+      "hora": "11:00",
+      "fecha": "2023-07-28",
+      "id": 8
+    },
+    {
+      "nombreDueno": "LEANDRO PAREDES",
+      "detalleCita": "SE DERRITE DE LO BOMBON QUE ES ",
+      "nombreVeterinario": "YANINA RODRIGUEZ",
+      "nombreMascota": "YO",
+      "hora": "03:30",
+      "fecha": "2023-07-23",
+      "id": 13
+    },
+    {
+      "nombreDueno": "LAUTARO MARTINEZ",
+      "detalleCita": "DOLOR DE SER TAN FACHERO",
+      "nombreVeterinario": "RODRIGUEZ YANINA",
+      "nombreMascota": "YO",
+      "hora": "20:20",
+      "fecha": "2023-07-27",
+      "id": 14
+    },
+    {
+      "nombreDueno": "maxi",
+      "detalleCita": "tos y fiebre",
+      "nombreVeterinario": "jorge",
+      "nombreMascota": "maki",
+      "hora": "18:00",
+      "fecha": "2020-10-28",
+      "id": 15
+    },
+    {
+      "nombreDueno": "maxi",
+      "detalleCita": "quiero probar algo",
+      "nombreVeterinario": "especifico",
+      "nombreMascota": "el turno",
+      "hora": "03:59",
+      "fecha": "2023-01-01",
+      "id": 16
+    },
+    {
+      "nombreDueno": "ADMINFIJO",
+      "detalleCita": "tos fiebre y un golpe de calor",
+      "nombreVeterinario": "pruieba1",
+      "nombreMascota": "joder",
+      "hora": "8:30",
+      "fecha": "2023-12-31",
+      "id": 17
+    },
+    {
+      "nombreDueno": "MaxiVega",
+      "detalleCita": "prueba de que ",
+      "nombreVeterinario": "funciona",
+      "nombreMascota": "la ruta protegida",
+      "hora": "8:30",
+      "fecha": "2023-12-31",
+      "id": 18
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "ADMINFIJO",
+      "email": "admin@huellitascenter.com",
+      "password": "Huellita123",
+      "telefono": "3814992483",
+      "dni": "12345678",
+      "direccion": "capital",
+      "esAdmin": true
+    },
+    {
+      "id": 2,
+      "nombreUsuario": "nombreCliente1",
+      "email": "cliente@huellitascenter.com",
+      "password": "Cliente123",
+      "direccion": "capital",
+      "telefono": "123456789",
+      "dni": "12345678",
+      "esAdmin": false
+    },
+    {
+      "nombreUsuario": "MaxiVega",
+      "direccion": "san martin 1051",
+      "email": "maximilianoVega600@gmail.com",
+      "dni": "44186712",
+      "telefono": "3815881372",
+      "password": "Huellita123",
+      "esAdmin": false,
+      "id": 3
+    }
+  ]
+}

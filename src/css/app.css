@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+.fondoGeneral{
+   background-color: rgb(249, 231, 231);
+} 
+.opinion{
+   border-radius: 0px 40px;
+   background: #EDE7FB;
+   
+}
+.titulos{
+   color: #04022c;
+   font-family: 'Alkatra', cursive;
+}
+.card:hover {
+   transform: scale(1.1); 
+   transition: transform 0.3s ease; 
+ }
+ 
+ .card.movimiento:hover {
+   transform: translate(5px, -5px);
+   transition: transform 0.3s ease; 
+ }
+ 
+
+.card {
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    height: 100%; 
+}
+ 
+ 
+ .titulos{
+   opacity: 0;
+   transform: translateX(-100px);
+   animation: aparecer 1s forwards;
+ }
+ 
+ @keyframes aparecer {
+   to {
+     opacity: 1;
+     transform: translateX(0);
+   }
+ }
+ .tipografia{
+   font-family: 'Alkatra', cursive;
+ }

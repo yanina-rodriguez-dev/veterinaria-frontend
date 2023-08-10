@@ -1,0 +1,35 @@
+    .columna-izquierda {
+      width: 100%;
+      background-color: #4D91CD;
+      padding: 10px;
+      height: 100vh !important;
+      text-align: center;
+      margin-left: -12px;
+      margin-top: -18px;
+    }
+
+  .encabezado {
+    margin-bottom: 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    
+  }  
+  .botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+  .salir {
+    margin-top: 50%;
+    text-align: center;
+  }

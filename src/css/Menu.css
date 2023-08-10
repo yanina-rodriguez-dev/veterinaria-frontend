@@ -1,0 +1,110 @@
+.fondoMenu{
+  background-color: #39a3fa;
+
+}
+.buscar{
+  position: absolute;
+  padding: 5px;
+}
+.buscarInput{
+  border-radius: 30px;
+}
+.logoFooter{
+  border-radius: 50%;
+  height: auto;
+  width: 50%;
+  max-width: 200px;
+  
+}
+.logoMenu{
+  border-radius: 172px;
+  height: 100%;
+  width: 100%;
+  
+}
+@media screen and (min-width: 992px) {
+  .logoFooter{
+    border-radius: 200px;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+
+
+
+.colorInstagram {
+    border-radius: 15px;
+    color: white;
+  background: rgb(235, 24, 197);
+  background: linear-gradient(
+    90deg,
+    rgba(235, 24, 197, 1) 6%,
+    rgba(84, 100, 195, 1) 59%,
+    rgba(223, 230, 12, 1) 100%,
+    rgba(223, 230, 12, 1) 100%
+  );
+}
+.colorWpp{
+color: rgb(92, 230, 73);
+}
+
+.colorFacebook{
+    border-radius: 21px;
+    color: rgb(53, 22, 226);
+    background-color: rgb(251, 251, 253);
+
+}
+.logoCentrado{
+    display: flex;
+    justify-content: center;
+}
+.logoSitio{
+    height: 100px;
+}
+
+.btnColor{
+  background: rgb(3, 102, 3);
+}
+
+.navSM{
+  display: flex;
+
+justify-content: space-evenly;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  padding-top: 100px; /* Espacio para el menú fijo */
+}

@@ -1,0 +1,28 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainSection{
+    flex-grow: 1;
+}
+
+.btnError{
+    border-style: double !important;
+    border-color: #301b51 !important;
+    background-color: #301b51;
+
+}
+/* .widthGif{
+    width: 40%;
+} */
+
+@media screen and (max-width: 768px) {
+    .widthGif{
+        min-width: 100%;
+    }
+}
+.fondoError{
+    background-color: rgb(249, 231, 231);
+}

@@ -1,0 +1,41 @@
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.mainSection{
+    flex-grow: 1;
+}
+.banner-Planes{
+    background-color: #9061c2;
+}
+
+.banner-Planes img{
+    object-fit: cover;
+    height: 600px;
+    width: 100%;   
+}
+.cajaPlanes{
+    border: 1px solid #dfcff1;
+    background-color: #dfcff1;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 470px !important;
+    object-fit: cover;
+}
+
+.box{
+    min-height: 100%;
+    min-width: fit-content;
+}
+
+.italic{
+    font-style: italic;
+}
+
