@@ -6,7 +6,6 @@ import { useNavigate} from "react-router-dom";
 import { useEffect } from "react";
 
 const CrearTurno = ({usuarioLogueado, setusuarioLogueado}) => {
-    console.log(usuarioLogueado);
   const {
     register,
     handleSubmit,
@@ -19,12 +18,10 @@ const CrearTurno = ({usuarioLogueado, setusuarioLogueado}) => {
 
   useEffect(() => {
           setValue("nombreDueno", usuarioLogueado.nombreUsuario);
-          console.log(usuarioLogueado.nombreUsuario);
         },[]);
   const onSubmit = (nuevoTurno) => {
     crearTurno(nuevoTurno).then((respuesta) => {
       if (respuesta.status === 201) {
-        console.log(respuesta);
         Swal.fire(
           "Turno creado",
           `El turno fue creado correctamente`,

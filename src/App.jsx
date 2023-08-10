@@ -25,7 +25,6 @@ import RutasCliente from "./routes/RutasCliente";
 function App() {
   const usuarioSessionStorage =
     JSON.parse(sessionStorage.getItem("usuario")) || {};
-  console.log(usuarioSessionStorage);
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSessionStorage);
 
   return (

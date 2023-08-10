@@ -36,10 +36,10 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
       }
     });
   };
-  const [offcanvasShow, setOffcanvasShow] = useState(false); 
+  const [offcanvasShow, setOffcanvasShow] = useState(false);
 
   const cerrarOffcanvas = () => {
-    setOffcanvasShow(false); 
+    setOffcanvasShow(false);
   };
 
   return (
@@ -47,7 +47,7 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
       <Navbar key={expand} expand={expand} className="fondoMenu titulos">
         <Container fluid className="d-flex justify-space-between">
           <Navbar.Toggle
-            onClick={() => setOffcanvasShow((prev) => !prev)} 
+            onClick={() => setOffcanvasShow((prev) => !prev)}
             aria-controls={`offcanvasNavbar-expand-${expand}`}
             className="fs-6"
           />
@@ -67,7 +67,10 @@ function Menu({ usuarioLogueado, setUsuarioLogueado }) {
             className="fondoMenu"
           >
             <Offcanvas.Header closeButton className="fondoMenu">
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className="fw-bold">
+              <Offcanvas.Title
+                id={`offcanvasNavbarLabel-expand-${expand}`}
+                className="fw-bold"
+              >
                 Huellitas Center
               </Offcanvas.Title>
             </Offcanvas.Header>

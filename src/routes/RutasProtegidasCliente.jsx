@@ -4,9 +4,9 @@ const RutasProtegidasCliente = ({ children }) => {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("usuario")) || null;
   if (usuarioLogueado) {
     if (!usuarioLogueado.esAdmin) {
-        return children;
+      return children;
     } else {
-        return <Navigate to="/login"></Navigate>;
+      return <Navigate to="/login"></Navigate>;
     }
   } else {
     return <Navigate to="/login"></Navigate>;

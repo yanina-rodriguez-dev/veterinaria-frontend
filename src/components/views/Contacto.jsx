@@ -1,6 +1,6 @@
 import { Button, Form } from "react-bootstrap";
-import MapIframe from './map';
-import '../../css/app.css';
+import MapIframe from "./map";
+import "../../css/app.css";
 
 const Contacto = () => {
   return (
@@ -56,7 +56,7 @@ const Contacto = () => {
               </Button>
             </div>
           </Form>
-        </div>        
+        </div>
       </div>
       <MapIframe></MapIframe>
     </div>

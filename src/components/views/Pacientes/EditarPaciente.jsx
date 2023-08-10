@@ -31,7 +31,6 @@ const EditarPaciente = () => {
   }, []);
 
   const onSubmit = (pacienteEditado) => {
-    console.log(pacienteEditado);
     editarPaciente(pacienteEditado, id).then((respuesta) => {
       if (respuesta) {
         Swal.fire(
