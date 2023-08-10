@@ -18,3 +18,7 @@
 .fondoRegistro{
     background-image: url(../assets/fondos/registro.png);
 }
+
+.contenedorFormulario{
+    background: rgba(215, 207, 231, 0.476);
+}

@@ -74,7 +74,7 @@ const Registro = () => {
       <hr />
       <Row className="justify-content-center w-100 ps-4">
         <Col xs={12} sm={9} md={4}>
-          <Form onSubmit={handleSubmit(onSubmit)} className="titulos">
+          <Form onSubmit={handleSubmit(onSubmit)} className="titulos mb-4 contenedorFormulario p-4">
             <Form.Group className="mb-2" controlId="formRegistroNombre">
               <Form.Label>Nombre y Apellido:</Form.Label>
               <Form.Control

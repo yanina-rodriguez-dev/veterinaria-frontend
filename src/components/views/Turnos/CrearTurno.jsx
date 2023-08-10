@@ -32,13 +32,13 @@ const CrearTurno = () => {
   };
 
   return (
-    <section className="mainSection fondoRegistro titulos">
+    <section className="mainSection fondoRegistro titulos pb-4">
       <div className="container">
       <h1 className="display-4 mt-5 titulos text-center">Nuevo Turno</h1>
       <hr />
       <Row className="justify-content-center w-100 ps-4">
         <Col xs={12} sm={9} md={4}>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)} className="contenedorFormulario p-4">
         <Form.Group className="mb-3" controlId="formPaciente">
           <Form.Label>Nombre y Apellido</Form.Label>
           <Form.Control

@@ -4,12 +4,12 @@ import '../../css/app.css';
 
 const Contacto = () => {
   return (
-    <div className="pt-5 mainSection fondoGeneral">
+    <div className="pt-5 mainSection fondoRegistro titulos">
       <h3 className="text-center titulos">Contáctanos!</h3>
       <hr />
-      <div className="row justify-content-center w-100 ps-4">
+      <div className="row justify-content-center w-100 ps-4 pb-4">
         <div className="col-12 col-sm-8 col-md-6 col-xl-4">
-          <Form className="titulos">
+          <Form className="titulos contenedorFormulario p-4">
             <Form.Group className="mb-2">
               <Form.Label>Nombre y Apellido</Form.Label>
               <Form.Control
