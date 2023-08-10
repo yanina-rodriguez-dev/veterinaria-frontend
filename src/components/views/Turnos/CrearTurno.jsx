@@ -1,4 +1,4 @@
-import { Form, Button } from "react-bootstrap";
+import {  Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { crearTurno } from "../../helpers/queries"; // Asegúrate de tener esta función implementada en queries.js
@@ -34,11 +34,13 @@ const CrearTurno = () => {
   return (
     <section className="mainSection fondoRegistro titulos">
       <div className="container">
-      <h1 className="display-4 mt-5">Nuevo Turno</h1>
+      <h1 className="display-4 mt-5 titulos text-center">Nuevo Turno</h1>
       <hr />
+      <Row className="justify-content-center w-100 ps-4">
+        <Col xs={12} sm={9} md={4}>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formPaciente">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label>Nombre y Apellido</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: Ana"
@@ -157,16 +159,17 @@ const CrearTurno = () => {
             })}
           />
           <Form.Text className="text-danger">
-
             {errors.fecha?.message}
-
           </Form.Text>
         </Form.Group>
-
+        <div className="text-center mb-3">
         <Button variant="primary" type="submit">
           Guardar
         </Button>
+        </div>
       </Form>
+      </Col>
+      </Row>
       </div>
     </section>
   );
