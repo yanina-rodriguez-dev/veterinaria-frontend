@@ -17,7 +17,7 @@ function Productos() {
         <Card.Title className='text-center'>Alimentos</Card.Title>
         <hr />
         <Card.Text className='mt-5'>
-        Desde piensos y alimentos húmedos hasta snacks y golosinas, tenemos todo lo que tu mascota necesita para una alimentación equilibrada y nutritiva. 
+        Desde piensos y alimentos húmedos hasta snacks y golosinas, tenemos todo lo que tu mascota necesita para una alimentación sana, equilibrada y nutritiva. 
         </Card.Text>
         <br />
         <Link to='/nosotros' className="btn btn-primary btn-lg">

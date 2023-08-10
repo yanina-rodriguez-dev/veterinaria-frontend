@@ -34,7 +34,7 @@ function TablaGestionPacientes() {
   return (
     <section>
       <div className="d-flex justify-content-between align-items-center mt-4">
-        <h2 className="display-6">Pacientes</h2>
+        <h2 className="display-6 titulos">Pacientes</h2>
       </div>
       <Table striped bordered size="sm" responsive className="text-center">
         <thead>

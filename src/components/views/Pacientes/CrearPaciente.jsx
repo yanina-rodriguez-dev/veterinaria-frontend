@@ -1,4 +1,4 @@
-import { Form, Button } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { crearPaciente } from "../../helpers/queries";
@@ -30,12 +30,15 @@ const CrearPaciente = () => {
     });
   };
   return (
-    <section className="container mainSection">
-      <h1 className="display-4 mt-5">Nuevo Paciente</h1>
+    <section className="mainSection fondoRegistro titulos">
+      <div className="container">
+      <h1 className="display-4 mt-5 text-center titulos">Nuevo Paciente</h1>
       <hr />
-      <Form onSubmit={handleSubmit(onSubmit)} className="my-4">
+      <Row className="justify-content-center w-100 ps-4">
+        <Col xs={12} sm={9} md={4}>
+      <Form onSubmit={handleSubmit(onSubmit)} className="my-5 contenedorFormulario p-4">
         <Form.Group className="mb-3" controlId="formPaciente">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label>Nombre y Apellido</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: Ana"
@@ -170,10 +173,15 @@ const CrearPaciente = () => {
           />
           <Form.Text className="text-danger">{errors.raza?.message}</Form.Text>
         </Form.Group>
+        <div className="text-center">
         <Button variant="primary" type="submit">
           Guardar
         </Button>
+        </div>
       </Form>
+      </Col>
+      </Row>
+      </div>
     </section>
   );
 };

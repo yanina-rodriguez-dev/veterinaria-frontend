@@ -8,13 +8,13 @@ const AdmPacientes = () => {
   return (
     <>
       <Container fluid className="text-center">
-        <Row className="text-center">
+        <Row className="text-center pt-3">
           <Col xs={3} className="d-none d-sm-block">
             <ColumnaIzquierda></ColumnaIzquierda>
           </Col>
           <Col xs={12} sm={9}>
             <div>
-              <h2>Administrar Pacientes:</h2>
+              <h2 className="fw-semibold titulos">Administrar Pacientes:</h2>
               <hr />
               <p>Gestiona los pacientes:</p>
               <Link

@@ -8,13 +8,13 @@ const AdmUsuarios = () => {
   return (
     <>
       <Container fluid className="text-center">
-        <Row className="text-center">
+        <Row className="text-center pt-3">
           <Col xs={3} className="d-none d-sm-block">
             <ColumnaIzquierda></ColumnaIzquierda>
           </Col>
           <Col xs={12} sm={9}>
             <div>
-              <h2>Administrar Usuarios:</h2>
+              <h2 className="fw-semibold titulos">Administrar Usuarios:</h2>
               <hr />
               <p>Gestiona los Usuarios:</p>
               <Link to={"/registro"} className="btn btn-lg btn-success">
