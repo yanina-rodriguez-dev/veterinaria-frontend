@@ -14,7 +14,7 @@ const AdmUsuarios = () => {
           </Col>
           <Col xs={12} sm={9}>
             <div>
-              <h2>Administrar Usuarios:</h2>
+              <h2 className="fw-semibold titulos">Administrar Usuarios:</h2>
               <hr />
               <p>Gestiona los Usuarios:</p>
               <Link to={"/registro"} className="btn btn-lg btn-success">

@@ -10,7 +10,7 @@ const ColumnaIzquierda = () => {
     <>
       <div className="columna-izquierda">
         <div className="encabezado">
-          <h4 className="titulo text-wrap text-break">Administrador</h4>
+          <h4 className="titulo text-wrap text-break titulos">Administrador</h4>
         </div>
         <div className="contenido">
           <img src={avatarImage} alt="Avatar" className="avatar" />

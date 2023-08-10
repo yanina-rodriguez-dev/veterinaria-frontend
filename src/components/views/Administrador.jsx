@@ -18,7 +18,7 @@ const Administrador = () => {
           </Col>
           <Col xs={12} md={9}>
             <div>
-              <h2 className="fw-semibold">
+              <h2 className="fw-semibold titulos">
                 Bienvenido{" "}
                 {usuariosSession ? usuariosSession.nombreUsuario : ""}!
               </h2>

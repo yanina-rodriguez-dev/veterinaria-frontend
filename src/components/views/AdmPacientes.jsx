@@ -14,7 +14,7 @@ const AdmPacientes = () => {
           </Col>
           <Col xs={12} sm={9}>
             <div>
-              <h2>Administrar Pacientes:</h2>
+              <h2 className="fw-semibold titulos">Administrar Pacientes:</h2>
               <hr />
               <p>Gestiona los pacientes:</p>
               <Link
