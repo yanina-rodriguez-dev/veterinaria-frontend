@@ -30,7 +30,8 @@ const CrearPaciente = () => {
     });
   };
   return (
-    <section className="container mainSection">
+    <section className="mainSection fondoRegistro">
+      <div className="container">
       <h1 className="display-4 mt-5">Nuevo Paciente</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)} className="my-4">
@@ -174,6 +175,7 @@ const CrearPaciente = () => {
           Guardar
         </Button>
       </Form>
+      </div>
     </section>
   );
 };
