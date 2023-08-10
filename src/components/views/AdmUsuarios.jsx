@@ -1,5 +1,5 @@
 import ColumnaIzquierda from "./Turnos/ColumnaIzquierda";
-import "../../css/administrador.css";
+import "../../css/Administrador.css";
 import { Col, Container, Row } from "react-bootstrap";
 import TablaGestionUsuarios from "./Usuarios/TablaGestionUsuarios";
 import { Link } from "react-router-dom";

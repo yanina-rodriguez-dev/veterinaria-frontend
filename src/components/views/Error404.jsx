@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import errorCanva from "../../assets/404/errorCanva.png";
 import { Link } from "react-router-dom";
-import "../../css/error404.css";
+import "../../css/Error404.css";
 
 const Error404 = () => {
   return (
