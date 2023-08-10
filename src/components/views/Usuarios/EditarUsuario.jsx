@@ -20,7 +20,6 @@ const EditarUsuario = () => {
   useEffect(() => {
     obtenerUsuario(id).then((respuesta) => {
       setUsuarioCompleto(respuesta);
-      console.log(usuarioCompleto);
       if (respuesta) {
         setValue("nombreUsuario", respuesta.nombreUsuario);
         setValue("telefono", respuesta.telefono);
@@ -39,7 +38,6 @@ const EditarUsuario = () => {
       direccion: usuarioEditado.direccion || direccion,
     };
 
-    console.log(usuarioEditadoCompleto);
     editarUsuario(usuarioEditadoCompleto, id).then((respuesta) => {
       if (respuesta) {
         Swal.fire(
