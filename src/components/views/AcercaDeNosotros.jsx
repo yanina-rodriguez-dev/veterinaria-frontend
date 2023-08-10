@@ -164,7 +164,32 @@ const AcercaDeNosotros = () => {
           Tecnologias con las que trabajamos
         </h2>
         <div className="container-fluid text-center">
+        <a
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ maxWidth: 200, maxHeight: 150 }}
+              className="img-fluid p-2"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="logo de HTML5"
+            ></img>
+          </a>
+
           <a
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ maxWidth: 200, maxHeight: 150 }}
+              className="img-fluid p-2"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="logo de CSS3"
+            ></img>
+          </a>
+           <a
             href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/540px-Npm-logo.svg.png?20140904162625"
             target="_blank"
             rel="noreferrer"
@@ -178,7 +203,7 @@ const AcercaDeNosotros = () => {
           </a>
           <a href="https://react.dev/" target="_blank" rel="noreferrer">
             <img
-              style={{ maxWidth: 250, maxHeight: 100 }}
+              style={{ maxWidth: 180, maxHeight: 120 }}
               className="img-fluid p-2 align-center"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207"
               alt="logo de React"
@@ -190,7 +215,7 @@ const AcercaDeNosotros = () => {
             rel="noreferrer"
           >
             <img
-              style={{ maxWidth: 200, maxHeight: 100 }}
+              style={{ maxWidth: 180, maxHeight: 120 }}
               className="img-fluid p-2"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
               alt="logo de JavaScript"
@@ -242,32 +267,6 @@ const AcercaDeNosotros = () => {
               className="img-fluid p-2"
               src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png?20211024200826"
               alt="logo de postman"
-            ></img>
-          </a>
-
-          <a
-            href="https://www.w3.org/html/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              style={{ maxWidth: 200, maxHeight: 150 }}
-              className="img-fluid p-2"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-              alt="logo de HTML5"
-            ></img>
-          </a>
-
-          <a
-            href="https://www.w3.org/html/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              style={{ maxWidth: 200, maxHeight: 150 }}
-              className="img-fluid p-2"
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-              alt="logo de CSS3"
             ></img>
           </a>
          </div>

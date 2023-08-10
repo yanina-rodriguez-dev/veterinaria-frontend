@@ -25,7 +25,7 @@ const Banner = () => {
           </span>
           <div className="button-container">
 
-          <Link to="/nosotros" className="btn btn-primary expand-button btn-lg my-4">
+          <Link to="/error404" className="btn btn-primary expand-button btn-lg my-4">
             Ver más <FaPaw  className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>
           </div>

@@ -40,7 +40,7 @@ const Login = ({ setUsuarioLogueado }) => {
           navegacion("/");
         }
       } else {
-        Swal.fire("Error!", "El emal o password son incorrectos.", "error");
+        Swal.fire("Error!", "El email o password son incorrectos.", "error");
       }
     });
   };
