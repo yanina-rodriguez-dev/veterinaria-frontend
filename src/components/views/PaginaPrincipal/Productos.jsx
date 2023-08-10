@@ -20,7 +20,7 @@ function Productos() {
         Desde piensos y alimentos húmedos hasta snacks y golosinas, tenemos todo lo que tu mascota necesita para una alimentación sana, equilibrada y nutritiva. 
         </Card.Text>
         <br />
-        <Link to='/nosotros' className="btn btn-primary btn-lg">
+        <Link to='/error404' className="btn btn-primary btn-lg">
             Ver más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>      </Card.Body>
     </Card>
@@ -36,7 +36,7 @@ function Productos() {
         Tu mascota se merece lo mejor del mundo, tenemos una alta gama de juguetes y accessorios para mantener a tus mascotas felices y comiendo perdices.
         </Card.Text>
         <br />
-        <Link to='/nosotros' className="btn btn-primary btn-lg">
+        <Link to='/error404' className="btn btn-primary btn-lg">
             Ver más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>      </Card.Body>
     </Card>
@@ -51,7 +51,7 @@ function Productos() {
         <Card.Text className='mt-5'>
         Nuestros expertos en cuidado animal están disponibles para brindarte asesoramiento y recomendaciones sobre cuál es el producto adecuado para tu mascota.
         </Card.Text>
-        <Link to='/nosotros' className="btn btn-primary btn-lg mt-4">
+        <Link to='/error404' className="btn btn-primary btn-lg mt-4">
             Ver más <FaPaw className="ms-2" style={{ transform: "rotate(30deg)" }} />
           </Link>      </Card.Body>
     </Card>

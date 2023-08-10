@@ -35,9 +35,9 @@ const Contacto = () => {
               <Form.Select>
                 <option value="">Seleccione una opción</option>
                 <option value="consulta">Consulta Veterinaria</option>
-                <option value="plan">Servicio Plan</option>
-                <option value="madurando">Servicio Madurando</option>
-                <option value="adultos">Servicio Adultos</option>
+                <option value="plan">Plan Cuidado Completo Primeros Pasos</option>
+                <option value="madurando">Plan Cuidado Completo Madurando</option>
+                <option value="adultos">Plan Cuidado Completo Plus</option>
               </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">

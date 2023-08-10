@@ -40,14 +40,14 @@ const Login = ({ setUsuarioLogueado }) => {
           navegacion("/");
         }
       } else {
-        Swal.fire("Error!", "El emal o password son incorrectos.", "error");
+        Swal.fire("Error!", "El email o password son incorrectos.", "error");
       }
     });
   };
   return (
-    <section className="row d-flex justify-content-center fondoLogin m-0">
+    <section className="row d-flex justify-content-center fondoRegistro mainSection m-0 py-5">
       <Form
-        className="text-center container mx-5 d-flex flex-column col-lg-3 col-md-4 my-5"
+        className="text-center container mx-5 d-flex flex-column col-lg-3 col-md-4 my-5 contenedorFormulario  titulos p-5"
         onSubmit={handleSubmit(onSubmit)}
       >
         <h1 className="titulos">Iniciar sesion</h1>
@@ -69,7 +69,6 @@ const Login = ({ setUsuarioLogueado }) => {
             })}
           />
           <Form.Text className="text-danger">
-            Nunca compartiremos tu contraseña.<br></br>
             {errors.email?.message}
           </Form.Text>
         </Form.Group>

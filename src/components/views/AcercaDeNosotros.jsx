@@ -9,12 +9,25 @@ import perfilyani from "../../assets/perfil-yani.jpeg";
 
 
 const AcercaDeNosotros = () => {
+  const iniciarCollapse = {
+    gatoEncerrado: false,
+    caballoGrande: false,
+    cazadorLiebre: false,
+  };
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
-  const [open, setOpen] = useState(false);
+
+  const [collapseState, setCollapseState] = useState(iniciarCollapse);
+
+  const handleCollapseToggle = (key) => {
+    setCollapseState((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key],
+    }));
+  };
 
   return (
     <section className="bg-nosotros text-center fondoGeneral">
@@ -26,63 +39,52 @@ const AcercaDeNosotros = () => {
    <br />
 <p>Data Dreamers es el corazón latente detrás de la presencia digital de Huellitas Center. Nuestra misión es construir puentes virtuales entre el mundo de las mascotas y sus cuidadores, aprovechando las capacidades de React JS y manteniendo siempre un enfoque en la innovación tecnológica.</p>
 <br />
-<p>En Data Dreamers, no solo creamos aplicaciones; creamos experiencias significativas. Nos enorgullece estar en un constante viaje de aprendizaje, explorando nuevas tecnologías para llevar a Huellitas Center a la vanguardia digital. Con un enfoque en la innovación, estamos siempre en busca de formas creativas de brindar un valor único a los amantes de las mascotas y sus compañeros peludos.</p>
-<br />
 <h5 className="titulos">Innovación en Acción</h5>
 <p>En Data Dreamers, no solo creamos aplicaciones; creamos experiencias significativas. Nos enorgullece estar en un constante viaje de aprendizaje, explorando nuevas tecnologías para llevar a Huellitas Center a la vanguardia digital. Con un enfoque en la innovación, estamos siempre en busca de formas creativas de brindar un valor único a los amantes de las mascotas y sus compañeros peludos.</p>
 <br />
 <p>Somos más que un equipo de desarrollo; somos narradores de la relación especial entre las mascotas y sus dueños. A través de la tecnología, llevamos esta relación a nuevas alturas, asegurándonos de que Huellitas Center sea más que una plataforma digital: sea un hogar virtual donde el amor por las mascotas florezca y se nutra.</p>
  </div>
-
-        {/* ///////////////////////////////////////////////////////////////////////////////////// */}
-        <>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="mision-collapse-text"
-            aria-expanded={open}
-            className="btn-background m-3"
-          >
-            Aqui no hay gato encerrado
-          </Button>
-          <Collapse in={open}>
-            <div id="mision-collapse-text" className="p-2">
-              Desarrollamos webs de la mejor calidad, con profesionalismo y
-              dedicacion.
-            </div>
-          </Collapse>
-        </>
-        <>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="mision-collapse-text"
-            aria-expanded={open}
-            className="btn-background m-3"
-          >
-            No somos de caballo grande, ande o no ande
-          </Button>
-          <Collapse in={open}>
-            <div id="mision-collapse-text p-2" className="p-2">
-              Valoramos como funciona tu web tanto como se luce.{" "}
-            </div>
-          </Collapse>
-        </>
-        <>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="mision-collapse-text"
-            aria-expanded={open}
-            className="btn-background m-3"
-          >
-            Hasta al mejor cazador, se le va la liebre
-          </Button>
-          <Collapse in={open}>
-            <div id="mision-collapse-text" className="p-2">
-              Aun las personas expertas en ciertas áreas, pueden fallar. Por eso
-              nuestro equipo esta continuamente buscando mejorar sus
-              habilidades.
-            </div>
-          </Collapse>
-        </>
+        <Button
+          onClick={() => handleCollapseToggle("gatoEncerrado")}
+          aria-controls="mision-collapse-text"
+          aria-expanded={collapseState.gatoEncerrado}
+          className="btn-background m-3"
+        >
+          Aqui no hay gato encerrado
+        </Button>
+        <Collapse in={collapseState.gatoEncerrado}>
+          <div id="mision-collapse-text" className="p-2">
+            Desarrollamos webs de la mejor calidad, con profesionalismo y
+            dedicacion.
+          </div>
+        </Collapse>
+        <Button
+          onClick={() => handleCollapseToggle("caballoGrande")}
+          aria-controls="mision-collapse-text"
+          aria-expanded={collapseState.caballoGrande}
+          className="btn-background m-3"
+        >
+          No somos de caballo grande, ande o no ande
+        </Button>
+        <Collapse in={collapseState.caballoGrande}>
+          <div id="mision-collapse-text p-2" className="p-2">
+            Valoramos como funciona tu web tanto como se luce.
+          </div>
+        </Collapse>
+        <Button
+          onClick={() => handleCollapseToggle("cazadorLiebre")}
+          aria-controls="mision-collapse-text"
+          aria-expanded={collapseState.cazadorLiebre}
+          className="btn-background m-3"
+        >
+          Hasta al mejor cazador, se le va la liebre
+        </Button>
+        <Collapse in={collapseState.cazadorLiebre}>
+          <div id="mision-collapse-text" className="p-2">
+            Aun las personas expertas en ciertas áreas, pueden fallar. Por eso
+            nuestro equipo esta continuamente buscando mejorar sus habilidades.
+          </div>
+        </Collapse>
       </div>
       <h2 className="f-title mt-5 titulos">Nuestro equipo</h2>
       <p className="f-text fs-4">
@@ -103,7 +105,7 @@ const AcercaDeNosotros = () => {
             />
             <Carousel.Caption className="caption">
               <h3 className="text-dark bgNombres fs-5">Yanina Rodriguez</h3>
-              <p className="text-dark bgNombres fs-6"> Scrum master</p>
+              <p className="text-dark bgNombres fs-6"> Scrum master <br /> Desarrolladora web Fullstack</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -162,7 +164,32 @@ const AcercaDeNosotros = () => {
           Tecnologias con las que trabajamos
         </h2>
         <div className="container-fluid text-center">
+        <a
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ maxWidth: 200, maxHeight: 150 }}
+              className="img-fluid p-2"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="logo de HTML5"
+            ></img>
+          </a>
+
           <a
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ maxWidth: 200, maxHeight: 150 }}
+              className="img-fluid p-2"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="logo de CSS3"
+            ></img>
+          </a>
+           <a
             href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/540px-Npm-logo.svg.png?20140904162625"
             target="_blank"
             rel="noreferrer"
@@ -176,7 +203,7 @@ const AcercaDeNosotros = () => {
           </a>
           <a href="https://react.dev/" target="_blank" rel="noreferrer">
             <img
-              style={{ maxWidth: 250, maxHeight: 100 }}
+              style={{ maxWidth: 180, maxHeight: 120 }}
               className="img-fluid p-2 align-center"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207"
               alt="logo de React"
@@ -188,7 +215,7 @@ const AcercaDeNosotros = () => {
             rel="noreferrer"
           >
             <img
-              style={{ maxWidth: 200, maxHeight: 100 }}
+              style={{ maxWidth: 180, maxHeight: 120 }}
               className="img-fluid p-2"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
               alt="logo de JavaScript"
@@ -242,7 +269,7 @@ const AcercaDeNosotros = () => {
               alt="logo de postman"
             ></img>
           </a>
-        </div>
+         </div>
       </div>
     </section>
   );
