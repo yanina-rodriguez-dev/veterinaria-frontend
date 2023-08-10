@@ -1,3 +1,4 @@
+
 # 🐾 Veterinaria Huellitas Center 🐾
 
 ## Proyecto Final Grupo 4
@@ -147,3 +148,4 @@ git clone <!--TO DO: agregar link del repo de backend -->
 |             Maxi Vega <br> _Fullstack Developer_              |      ![Maxi Vega](src/assets/perfil-maxi.jpg)      |          [Maxi Vega Github](https://github.com/maxivega0)          |
 |        Federico Rueda Leal <br> _Fullstack Developer_         | ![Federico Rueda Leal](src/assets/perfil-fede.jpg) |      [Federio Rueda Leal Github](https://github.com/federl94)      |
 |       Azul De Pol <br> _Fullstack Developer/Scrum Sub_        |     ![Azul De Pol](src/assets/perfil-azul.png)     |          [Azul De Pol Github](https://github.com/AzulDP)           |
+
