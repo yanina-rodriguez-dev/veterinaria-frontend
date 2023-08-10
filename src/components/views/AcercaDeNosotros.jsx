@@ -9,7 +9,7 @@ import perfilyani from "../../assets/perfil-yani.jpeg";
 
 
 const AcercaDeNosotros = () => {
-  const [index, setIndex] = useState(0);
+const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
@@ -26,15 +26,12 @@ const AcercaDeNosotros = () => {
    <br />
 <p>Data Dreamers es el corazón latente detrás de la presencia digital de Huellitas Center. Nuestra misión es construir puentes virtuales entre el mundo de las mascotas y sus cuidadores, aprovechando las capacidades de React JS y manteniendo siempre un enfoque en la innovación tecnológica.</p>
 <br />
-<p>En Data Dreamers, no solo creamos aplicaciones; creamos experiencias significativas. Nos enorgullece estar en un constante viaje de aprendizaje, explorando nuevas tecnologías para llevar a Huellitas Center a la vanguardia digital. Con un enfoque en la innovación, estamos siempre en busca de formas creativas de brindar un valor único a los amantes de las mascotas y sus compañeros peludos.</p>
-<br />
 <h5 className="titulos">Innovación en Acción</h5>
 <p>En Data Dreamers, no solo creamos aplicaciones; creamos experiencias significativas. Nos enorgullece estar en un constante viaje de aprendizaje, explorando nuevas tecnologías para llevar a Huellitas Center a la vanguardia digital. Con un enfoque en la innovación, estamos siempre en busca de formas creativas de brindar un valor único a los amantes de las mascotas y sus compañeros peludos.</p>
 <br />
 <p>Somos más que un equipo de desarrollo; somos narradores de la relación especial entre las mascotas y sus dueños. A través de la tecnología, llevamos esta relación a nuevas alturas, asegurándonos de que Huellitas Center sea más que una plataforma digital: sea un hogar virtual donde el amor por las mascotas florezca y se nutra.</p>
  </div>
 
-        {/* ///////////////////////////////////////////////////////////////////////////////////// */}
         <>
           <Button
             onClick={() => setOpen(!open)}
@@ -242,7 +239,33 @@ const AcercaDeNosotros = () => {
               alt="logo de postman"
             ></img>
           </a>
-        </div>
+
+          <a
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ maxWidth: 200, maxHeight: 150 }}
+              className="img-fluid p-2"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="logo de HTML5"
+            ></img>
+          </a>
+
+          <a
+            href="https://www.w3.org/html/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ maxWidth: 200, maxHeight: 150 }}
+              className="img-fluid p-2"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="logo de CSS3"
+            ></img>
+          </a>
+         </div>
       </div>
     </section>
   );
