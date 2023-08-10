@@ -8,7 +8,7 @@ const AdmUsuarios = () => {
   return (
     <>
       <Container fluid className="text-center">
-        <Row className="text-center">
+        <Row className="text-center pt-3">
           <Col xs={3} className="d-none d-sm-block">
             <ColumnaIzquierda></ColumnaIzquierda>
           </Col>
