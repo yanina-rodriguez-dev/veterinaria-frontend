@@ -38,7 +38,6 @@ const Contacto = () => {
                 <option value="plan">Plan Cuidado Completo Primeros Pasos</option>
                 <option value="madurando">Plan Cuidado Completo Madurando</option>
                 <option value="adultos">Plan Cuidado Completo Plus</option>
-                <option value="adultos">Otros Servicios</option>
               </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
