@@ -78,5 +78,4 @@ function App() {
 
 export default App;
 
-// json server comando
-// json-server --watch db.json --port 3004
+

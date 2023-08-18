@@ -29,7 +29,9 @@ const CrearTurno = () => {
       }
     });
   };
-
+const fechaActual = new Date();
+const fechaActualString = fechaActual.toISOString().split('T')[0];
+  
   return (
     <section className="mainSection fondoRegistro titulos pb-4">
       <div className="container">
@@ -153,6 +155,7 @@ const CrearTurno = () => {
           <Form.Control
             type="date"
             placeholder="dd/mm/aaaa"
+            min={fechaActualString}
             {...register("fecha", {
               required: "La fecha del turno es obligatorio",
             })}
