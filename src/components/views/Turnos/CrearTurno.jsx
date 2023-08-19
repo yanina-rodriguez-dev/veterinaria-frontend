@@ -1,7 +1,7 @@
 import {  Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { crearTurno } from "../../helpers/queries"; // Asegúrate de tener esta función implementada en queries.js
+import { crearTurno } from "../../helpers/queries"; 
 import { useNavigate} from "react-router-dom";
 
 const CrearTurno = () => {
@@ -29,7 +29,9 @@ const CrearTurno = () => {
       }
     });
   };
-
+const fechaActual = new Date();
+const fechaActualString = fechaActual.toISOString().split('T')[0];
+  
   return (
     <section className="mainSection fondoRegistro titulos pb-4">
       <div className="container">
@@ -153,6 +155,7 @@ const CrearTurno = () => {
           <Form.Control
             type="date"
             placeholder="dd/mm/aaaa"
+            min={fechaActualString}
             {...register("fecha", {
               required: "La fecha del turno es obligatorio",
             })}

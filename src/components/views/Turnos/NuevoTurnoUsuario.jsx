@@ -34,6 +34,8 @@ const CrearTurno = ({usuarioLogueado, setusuarioLogueado}) => {
       }
     });
   };
+   const fechaActual = new Date();
+  const fechaActualString = fechaActual.toISOString().split('T')[0];
 
   return (
     <section className="container mainSection">
@@ -144,6 +146,7 @@ const CrearTurno = ({usuarioLogueado, setusuarioLogueado}) => {
           <Form.Control
             type="date"
             placeholder="dd/mm/aaaa"
+            min={fechaActualString}
             {...register("fecha", {
               required: "La fecha del turno es obligatorio",
             })}
