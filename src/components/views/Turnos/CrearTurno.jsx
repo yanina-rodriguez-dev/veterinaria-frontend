@@ -1,7 +1,7 @@
 import {  Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { crearTurno } from "../../helpers/queries"; // Asegúrate de tener esta función implementada en queries.js
+import { crearTurno } from "../../helpers/queries"; 
 import { useNavigate} from "react-router-dom";
 
 const CrearTurno = () => {
